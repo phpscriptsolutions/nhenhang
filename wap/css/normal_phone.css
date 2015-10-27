@@ -1,0 +1,12 @@
+#menu_top td{
+    float: left;
+}
+body {
+    font-size: 14px;
+}
+h1{
+    margin: 0; 
+}
+.vg_more{
+    font-size: 13px !important;
+}

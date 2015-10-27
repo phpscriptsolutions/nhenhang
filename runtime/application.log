@@ -1,0 +1,1518 @@
+2015/10/27 14:50:56 [trace] [system.CModule] Loading "log" application component
+in /var/www/nhenhang/dev.php (38)
+2015/10/27 14:50:56 [trace] [system.CModule] Loading "request" application component
+in /var/www/nhenhang/dev.php (38)
+2015/10/27 14:50:56 [trace] [system.CModule] Loading "urlManager" application component
+in /var/www/nhenhang/dev.php (38)
+2015/10/27 14:50:56 [trace] [system.CModule] Loading "cache" application component
+in /var/www/nhenhang/dev.php (38)
+2015/10/27 14:50:56 [trace] [system.caching.CMemCache] Serving "Yii.CUrlManager.rules" from cache
+in /var/www/nhenhang/dev.php (38)
+2015/10/27 14:50:56 [trace] [system.caching.CMemCache] Saving "Yii.CUrlManager.rules" to cache
+in /var/www/nhenhang/dev.php (38)
+2015/10/27 14:50:56 [trace] [system.CModule] Loading "session" application component
+in /var/www/nhenhang/protected/components/web/Controller.php (16)
+in /var/www/nhenhang/dev.php (38)
+2015/10/27 14:50:56 [trace] [system.CModule] Loading "user" application component
+in /var/www/nhenhang/protected/components/web/Controller.php (35)
+in /var/www/nhenhang/dev.php (38)
+2015/10/27 14:50:57 [trace] [system.db.ar.CActiveRecord] CollectionModel.findByAttributes()
+in /var/www/nhenhang/protected/components/common/MainContentModel.php (55)
+in /var/www/nhenhang/protected/controllers/web/IndexController.php (6)
+in /var/www/nhenhang/dev.php (38)
+2015/10/27 14:50:57 [trace] [system.CModule] Loading "db" application component
+in /var/www/nhenhang/protected/components/common/MainActiveRecord.php (35)
+in /var/www/nhenhang/protected/components/common/MainContentModel.php (55)
+in /var/www/nhenhang/protected/controllers/web/IndexController.php (6)
+2015/10/27 14:50:57 [trace] [system.db.CDbConnection] Opening DB connection
+in /var/www/nhenhang/protected/components/common/MainActiveRecord.php (35)
+in /var/www/nhenhang/protected/components/common/MainContentModel.php (55)
+in /var/www/nhenhang/protected/controllers/web/IndexController.php (6)
+2015/10/27 14:50:57 [trace] [system.caching.CMemCache] Serving "yii:dbschemamysql:host=10.0.9.194;dbname=nhacvn_v1_full:chacha:collection" from cache
+in /var/www/nhenhang/protected/components/common/MainContentModel.php (55)
+in /var/www/nhenhang/protected/controllers/web/IndexController.php (6)
+in /var/www/nhenhang/dev.php (38)
+2015/10/27 14:50:57 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `collection` `t` WHERE `t`.`code`=:yp0 LIMIT 1. Bound with :yp0='HOTLIST'
+in /var/www/nhenhang/protected/components/common/MainContentModel.php (55)
+in /var/www/nhenhang/protected/controllers/web/IndexController.php (6)
+in /var/www/nhenhang/dev.php (38)
+2015/10/27 14:50:57 [trace] [system.caching.CMemCache] Saving "COLLECTION_HOTLIST_page_1_limit_8" to cache
+in /var/www/nhenhang/protected/components/common/MainContentModel.php (56)
+in /var/www/nhenhang/protected/controllers/web/IndexController.php (6)
+in /var/www/nhenhang/dev.php (38)
+2015/10/27 14:50:57 [trace] [system.db.ar.CActiveRecord] AlbumModel.findAll()
+in /var/www/nhenhang/protected/models/db/CollectionModel.php (67)
+in /var/www/nhenhang/protected/models/db/CollectionModel.php (28)
+in /var/www/nhenhang/protected/components/common/MainContentModel.php (61)
+2015/10/27 14:50:57 [trace] [system.caching.CMemCache] Serving "yii:dbschemamysql:host=10.0.9.194;dbname=nhacvn_v1_full:chacha:album" from cache
+in /var/www/nhenhang/protected/models/db/CollectionModel.php (67)
+in /var/www/nhenhang/protected/models/db/CollectionModel.php (28)
+in /var/www/nhenhang/protected/components/common/MainContentModel.php (61)
+2015/10/27 14:50:57 [trace] [system.caching.CMemCache] Serving "yii:dbschemamysql:host=10.0.9.194;dbname=nhacvn_v1_full:chacha:album_statistic" from cache
+in /var/www/nhenhang/protected/models/db/CollectionModel.php (67)
+in /var/www/nhenhang/protected/models/db/CollectionModel.php (28)
+in /var/www/nhenhang/protected/components/common/MainContentModel.php (61)
+2015/10/27 14:50:57 [trace] [system.db.CDbCommand] Querying SQL: SELECT `t`.`id` AS `t0_c0`, `t`.`name` AS `t0_c1`, `t`.`url_key` AS `t0_c2`, `t`.`type` AS `t0_c3`, `t`.`genre_id` AS `t0_c4`, `t`.`artist_name` AS `t0_c5`, `t`.`song_count` AS `t0_c6`, `t`.`price` AS `t0_c7`, `t`.`publisher` AS `t0_c8`, `t`.`published_date` AS `t0_c9`, `t`.`description` AS `t0_c10`, `t`.`created_by` AS `t0_c11`, `t`.`approved_by` AS `t0_c12`, `t`.`updated_by` AS `t0_c13`, `t`.`cp_id` AS `t0_c14`, `t`.`created_time` AS `t0_c15`, `t`.`updated_time` AS `t0_c16`, `t`.`active_fromtime` AS `t0_c17`, `t`.`active_totime` AS `t0_c18`, `t`.`sorder` AS `t0_c19`, `t`.`status` AS `t0_c20`, `t`.`cmc_id` AS `t0_c21`, `t`.`is_hot` AS `t0_c22`, `t`.`playlist_favourite` AS `t0_c23`, `t`.`user_id` AS `t0_c24`, `t`.`user_phone` AS `t0_c25`, `t`.`user_name` AS `t0_c26`, `as`.`album_id` AS `t1_c0`, `as`.`played_count` AS `t1_c1` FROM `album` `t` INNER JOIN collection_item t2 ON t.id=t2.item_id LEFT JOIN `album_statistic` `as` ON (`as`.`album_id`=`t`.`id`)  WHERE (t.status=1 AND t2.collect_id=:COLLECT_ID) GROUP BY t2.id ORDER BY t2.sorder ASC, t2.id DESC LIMIT 8. Bound with :COLLECT_ID='33'
+in /var/www/nhenhang/protected/models/db/CollectionModel.php (67)
+in /var/www/nhenhang/protected/models/db/CollectionModel.php (28)
+in /var/www/nhenhang/protected/components/common/MainContentModel.php (61)
+2015/10/27 14:50:57 [trace] [system.caching.CMemCache] Saving "COLLECTION_ITEMS_33_page_1_limit_8" to cache
+in /var/www/nhenhang/protected/models/db/CollectionModel.php (68)
+in /var/www/nhenhang/protected/models/db/CollectionModel.php (28)
+in /var/www/nhenhang/protected/components/common/MainContentModel.php (61)
+2015/10/27 14:50:57 [trace] [system.db.ar.CActiveRecord] CollectionModel.findByAttributes()
+in /var/www/nhenhang/protected/components/common/MainContentModel.php (55)
+in /var/www/nhenhang/protected/controllers/web/IndexController.php (7)
+in /var/www/nhenhang/dev.php (38)
+2015/10/27 14:50:57 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `collection` `t` WHERE `t`.`code`=:yp0 LIMIT 1. Bound with :yp0='ALBUM_HOT'
+in /var/www/nhenhang/protected/components/common/MainContentModel.php (55)
+in /var/www/nhenhang/protected/controllers/web/IndexController.php (7)
+in /var/www/nhenhang/dev.php (38)
+2015/10/27 14:50:57 [trace] [system.caching.CMemCache] Saving "COLLECTION_ALBUM_HOT_page_1_limit_16" to cache
+in /var/www/nhenhang/protected/components/common/MainContentModel.php (56)
+in /var/www/nhenhang/protected/controllers/web/IndexController.php (7)
+in /var/www/nhenhang/dev.php (38)
+2015/10/27 14:50:57 [trace] [system.db.ar.CActiveRecord] AlbumModel.findAll()
+in /var/www/nhenhang/protected/models/db/CollectionModel.php (67)
+in /var/www/nhenhang/protected/models/db/CollectionModel.php (28)
+in /var/www/nhenhang/protected/components/common/MainContentModel.php (61)
+2015/10/27 14:50:57 [trace] [system.db.CDbCommand] Querying SQL: SELECT `t`.`id` AS `t0_c0`, `t`.`name` AS `t0_c1`, `t`.`url_key` AS `t0_c2`, `t`.`type` AS `t0_c3`, `t`.`genre_id` AS `t0_c4`, `t`.`artist_name` AS `t0_c5`, `t`.`song_count` AS `t0_c6`, `t`.`price` AS `t0_c7`, `t`.`publisher` AS `t0_c8`, `t`.`published_date` AS `t0_c9`, `t`.`description` AS `t0_c10`, `t`.`created_by` AS `t0_c11`, `t`.`approved_by` AS `t0_c12`, `t`.`updated_by` AS `t0_c13`, `t`.`cp_id` AS `t0_c14`, `t`.`created_time` AS `t0_c15`, `t`.`updated_time` AS `t0_c16`, `t`.`active_fromtime` AS `t0_c17`, `t`.`active_totime` AS `t0_c18`, `t`.`sorder` AS `t0_c19`, `t`.`status` AS `t0_c20`, `t`.`cmc_id` AS `t0_c21`, `t`.`is_hot` AS `t0_c22`, `t`.`playlist_favourite` AS `t0_c23`, `t`.`user_id` AS `t0_c24`, `t`.`user_phone` AS `t0_c25`, `t`.`user_name` AS `t0_c26`, `as`.`album_id` AS `t1_c0`, `as`.`played_count` AS `t1_c1` FROM `album` `t` INNER JOIN collection_item t2 ON t.id=t2.item_id LEFT JOIN `album_statistic` `as` ON (`as`.`album_id`=`t`.`id`)  WHERE (t.status=1 AND t2.collect_id=:COLLECT_ID) GROUP BY t2.id ORDER BY t2.sorder ASC, t2.id DESC LIMIT 16. Bound with :COLLECT_ID='1'
+in /var/www/nhenhang/protected/models/db/CollectionModel.php (67)
+in /var/www/nhenhang/protected/models/db/CollectionModel.php (28)
+in /var/www/nhenhang/protected/components/common/MainContentModel.php (61)
+2015/10/27 14:50:57 [trace] [system.caching.CMemCache] Saving "COLLECTION_ITEMS_1_page_1_limit_16" to cache
+in /var/www/nhenhang/protected/models/db/CollectionModel.php (68)
+in /var/www/nhenhang/protected/models/db/CollectionModel.php (28)
+in /var/www/nhenhang/protected/components/common/MainContentModel.php (61)
+2015/10/27 14:50:57 [trace] [system.db.ar.CActiveRecord] CollectionModel.findByAttributes()
+in /var/www/nhenhang/protected/components/common/MainContentModel.php (55)
+in /var/www/nhenhang/protected/controllers/web/IndexController.php (8)
+in /var/www/nhenhang/dev.php (38)
+2015/10/27 14:50:57 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `collection` `t` WHERE `t`.`code`=:yp0 LIMIT 1. Bound with :yp0='VIDEO_HOT'
+in /var/www/nhenhang/protected/components/common/MainContentModel.php (55)
+in /var/www/nhenhang/protected/controllers/web/IndexController.php (8)
+in /var/www/nhenhang/dev.php (38)
+2015/10/27 14:50:57 [trace] [system.caching.CMemCache] Saving "COLLECTION_VIDEO_HOT_page_1_limit_16" to cache
+in /var/www/nhenhang/protected/components/common/MainContentModel.php (56)
+in /var/www/nhenhang/protected/controllers/web/IndexController.php (8)
+in /var/www/nhenhang/dev.php (38)
+2015/10/27 14:50:57 [trace] [system.db.ar.CActiveRecord] VideoModel.findAll()
+in /var/www/nhenhang/protected/models/db/CollectionModel.php (67)
+in /var/www/nhenhang/protected/models/db/CollectionModel.php (28)
+in /var/www/nhenhang/protected/components/common/MainContentModel.php (61)
+2015/10/27 14:50:57 [trace] [system.caching.CMemCache] Serving "yii:dbschemamysql:host=10.0.9.194;dbname=nhacvn_v1_full:chacha:video" from cache
+in /var/www/nhenhang/protected/models/db/CollectionModel.php (67)
+in /var/www/nhenhang/protected/models/db/CollectionModel.php (28)
+in /var/www/nhenhang/protected/components/common/MainContentModel.php (61)
+2015/10/27 14:50:57 [trace] [system.caching.CMemCache] Serving "yii:dbschemamysql:host=10.0.9.194;dbname=nhacvn_v1_full:chacha:video_statistic" from cache
+in /var/www/nhenhang/protected/models/db/CollectionModel.php (67)
+in /var/www/nhenhang/protected/models/db/CollectionModel.php (28)
+in /var/www/nhenhang/protected/components/common/MainContentModel.php (61)
+2015/10/27 14:50:57 [trace] [system.db.CDbCommand] Querying SQL: SELECT `t`.`id` AS `t0_c0`, `t`.`code` AS `t0_c1`, `t`.`name` AS `t0_c2`, `t`.`url_key` AS `t0_c3`, `t`.`lyrics` AS `t0_c4`, `t`.`song_id` AS `t0_c5`, `t`.`genre_name` AS `t0_c6`, `t`.`composer_id` AS `t0_c7`, `t`.`composer_name` AS `t0_c8`, `t`.`artist_name` AS `t0_c9`, `t`.`owner` AS `t0_c10`, `t`.`source` AS `t0_c11`, `t`.`source_link` AS `t0_c12`, `t`.`national` AS `t0_c13`, `t`.`language` AS `t0_c14`, `t`.`created_by` AS `t0_c15`, `t`.`approved_by` AS `t0_c16`, `t`.`updated_by` AS `t0_c17`, `t`.`cp_id` AS `t0_c18`, `t`.`source_path` AS `t0_c19`, `t`.`allow_download` AS `t0_c20`, `t`.`download_price` AS `t0_c21`, `t`.`listen_price` AS `t0_c22`, `t`.`duration` AS `t0_c23`, `t`.`max_bitrate` AS `t0_c24`, `t`.`profile_ids` AS `t0_c25`, `t`.`created_time` AS `t0_c26`, `t`.`updated_time` AS `t0_c27`, `t`.`copyright` AS `t0_c28`, `t`.`related_right` AS `t0_c29`, `t`.`active_fromtime` AS `t0_c30`, `t`.`active_totime` AS `t0_c31`, `t`.`sorder` AS `t0_c32`, `t`.`status` AS `t0_c33`, `t`.`custom_rank` AS `t0_c34`, `t`.`cmc_id` AS `t0_c35`, `t`.`is_hot` AS `t0_c36`, `ss`.`video_id` AS `t1_c0`, `ss`.`played_count` AS `t1_c1`, `ss`.`downloaded_count` AS `t1_c2` FROM `video` `t` INNER JOIN collection_item t2 ON t.id=t2.item_id LEFT JOIN `video_statistic` `ss` ON (`ss`.`video_id`=`t`.`id`)  WHERE (t.status=1 AND t2.collect_id=:COLLECT_ID) GROUP BY t2.id ORDER BY t2.sorder ASC, t2.id DESC LIMIT 16. Bound with :COLLECT_ID='3'
+in /var/www/nhenhang/protected/models/db/CollectionModel.php (67)
+in /var/www/nhenhang/protected/models/db/CollectionModel.php (28)
+in /var/www/nhenhang/protected/components/common/MainContentModel.php (61)
+2015/10/27 14:50:57 [trace] [system.caching.CMemCache] Saving "COLLECTION_ITEMS_3_page_1_limit_16" to cache
+in /var/www/nhenhang/protected/models/db/CollectionModel.php (68)
+in /var/www/nhenhang/protected/models/db/CollectionModel.php (28)
+in /var/www/nhenhang/protected/components/common/MainContentModel.php (61)
+2015/10/27 14:50:57 [trace] [system.CModule] Loading "themeManager" application component
+in /var/www/nhenhang/protected/components/web/Controller.php (65)
+in /var/www/nhenhang/protected/controllers/web/IndexController.php (9)
+in /var/www/nhenhang/dev.php (38)
+2015/10/27 14:50:57 [trace] [system.CModule] Loading "clientScript" application component
+in /var/www/nhenhang/protected/views/web/index/index.php (2)
+in /var/www/nhenhang/protected/components/web/Controller.php (65)
+in /var/www/nhenhang/protected/controllers/web/IndexController.php (9)
+2015/10/27 14:50:57 [trace] [system.CModule] Loading "SEO" application component
+in /var/www/nhenhang/protected/views/web/index/index.php (11)
+in /var/www/nhenhang/protected/components/web/Controller.php (65)
+in /var/www/nhenhang/protected/controllers/web/IndexController.php (9)
+2015/10/27 14:50:57 [trace] [system.CModule] Loading "widgetFactory" application component
+in /var/www/nhenhang/protected/views/web/index/index.php (25)
+in /var/www/nhenhang/protected/components/web/Controller.php (65)
+in /var/www/nhenhang/protected/controllers/web/IndexController.php (9)
+2015/10/27 14:50:57 [trace] [system.CModule] Loading "assetManager" application component
+in /var/www/nhenhang/protected/widgets/web/slideshowWidget/Init.php (17)
+in /var/www/nhenhang/protected/widgets/web/slideshowWidget/Init.php (8)
+in /var/www/nhenhang/protected/views/web/index/index.php (25)
+2015/10/27 14:50:57 [trace] [system.db.ar.CActiveRecord] NewsEventModel.findAll()
+in /var/www/nhenhang/protected/models/db/NewsEventModel.php (90)
+in /var/www/nhenhang/protected/widgets/web/slideshowWidget/Init.php (28)
+in /var/www/nhenhang/protected/views/web/index/index.php (25)
+2015/10/27 14:50:57 [trace] [system.caching.CMemCache] Serving "yii:dbschemamysql:host=10.0.9.194;dbname=nhacvn_v1_full:chacha:news_event" from cache
+in /var/www/nhenhang/protected/models/db/NewsEventModel.php (90)
+in /var/www/nhenhang/protected/widgets/web/slideshowWidget/Init.php (28)
+in /var/www/nhenhang/protected/views/web/index/index.php (25)
+2015/10/27 14:50:57 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `news_event` `t` WHERE status=1 ORDER BY sorder ASC,id DESC
+in /var/www/nhenhang/protected/models/db/NewsEventModel.php (90)
+in /var/www/nhenhang/protected/widgets/web/slideshowWidget/Init.php (28)
+in /var/www/nhenhang/protected/views/web/index/index.php (25)
+2015/10/27 14:50:57 [trace] [system.db.ar.CActiveRecord] HtmlModel.findByPk()
+in /var/www/nhenhang/protected/models/db/NewsEventModel.php (108)
+in /var/www/nhenhang/protected/widgets/web/slideshowWidget/views/init.php (6)
+in /var/www/nhenhang/protected/widgets/web/slideshowWidget/Init.php (29)
+2015/10/27 14:50:57 [trace] [system.caching.CMemCache] Serving "yii:dbschemamysql:host=10.0.9.194;dbname=nhacvn_v1_full:chacha:html" from cache
+in /var/www/nhenhang/protected/models/db/NewsEventModel.php (108)
+in /var/www/nhenhang/protected/widgets/web/slideshowWidget/views/init.php (6)
+in /var/www/nhenhang/protected/widgets/web/slideshowWidget/Init.php (29)
+2015/10/27 14:50:57 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `html` `t` WHERE `t`.`id`=5 LIMIT 1
+in /var/www/nhenhang/protected/models/db/NewsEventModel.php (108)
+in /var/www/nhenhang/protected/widgets/web/slideshowWidget/views/init.php (6)
+in /var/www/nhenhang/protected/widgets/web/slideshowWidget/Init.php (29)
+2015/10/27 14:50:58 [trace] [system.db.ar.CActiveRecord] AlbumModel.findByPk()
+in /var/www/nhenhang/protected/models/db/NewsEventModel.php (126)
+in /var/www/nhenhang/protected/widgets/web/slideshowWidget/views/init.php (6)
+in /var/www/nhenhang/protected/widgets/web/slideshowWidget/Init.php (29)
+2015/10/27 14:50:58 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `album` `t` WHERE `t`.`id`='61555' LIMIT 1
+in /var/www/nhenhang/protected/models/db/NewsEventModel.php (126)
+in /var/www/nhenhang/protected/widgets/web/slideshowWidget/views/init.php (6)
+in /var/www/nhenhang/protected/widgets/web/slideshowWidget/Init.php (29)
+2015/10/27 14:50:58 [trace] [system.db.ar.CActiveRecord] AlbumModel.findByPk()
+in /var/www/nhenhang/protected/models/db/NewsEventModel.php (126)
+in /var/www/nhenhang/protected/widgets/web/slideshowWidget/views/init.php (6)
+in /var/www/nhenhang/protected/widgets/web/slideshowWidget/Init.php (29)
+2015/10/27 14:50:58 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `album` `t` WHERE `t`.`id`='63178' LIMIT 1
+in /var/www/nhenhang/protected/models/db/NewsEventModel.php (126)
+in /var/www/nhenhang/protected/widgets/web/slideshowWidget/views/init.php (6)
+in /var/www/nhenhang/protected/widgets/web/slideshowWidget/Init.php (29)
+2015/10/27 14:50:58 [trace] [system.db.ar.CActiveRecord] AlbumModel.findByPk()
+in /var/www/nhenhang/protected/models/db/NewsEventModel.php (126)
+in /var/www/nhenhang/protected/widgets/web/slideshowWidget/views/init.php (6)
+in /var/www/nhenhang/protected/widgets/web/slideshowWidget/Init.php (29)
+2015/10/27 14:50:58 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `album` `t` WHERE `t`.`id`='20199' LIMIT 1
+in /var/www/nhenhang/protected/models/db/NewsEventModel.php (126)
+in /var/www/nhenhang/protected/widgets/web/slideshowWidget/views/init.php (6)
+in /var/www/nhenhang/protected/widgets/web/slideshowWidget/Init.php (29)
+2015/10/27 14:50:58 [trace] [system.db.ar.CActiveRecord] AlbumModel.findByPk()
+in /var/www/nhenhang/protected/models/db/NewsEventModel.php (126)
+in /var/www/nhenhang/protected/widgets/web/slideshowWidget/views/init.php (6)
+in /var/www/nhenhang/protected/widgets/web/slideshowWidget/Init.php (29)
+2015/10/27 14:50:58 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `album` `t` WHERE `t`.`id`='64331' LIMIT 1
+in /var/www/nhenhang/protected/models/db/NewsEventModel.php (126)
+in /var/www/nhenhang/protected/widgets/web/slideshowWidget/views/init.php (6)
+in /var/www/nhenhang/protected/widgets/web/slideshowWidget/Init.php (29)
+2015/10/27 14:50:58 [trace] [system.db.ar.CActiveRecord] VideoModel.findByPk()
+in /var/www/nhenhang/protected/models/db/NewsEventModel.php (132)
+in /var/www/nhenhang/protected/widgets/web/slideshowWidget/views/init.php (6)
+in /var/www/nhenhang/protected/widgets/web/slideshowWidget/Init.php (29)
+2015/10/27 14:50:58 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `video` `t` WHERE `t`.`id`=29256 LIMIT 1
+in /var/www/nhenhang/protected/models/db/NewsEventModel.php (132)
+in /var/www/nhenhang/protected/widgets/web/slideshowWidget/views/init.php (6)
+in /var/www/nhenhang/protected/widgets/web/slideshowWidget/Init.php (29)
+2015/10/27 14:50:58 [trace] [system.CModule] Loading "messages" application component
+in /var/www/nhenhang/protected/views/web/index/index.php (33)
+in /var/www/nhenhang/protected/components/web/Controller.php (65)
+in /var/www/nhenhang/protected/controllers/web/IndexController.php (9)
+2015/10/27 14:50:58 [trace] [system.db.ar.CActiveRecord] ConfigModel.findAll()
+in /var/www/nhenhang/protected/models/db/ConfigModel.php (23)
+in /var/www/nhenhang/protected/views/web/layouts/_footer.php (6)
+in /var/www/nhenhang/protected/views/web/layouts/main.php (129)
+2015/10/27 14:50:58 [trace] [system.caching.CMemCache] Serving "yii:dbschemamysql:host=10.0.9.194;dbname=nhacvn_v1_full:chacha:config" from cache
+in /var/www/nhenhang/protected/models/db/ConfigModel.php (23)
+in /var/www/nhenhang/protected/views/web/layouts/_footer.php (6)
+in /var/www/nhenhang/protected/views/web/layouts/main.php (129)
+2015/10/27 14:50:58 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `config` `t` WHERE name = :name. Bound with :name='SEARCH_SUGGEST'
+in /var/www/nhenhang/protected/models/db/ConfigModel.php (23)
+in /var/www/nhenhang/protected/views/web/layouts/_footer.php (6)
+in /var/www/nhenhang/protected/views/web/layouts/main.php (129)
+2015/10/27 14:50:58 [trace] [system.caching.CMemCache] Saving "yii:dbquerymysql:host=10.0.9.194;dbname=nhacvn_v1_full:chacha:SELECT * FROM `config` `t` WHERE name = :name:a:1:{s:5:":name";s:14:"SEARCH_SUGGEST";}" to cache
+in /var/www/nhenhang/protected/models/db/ConfigModel.php (23)
+in /var/www/nhenhang/protected/views/web/layouts/_footer.php (6)
+in /var/www/nhenhang/protected/views/web/layouts/main.php (129)
+2015/10/27 14:50:58 [error] [exception.CException] exception 'CException' with message 'The minScript groups folder "/var/www/nhenhang/runtime/minScript/groups" is not writable or couldn't be created. Please check file and folder permissions.' in /var/www/nhenhang/protected/extensions/minScript/components/ExtMinScript.php:237
+Stack trace:
+#0 /var/www/nhenhang/protected/extensions/minScript/components/ExtMinScript.php(304): ExtMinScript->minScriptCreateGroup(Array)
+#1 /var/www/nhenhang/protected/extensions/minScript/components/ExtMinScript.php(352): ExtMinScript->_minScriptProcessor('scripts', 0)
+#2 /home/tiennt/Downloads/website_biofood/framework/web/CClientScript.php(215): ExtMinScript->renderHead('<!DOCTYPE html ...')
+#3 /home/tiennt/Downloads/website_biofood/framework/web/CController.php(351): CClientScript->render('<!DOCTYPE html ...')
+#4 /home/tiennt/Downloads/website_biofood/framework/web/CController.php(788): CController->processOutput('<!DOCTYPE html ...')
+#5 /var/www/nhenhang/protected/components/web/Controller.php(65): CController->render('index', Array, false)
+#6 /var/www/nhenhang/protected/controllers/web/IndexController.php(9): Controller->render('index', Array)
+#7 /home/tiennt/Downloads/website_biofood/framework/web/actions/CInlineAction.php(49): IndexController->actionIndex()
+#8 /home/tiennt/Downloads/website_biofood/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#9 /home/tiennt/Downloads/website_biofood/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#10 /home/tiennt/Downloads/website_biofood/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#11 /home/tiennt/Downloads/website_biofood/framework/web/CWebApplication.php(282): CController->run('')
+#12 /home/tiennt/Downloads/website_biofood/framework/web/CWebApplication.php(141): CWebApplication->runController('')
+#13 /home/tiennt/Downloads/website_biofood/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#14 /var/www/nhenhang/dev.php(38): CApplication->run()
+#15 {main}
+REQUEST_URI=/dev.php
+---
+2015/10/27 14:50:58 [trace] [system.CModule] Loading "errorHandler" application component
+2015/10/27 15:42:04 [trace] [system.CModule] Loading "log" application component
+in /var/www/nhenhang/dev.php (38)
+2015/10/27 15:42:04 [trace] [system.CModule] Loading "request" application component
+in /var/www/nhenhang/dev.php (38)
+2015/10/27 15:42:04 [trace] [system.CModule] Loading "urlManager" application component
+in /var/www/nhenhang/dev.php (38)
+2015/10/27 15:42:04 [trace] [system.CModule] Loading "cache" application component
+in /var/www/nhenhang/dev.php (38)
+2015/10/27 15:42:04 [trace] [system.caching.CMemCache] Serving "Yii.CUrlManager.rules" from cache
+in /var/www/nhenhang/dev.php (38)
+2015/10/27 15:42:04 [trace] [system.CModule] Loading "session" application component
+in /var/www/nhenhang/protected/components/web/Controller.php (16)
+in /var/www/nhenhang/dev.php (38)
+2015/10/27 15:42:04 [trace] [system.CModule] Loading "user" application component
+in /var/www/nhenhang/protected/components/web/Controller.php (35)
+in /var/www/nhenhang/dev.php (38)
+2015/10/27 15:42:04 [trace] [system.CModule] Loading "themeManager" application component
+in /var/www/nhenhang/protected/components/web/Controller.php (65)
+in /var/www/nhenhang/protected/controllers/web/IndexController.php (6)
+in /var/www/nhenhang/dev.php (38)
+2015/10/27 15:42:04 [trace] [system.CModule] Loading "widgetFactory" application component
+in /var/www/nhenhang/protected/views/web/layouts/2column.php (1)
+in /var/www/nhenhang/protected/components/web/Controller.php (65)
+in /var/www/nhenhang/protected/controllers/web/IndexController.php (6)
+2015/10/27 15:42:04 [trace] [system.CModule] Loading "clientScript" application component
+in /var/www/nhenhang/protected/views/web/layouts/_header.php (15)
+in /var/www/nhenhang/protected/views/web/layouts/main.php (1)
+in /var/www/nhenhang/protected/views/web/layouts/2column.php (20)
+2015/10/27 15:42:04 [error] [exception.CException] exception 'CException' with message 'The minScript controller with ID "min" needs to be defined in CWebApplication::$controllerMap.' in /var/www/nhenhang/protected/extensions/minScript/components/ExtMinScript.php:120
+Stack trace:
+#0 /home/tiennt/Downloads/website_biofood/framework/base/CModule.php(387): ExtMinScript->init()
+#1 /home/tiennt/Downloads/website_biofood/framework/web/CWebApplication.php(230): CModule->getComponent('clientScript')
+#2 /var/www/nhenhang/protected/views/web/layouts/_header.php(15): CWebApplication->getClientScript()
+#3 /var/www/nhenhang/protected/views/web/layouts/main.php(1): include_once('/var/www/nhenha...')
+#4 /home/tiennt/Downloads/website_biofood/framework/web/CBaseController.php(126): require('/var/www/nhenha...')
+#5 /home/tiennt/Downloads/website_biofood/framework/web/CBaseController.php(95): CBaseController->renderInternal('/var/www/nhenha...', Array, true)
+#6 /home/tiennt/Downloads/website_biofood/framework/web/widgets/CContentDecorator.php(76): CBaseController->renderFile('/var/www/nhenha...', Array, true)
+#7 /home/tiennt/Downloads/website_biofood/framework/web/widgets/CContentDecorator.php(54): CContentDecorator->decorate('    <div class=...')
+#8 /home/tiennt/Downloads/website_biofood/framework/web/widgets/COutputProcessor.php(44): CContentDecorator->processOutput('    <div class=...')
+#9 /home/tiennt/Downloads/website_biofood/framework/web/CBaseController.php(206): COutputProcessor->run()
+#10 /home/tiennt/Downloads/website_biofood/framework/web/CBaseController.php(300): CBaseController->endWidget('CContentDecorat...')
+#11 /var/www/nhenhang/protected/views/web/layouts/2column.php(20): CBaseController->endContent()
+#12 /home/tiennt/Downloads/website_biofood/framework/web/CBaseController.php(126): require('/var/www/nhenha...')
+#13 /home/tiennt/Downloads/website_biofood/framework/web/CBaseController.php(95): CBaseController->renderInternal('/var/www/nhenha...', Array, true)
+#14 /home/tiennt/Downloads/website_biofood/framework/web/CController.php(784): CBaseController->renderFile('/var/www/nhenha...', Array, true)
+#15 /var/www/nhenhang/protected/components/web/Controller.php(65): CController->render('index', NULL, false)
+#16 /var/www/nhenhang/protected/controllers/web/IndexController.php(6): Controller->render('index')
+#17 /home/tiennt/Downloads/website_biofood/framework/web/actions/CInlineAction.php(49): IndexController->actionIndex()
+#18 /home/tiennt/Downloads/website_biofood/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#19 /home/tiennt/Downloads/website_biofood/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#20 /home/tiennt/Downloads/website_biofood/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#21 /home/tiennt/Downloads/website_biofood/framework/web/CWebApplication.php(282): CController->run('')
+#22 /home/tiennt/Downloads/website_biofood/framework/web/CWebApplication.php(141): CWebApplication->runController('')
+#23 /home/tiennt/Downloads/website_biofood/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#24 /var/www/nhenhang/dev.php(38): CApplication->run()
+#25 {main}
+REQUEST_URI=/dev.php
+---
+2015/10/27 15:42:04 [trace] [system.CModule] Loading "errorHandler" application component
+2015/10/27 15:44:45 [trace] [system.CModule] Loading "log" application component
+in /var/www/nhenhang/dev.php (38)
+2015/10/27 15:44:45 [trace] [system.CModule] Loading "request" application component
+in /var/www/nhenhang/dev.php (38)
+2015/10/27 15:44:45 [trace] [system.CModule] Loading "urlManager" application component
+in /var/www/nhenhang/dev.php (38)
+2015/10/27 15:44:45 [trace] [system.CModule] Loading "cache" application component
+in /var/www/nhenhang/dev.php (38)
+2015/10/27 15:44:45 [trace] [system.caching.CMemCache] Serving "Yii.CUrlManager.rules" from cache
+in /var/www/nhenhang/dev.php (38)
+2015/10/27 15:44:45 [trace] [system.CModule] Loading "session" application component
+in /var/www/nhenhang/protected/components/web/Controller.php (16)
+in /var/www/nhenhang/dev.php (38)
+2015/10/27 15:44:45 [trace] [system.CModule] Loading "user" application component
+in /var/www/nhenhang/protected/components/web/Controller.php (35)
+in /var/www/nhenhang/dev.php (38)
+2015/10/27 15:44:45 [trace] [system.CModule] Loading "themeManager" application component
+in /var/www/nhenhang/protected/components/web/Controller.php (65)
+in /var/www/nhenhang/protected/controllers/web/IndexController.php (6)
+in /var/www/nhenhang/dev.php (38)
+2015/10/27 15:44:45 [trace] [system.CModule] Loading "widgetFactory" application component
+in /var/www/nhenhang/protected/views/web/layouts/2column.php (1)
+in /var/www/nhenhang/protected/components/web/Controller.php (65)
+in /var/www/nhenhang/protected/controllers/web/IndexController.php (6)
+2015/10/27 15:44:45 [trace] [system.CModule] Loading "clientScript" application component
+in /var/www/nhenhang/protected/views/web/layouts/_header.php (15)
+in /var/www/nhenhang/protected/views/web/layouts/main.php (1)
+in /var/www/nhenhang/protected/views/web/layouts/2column.php (20)
+2015/10/27 15:44:45 [trace] [system.CModule] Loading "assetManager" application component
+in /var/www/nhenhang/protected/components/web/Controller.php (65)
+in /var/www/nhenhang/protected/controllers/web/IndexController.php (6)
+in /var/www/nhenhang/dev.php (38)
+2015/10/27 15:45:51 [trace] [system.CModule] Loading "log" application component
+in /var/www/nhenhang/dev.php (38)
+2015/10/27 15:45:51 [trace] [system.CModule] Loading "request" application component
+in /var/www/nhenhang/dev.php (38)
+2015/10/27 15:45:51 [trace] [system.CModule] Loading "urlManager" application component
+in /var/www/nhenhang/dev.php (38)
+2015/10/27 15:45:51 [trace] [system.CModule] Loading "cache" application component
+in /var/www/nhenhang/dev.php (38)
+2015/10/27 15:45:51 [trace] [system.caching.CMemCache] Serving "Yii.CUrlManager.rules" from cache
+in /var/www/nhenhang/dev.php (38)
+2015/10/27 15:45:51 [trace] [system.CModule] Loading "session" application component
+in /var/www/nhenhang/protected/components/web/Controller.php (16)
+in /var/www/nhenhang/dev.php (38)
+2015/10/27 15:45:51 [trace] [system.CModule] Loading "user" application component
+in /var/www/nhenhang/protected/components/web/Controller.php (35)
+in /var/www/nhenhang/dev.php (38)
+2015/10/27 15:45:51 [trace] [system.CModule] Loading "themeManager" application component
+in /var/www/nhenhang/protected/components/web/Controller.php (65)
+in /var/www/nhenhang/protected/controllers/web/IndexController.php (6)
+in /var/www/nhenhang/dev.php (38)
+2015/10/27 15:45:51 [trace] [system.CModule] Loading "widgetFactory" application component
+in /var/www/nhenhang/protected/views/web/layouts/2column.php (1)
+in /var/www/nhenhang/protected/components/web/Controller.php (65)
+in /var/www/nhenhang/protected/controllers/web/IndexController.php (6)
+2015/10/27 15:45:51 [trace] [system.CModule] Loading "clientScript" application component
+in /var/www/nhenhang/protected/views/web/layouts/_header.php (15)
+in /var/www/nhenhang/protected/views/web/layouts/main.php (1)
+in /var/www/nhenhang/protected/views/web/layouts/2column.php (20)
+2015/10/27 15:45:51 [trace] [system.CModule] Loading "assetManager" application component
+in /var/www/nhenhang/protected/components/web/Controller.php (65)
+in /var/www/nhenhang/protected/controllers/web/IndexController.php (6)
+in /var/www/nhenhang/dev.php (38)
+2015/10/27 15:46:11 [trace] [system.CModule] Loading "log" application component
+in /var/www/nhenhang/dev.php (38)
+2015/10/27 15:46:11 [trace] [system.CModule] Loading "request" application component
+in /var/www/nhenhang/dev.php (38)
+2015/10/27 15:46:11 [trace] [system.CModule] Loading "urlManager" application component
+in /var/www/nhenhang/dev.php (38)
+2015/10/27 15:46:11 [trace] [system.CModule] Loading "cache" application component
+in /var/www/nhenhang/dev.php (38)
+2015/10/27 15:46:11 [trace] [system.caching.CMemCache] Serving "Yii.CUrlManager.rules" from cache
+in /var/www/nhenhang/dev.php (38)
+2015/10/27 15:46:11 [trace] [system.CModule] Loading "session" application component
+in /var/www/nhenhang/protected/components/web/Controller.php (16)
+in /var/www/nhenhang/dev.php (38)
+2015/10/27 15:46:11 [trace] [system.CModule] Loading "user" application component
+in /var/www/nhenhang/protected/components/web/Controller.php (35)
+in /var/www/nhenhang/dev.php (38)
+2015/10/27 15:46:11 [trace] [system.CModule] Loading "themeManager" application component
+in /var/www/nhenhang/protected/components/web/Controller.php (65)
+in /var/www/nhenhang/protected/controllers/web/IndexController.php (6)
+in /var/www/nhenhang/dev.php (38)
+2015/10/27 15:46:11 [trace] [system.CModule] Loading "widgetFactory" application component
+in /var/www/nhenhang/protected/views/web/layouts/2column.php (1)
+in /var/www/nhenhang/protected/components/web/Controller.php (65)
+in /var/www/nhenhang/protected/controllers/web/IndexController.php (6)
+2015/10/27 15:46:11 [trace] [system.CModule] Loading "clientScript" application component
+in /var/www/nhenhang/protected/views/web/layouts/_header.php (15)
+in /var/www/nhenhang/protected/views/web/layouts/main.php (1)
+in /var/www/nhenhang/protected/views/web/layouts/2column.php (20)
+2015/10/27 15:46:11 [trace] [system.CModule] Loading "assetManager" application component
+in /var/www/nhenhang/protected/components/web/Controller.php (65)
+in /var/www/nhenhang/protected/controllers/web/IndexController.php (6)
+in /var/www/nhenhang/dev.php (38)
+2015/10/27 15:49:21 [trace] [system.CModule] Loading "log" application component
+in /var/www/nhenhang/dev.php (38)
+2015/10/27 15:49:21 [trace] [system.CModule] Loading "request" application component
+in /var/www/nhenhang/dev.php (38)
+2015/10/27 15:49:21 [trace] [system.CModule] Loading "urlManager" application component
+in /var/www/nhenhang/dev.php (38)
+2015/10/27 15:49:21 [trace] [system.CModule] Loading "cache" application component
+in /var/www/nhenhang/dev.php (38)
+2015/10/27 15:49:21 [trace] [system.caching.CMemCache] Serving "Yii.CUrlManager.rules" from cache
+in /var/www/nhenhang/dev.php (38)
+2015/10/27 15:49:21 [trace] [system.CModule] Loading "session" application component
+in /var/www/nhenhang/protected/components/web/Controller.php (16)
+in /var/www/nhenhang/dev.php (38)
+2015/10/27 15:49:21 [trace] [system.CModule] Loading "user" application component
+in /var/www/nhenhang/protected/components/web/Controller.php (35)
+in /var/www/nhenhang/dev.php (38)
+2015/10/27 15:49:21 [trace] [system.CModule] Loading "themeManager" application component
+in /var/www/nhenhang/protected/components/web/Controller.php (65)
+in /var/www/nhenhang/protected/controllers/web/IndexController.php (6)
+in /var/www/nhenhang/dev.php (38)
+2015/10/27 15:49:21 [trace] [system.CModule] Loading "widgetFactory" application component
+in /var/www/nhenhang/protected/views/web/layouts/2column.php (1)
+in /var/www/nhenhang/protected/components/web/Controller.php (65)
+in /var/www/nhenhang/protected/controllers/web/IndexController.php (6)
+2015/10/27 15:49:21 [trace] [system.CModule] Loading "clientScript" application component
+in /var/www/nhenhang/protected/views/web/layouts/_header.php (15)
+in /var/www/nhenhang/protected/views/web/layouts/main.php (1)
+in /var/www/nhenhang/protected/views/web/layouts/2column.php (20)
+2015/10/27 15:49:21 [trace] [system.CModule] Loading "assetManager" application component
+in /var/www/nhenhang/protected/components/web/Controller.php (65)
+in /var/www/nhenhang/protected/controllers/web/IndexController.php (6)
+in /var/www/nhenhang/dev.php (38)
+2015/10/27 15:51:12 [trace] [system.CModule] Loading "log" application component
+in /var/www/nhenhang/dev.php (38)
+2015/10/27 15:51:12 [trace] [system.CModule] Loading "request" application component
+in /var/www/nhenhang/dev.php (38)
+2015/10/27 15:51:12 [trace] [system.CModule] Loading "urlManager" application component
+in /var/www/nhenhang/dev.php (38)
+2015/10/27 15:51:12 [trace] [system.CModule] Loading "cache" application component
+in /var/www/nhenhang/dev.php (38)
+2015/10/27 15:51:12 [trace] [system.caching.CMemCache] Serving "Yii.CUrlManager.rules" from cache
+in /var/www/nhenhang/dev.php (38)
+2015/10/27 15:51:12 [trace] [system.CModule] Loading "session" application component
+in /var/www/nhenhang/protected/components/web/Controller.php (16)
+in /var/www/nhenhang/dev.php (38)
+2015/10/27 15:51:12 [trace] [system.CModule] Loading "user" application component
+in /var/www/nhenhang/protected/components/web/Controller.php (35)
+in /var/www/nhenhang/dev.php (38)
+2015/10/27 15:51:12 [trace] [system.CModule] Loading "themeManager" application component
+in /var/www/nhenhang/protected/components/web/Controller.php (65)
+in /var/www/nhenhang/protected/controllers/web/IndexController.php (6)
+in /var/www/nhenhang/dev.php (38)
+2015/10/27 15:51:12 [trace] [system.CModule] Loading "widgetFactory" application component
+in /var/www/nhenhang/protected/views/web/layouts/2column.php (1)
+in /var/www/nhenhang/protected/components/web/Controller.php (65)
+in /var/www/nhenhang/protected/controllers/web/IndexController.php (6)
+2015/10/27 15:51:12 [trace] [system.CModule] Loading "clientScript" application component
+in /var/www/nhenhang/protected/views/web/layouts/_header.php (15)
+in /var/www/nhenhang/protected/views/web/layouts/main.php (1)
+in /var/www/nhenhang/protected/views/web/layouts/2column.php (20)
+2015/10/27 15:51:12 [trace] [system.CModule] Loading "assetManager" application component
+in /var/www/nhenhang/protected/components/web/Controller.php (65)
+in /var/www/nhenhang/protected/controllers/web/IndexController.php (6)
+in /var/www/nhenhang/dev.php (38)
+2015/10/27 15:54:05 [trace] [system.CModule] Loading "log" application component
+in /var/www/nhenhang/dev.php (38)
+2015/10/27 15:54:05 [trace] [system.CModule] Loading "request" application component
+in /var/www/nhenhang/dev.php (38)
+2015/10/27 15:54:05 [trace] [system.CModule] Loading "urlManager" application component
+in /var/www/nhenhang/dev.php (38)
+2015/10/27 15:54:05 [trace] [system.CModule] Loading "cache" application component
+in /var/www/nhenhang/dev.php (38)
+2015/10/27 15:54:05 [trace] [system.caching.CMemCache] Serving "Yii.CUrlManager.rules" from cache
+in /var/www/nhenhang/dev.php (38)
+2015/10/27 15:54:05 [trace] [system.CModule] Loading "session" application component
+in /var/www/nhenhang/protected/components/web/Controller.php (16)
+in /var/www/nhenhang/dev.php (38)
+2015/10/27 15:54:05 [trace] [system.CModule] Loading "user" application component
+in /var/www/nhenhang/protected/components/web/Controller.php (35)
+in /var/www/nhenhang/dev.php (38)
+2015/10/27 15:54:05 [trace] [system.CModule] Loading "themeManager" application component
+in /var/www/nhenhang/protected/components/web/Controller.php (65)
+in /var/www/nhenhang/protected/controllers/web/IndexController.php (6)
+in /var/www/nhenhang/dev.php (38)
+2015/10/27 15:54:05 [trace] [system.CModule] Loading "widgetFactory" application component
+in /var/www/nhenhang/protected/views/web/layouts/2column.php (1)
+in /var/www/nhenhang/protected/components/web/Controller.php (65)
+in /var/www/nhenhang/protected/controllers/web/IndexController.php (6)
+2015/10/27 15:54:05 [trace] [system.CModule] Loading "SEO" application component
+in /var/www/nhenhang/protected/views/web/layouts/_header.php (8)
+in /var/www/nhenhang/protected/views/web/layouts/main.php (1)
+in /var/www/nhenhang/protected/views/web/layouts/2column.php (20)
+2015/10/27 15:54:05 [trace] [system.CModule] Loading "clientScript" application component
+in /var/www/nhenhang/protected/views/web/layouts/_header.php (16)
+in /var/www/nhenhang/protected/views/web/layouts/main.php (1)
+in /var/www/nhenhang/protected/views/web/layouts/2column.php (20)
+2015/10/27 15:54:05 [trace] [system.CModule] Loading "assetManager" application component
+in /var/www/nhenhang/protected/components/web/Controller.php (65)
+in /var/www/nhenhang/protected/controllers/web/IndexController.php (6)
+in /var/www/nhenhang/dev.php (38)
+2015/10/27 15:56:19 [trace] [system.CModule] Loading "log" application component
+in /var/www/nhenhang/dev.php (38)
+2015/10/27 15:56:19 [trace] [system.CModule] Loading "request" application component
+in /var/www/nhenhang/dev.php (38)
+2015/10/27 15:56:19 [trace] [system.CModule] Loading "urlManager" application component
+in /var/www/nhenhang/dev.php (38)
+2015/10/27 15:56:19 [trace] [system.CModule] Loading "cache" application component
+in /var/www/nhenhang/dev.php (38)
+2015/10/27 15:56:19 [trace] [system.caching.CMemCache] Serving "Yii.CUrlManager.rules" from cache
+in /var/www/nhenhang/dev.php (38)
+2015/10/27 15:56:19 [trace] [system.CModule] Loading "session" application component
+in /var/www/nhenhang/protected/components/web/Controller.php (16)
+in /var/www/nhenhang/dev.php (38)
+2015/10/27 15:56:19 [trace] [system.CModule] Loading "user" application component
+in /var/www/nhenhang/protected/components/web/Controller.php (35)
+in /var/www/nhenhang/dev.php (38)
+2015/10/27 15:56:20 [trace] [system.CModule] Loading "themeManager" application component
+in /var/www/nhenhang/protected/components/web/Controller.php (65)
+in /var/www/nhenhang/protected/controllers/web/IndexController.php (6)
+in /var/www/nhenhang/dev.php (38)
+2015/10/27 15:56:20 [trace] [system.CModule] Loading "widgetFactory" application component
+in /var/www/nhenhang/protected/views/web/layouts/2column.php (1)
+in /var/www/nhenhang/protected/components/web/Controller.php (65)
+in /var/www/nhenhang/protected/controllers/web/IndexController.php (6)
+2015/10/27 15:56:20 [trace] [system.CModule] Loading "SEO" application component
+in /var/www/nhenhang/protected/views/web/layouts/_header.php (8)
+in /var/www/nhenhang/protected/views/web/layouts/main.php (1)
+in /var/www/nhenhang/protected/views/web/layouts/2column.php (20)
+2015/10/27 15:56:20 [trace] [system.CModule] Loading "clientScript" application component
+in /var/www/nhenhang/protected/views/web/layouts/_header.php (16)
+in /var/www/nhenhang/protected/views/web/layouts/main.php (1)
+in /var/www/nhenhang/protected/views/web/layouts/2column.php (20)
+2015/10/27 15:56:20 [trace] [system.CModule] Loading "assetManager" application component
+in /var/www/nhenhang/protected/components/web/Controller.php (65)
+in /var/www/nhenhang/protected/controllers/web/IndexController.php (6)
+in /var/www/nhenhang/dev.php (38)
+2015/10/27 15:56:25 [trace] [system.CModule] Loading "log" application component
+in /var/www/nhenhang/dev.php (38)
+2015/10/27 15:56:25 [trace] [system.CModule] Loading "request" application component
+in /var/www/nhenhang/dev.php (38)
+2015/10/27 15:56:25 [trace] [system.CModule] Loading "urlManager" application component
+in /var/www/nhenhang/dev.php (38)
+2015/10/27 15:56:25 [trace] [system.CModule] Loading "cache" application component
+in /var/www/nhenhang/dev.php (38)
+2015/10/27 15:56:25 [trace] [system.caching.CMemCache] Serving "Yii.CUrlManager.rules" from cache
+in /var/www/nhenhang/dev.php (38)
+2015/10/27 15:56:25 [trace] [system.CModule] Loading "session" application component
+in /var/www/nhenhang/protected/components/web/Controller.php (16)
+in /var/www/nhenhang/dev.php (38)
+2015/10/27 15:56:25 [trace] [system.CModule] Loading "user" application component
+in /var/www/nhenhang/protected/components/web/Controller.php (35)
+in /var/www/nhenhang/dev.php (38)
+2015/10/27 15:56:25 [trace] [system.CModule] Loading "themeManager" application component
+in /var/www/nhenhang/protected/components/web/Controller.php (65)
+in /var/www/nhenhang/protected/controllers/web/IndexController.php (6)
+in /var/www/nhenhang/dev.php (38)
+2015/10/27 15:56:25 [trace] [system.CModule] Loading "widgetFactory" application component
+in /var/www/nhenhang/protected/views/web/layouts/2column.php (1)
+in /var/www/nhenhang/protected/components/web/Controller.php (65)
+in /var/www/nhenhang/protected/controllers/web/IndexController.php (6)
+2015/10/27 15:56:25 [trace] [system.CModule] Loading "SEO" application component
+in /var/www/nhenhang/protected/views/web/layouts/_header.php (8)
+in /var/www/nhenhang/protected/views/web/layouts/main.php (1)
+in /var/www/nhenhang/protected/views/web/layouts/2column.php (20)
+2015/10/27 15:56:25 [trace] [system.CModule] Loading "clientScript" application component
+in /var/www/nhenhang/protected/views/web/layouts/_header.php (16)
+in /var/www/nhenhang/protected/views/web/layouts/main.php (1)
+in /var/www/nhenhang/protected/views/web/layouts/2column.php (20)
+2015/10/27 15:56:25 [trace] [system.CModule] Loading "assetManager" application component
+in /var/www/nhenhang/protected/components/web/Controller.php (65)
+in /var/www/nhenhang/protected/controllers/web/IndexController.php (6)
+in /var/www/nhenhang/dev.php (38)
+2015/10/27 15:56:26 [trace] [system.CModule] Loading "log" application component
+in /var/www/nhenhang/dev.php (38)
+2015/10/27 15:56:26 [trace] [system.CModule] Loading "request" application component
+in /var/www/nhenhang/dev.php (38)
+2015/10/27 15:56:26 [trace] [system.CModule] Loading "urlManager" application component
+in /var/www/nhenhang/dev.php (38)
+2015/10/27 15:56:26 [trace] [system.CModule] Loading "cache" application component
+in /var/www/nhenhang/dev.php (38)
+2015/10/27 15:56:26 [trace] [system.caching.CMemCache] Serving "Yii.CUrlManager.rules" from cache
+in /var/www/nhenhang/dev.php (38)
+2015/10/27 15:56:26 [trace] [system.CModule] Loading "session" application component
+in /var/www/nhenhang/protected/components/web/Controller.php (16)
+in /var/www/nhenhang/dev.php (38)
+2015/10/27 15:56:26 [trace] [system.CModule] Loading "user" application component
+in /var/www/nhenhang/protected/components/web/Controller.php (35)
+in /var/www/nhenhang/dev.php (38)
+2015/10/27 15:56:26 [trace] [system.CModule] Loading "themeManager" application component
+in /var/www/nhenhang/protected/components/web/Controller.php (65)
+in /var/www/nhenhang/protected/controllers/web/IndexController.php (6)
+in /var/www/nhenhang/dev.php (38)
+2015/10/27 15:56:26 [trace] [system.CModule] Loading "widgetFactory" application component
+in /var/www/nhenhang/protected/views/web/layouts/2column.php (1)
+in /var/www/nhenhang/protected/components/web/Controller.php (65)
+in /var/www/nhenhang/protected/controllers/web/IndexController.php (6)
+2015/10/27 15:56:26 [trace] [system.CModule] Loading "SEO" application component
+in /var/www/nhenhang/protected/views/web/layouts/_header.php (8)
+in /var/www/nhenhang/protected/views/web/layouts/main.php (1)
+in /var/www/nhenhang/protected/views/web/layouts/2column.php (20)
+2015/10/27 15:56:26 [trace] [system.CModule] Loading "clientScript" application component
+in /var/www/nhenhang/protected/views/web/layouts/_header.php (16)
+in /var/www/nhenhang/protected/views/web/layouts/main.php (1)
+in /var/www/nhenhang/protected/views/web/layouts/2column.php (20)
+2015/10/27 15:56:26 [trace] [system.CModule] Loading "assetManager" application component
+in /var/www/nhenhang/protected/components/web/Controller.php (65)
+in /var/www/nhenhang/protected/controllers/web/IndexController.php (6)
+in /var/www/nhenhang/dev.php (38)
+2015/10/27 16:00:25 [trace] [system.CModule] Loading "log" application component
+in /var/www/nhenhang/dev.php (38)
+2015/10/27 16:00:25 [trace] [system.CModule] Loading "request" application component
+in /var/www/nhenhang/dev.php (38)
+2015/10/27 16:00:25 [trace] [system.CModule] Loading "urlManager" application component
+in /var/www/nhenhang/dev.php (38)
+2015/10/27 16:00:25 [trace] [system.CModule] Loading "cache" application component
+in /var/www/nhenhang/dev.php (38)
+2015/10/27 16:00:25 [trace] [system.caching.CMemCache] Serving "Yii.CUrlManager.rules" from cache
+in /var/www/nhenhang/dev.php (38)
+2015/10/27 16:00:25 [trace] [system.CModule] Loading "session" application component
+in /var/www/nhenhang/protected/components/web/Controller.php (16)
+in /var/www/nhenhang/dev.php (38)
+2015/10/27 16:00:25 [trace] [system.CModule] Loading "user" application component
+in /var/www/nhenhang/protected/components/web/Controller.php (35)
+in /var/www/nhenhang/dev.php (38)
+2015/10/27 16:00:25 [trace] [system.CModule] Loading "themeManager" application component
+in /var/www/nhenhang/protected/components/web/Controller.php (65)
+in /var/www/nhenhang/protected/controllers/web/IndexController.php (6)
+in /var/www/nhenhang/dev.php (38)
+2015/10/27 16:00:25 [trace] [system.CModule] Loading "widgetFactory" application component
+in /var/www/nhenhang/protected/views/web/layouts/2column.php (1)
+in /var/www/nhenhang/protected/components/web/Controller.php (65)
+in /var/www/nhenhang/protected/controllers/web/IndexController.php (6)
+2015/10/27 16:00:25 [trace] [system.CModule] Loading "SEO" application component
+in /var/www/nhenhang/protected/views/web/layouts/_header.php (8)
+in /var/www/nhenhang/protected/views/web/layouts/main.php (1)
+in /var/www/nhenhang/protected/views/web/layouts/2column.php (20)
+2015/10/27 16:00:25 [trace] [system.CModule] Loading "clientScript" application component
+in /var/www/nhenhang/protected/views/web/layouts/_header.php (16)
+in /var/www/nhenhang/protected/views/web/layouts/main.php (1)
+in /var/www/nhenhang/protected/views/web/layouts/2column.php (20)
+2015/10/27 16:00:25 [trace] [system.CModule] Loading "assetManager" application component
+in /var/www/nhenhang/protected/components/web/Controller.php (65)
+in /var/www/nhenhang/protected/controllers/web/IndexController.php (6)
+in /var/www/nhenhang/dev.php (38)
+2015/10/27 16:00:28 [trace] [system.CModule] Loading "log" application component
+in /var/www/nhenhang/dev.php (38)
+2015/10/27 16:00:28 [trace] [system.CModule] Loading "request" application component
+in /var/www/nhenhang/dev.php (38)
+2015/10/27 16:00:28 [trace] [system.CModule] Loading "urlManager" application component
+in /var/www/nhenhang/dev.php (38)
+2015/10/27 16:00:28 [trace] [system.CModule] Loading "cache" application component
+in /var/www/nhenhang/dev.php (38)
+2015/10/27 16:00:28 [trace] [system.caching.CMemCache] Serving "Yii.CUrlManager.rules" from cache
+in /var/www/nhenhang/dev.php (38)
+2015/10/27 16:00:28 [trace] [system.CModule] Loading "session" application component
+in /var/www/nhenhang/protected/components/web/Controller.php (16)
+in /var/www/nhenhang/dev.php (38)
+2015/10/27 16:00:28 [trace] [system.CModule] Loading "user" application component
+in /var/www/nhenhang/protected/components/web/Controller.php (35)
+in /var/www/nhenhang/dev.php (38)
+2015/10/27 16:00:28 [trace] [system.CModule] Loading "themeManager" application component
+in /var/www/nhenhang/protected/components/web/Controller.php (65)
+in /var/www/nhenhang/protected/controllers/web/IndexController.php (6)
+in /var/www/nhenhang/dev.php (38)
+2015/10/27 16:00:28 [trace] [system.CModule] Loading "widgetFactory" application component
+in /var/www/nhenhang/protected/views/web/layouts/2column.php (1)
+in /var/www/nhenhang/protected/components/web/Controller.php (65)
+in /var/www/nhenhang/protected/controllers/web/IndexController.php (6)
+2015/10/27 16:00:28 [trace] [system.CModule] Loading "SEO" application component
+in /var/www/nhenhang/protected/views/web/layouts/_header.php (8)
+in /var/www/nhenhang/protected/views/web/layouts/main.php (1)
+in /var/www/nhenhang/protected/views/web/layouts/2column.php (20)
+2015/10/27 16:00:28 [trace] [system.CModule] Loading "clientScript" application component
+in /var/www/nhenhang/protected/views/web/layouts/_header.php (16)
+in /var/www/nhenhang/protected/views/web/layouts/main.php (1)
+in /var/www/nhenhang/protected/views/web/layouts/2column.php (20)
+2015/10/27 16:00:28 [trace] [system.CModule] Loading "assetManager" application component
+in /var/www/nhenhang/protected/components/web/Controller.php (65)
+in /var/www/nhenhang/protected/controllers/web/IndexController.php (6)
+in /var/www/nhenhang/dev.php (38)
+2015/10/27 16:00:29 [trace] [system.CModule] Loading "log" application component
+in /var/www/nhenhang/dev.php (38)
+2015/10/27 16:00:29 [trace] [system.CModule] Loading "request" application component
+in /var/www/nhenhang/dev.php (38)
+2015/10/27 16:00:29 [trace] [system.CModule] Loading "urlManager" application component
+in /var/www/nhenhang/dev.php (38)
+2015/10/27 16:00:29 [trace] [system.CModule] Loading "cache" application component
+in /var/www/nhenhang/dev.php (38)
+2015/10/27 16:00:29 [trace] [system.caching.CMemCache] Serving "Yii.CUrlManager.rules" from cache
+in /var/www/nhenhang/dev.php (38)
+2015/10/27 16:00:29 [trace] [system.CModule] Loading "session" application component
+in /var/www/nhenhang/protected/components/web/Controller.php (16)
+in /var/www/nhenhang/dev.php (38)
+2015/10/27 16:00:29 [trace] [system.CModule] Loading "user" application component
+in /var/www/nhenhang/protected/components/web/Controller.php (35)
+in /var/www/nhenhang/dev.php (38)
+2015/10/27 16:00:29 [trace] [system.CModule] Loading "themeManager" application component
+in /var/www/nhenhang/protected/components/web/Controller.php (65)
+in /var/www/nhenhang/protected/controllers/web/IndexController.php (6)
+in /var/www/nhenhang/dev.php (38)
+2015/10/27 16:00:29 [trace] [system.CModule] Loading "widgetFactory" application component
+in /var/www/nhenhang/protected/views/web/layouts/2column.php (1)
+in /var/www/nhenhang/protected/components/web/Controller.php (65)
+in /var/www/nhenhang/protected/controllers/web/IndexController.php (6)
+2015/10/27 16:00:29 [trace] [system.CModule] Loading "SEO" application component
+in /var/www/nhenhang/protected/views/web/layouts/_header.php (8)
+in /var/www/nhenhang/protected/views/web/layouts/main.php (1)
+in /var/www/nhenhang/protected/views/web/layouts/2column.php (20)
+2015/10/27 16:00:29 [trace] [system.CModule] Loading "clientScript" application component
+in /var/www/nhenhang/protected/views/web/layouts/_header.php (16)
+in /var/www/nhenhang/protected/views/web/layouts/main.php (1)
+in /var/www/nhenhang/protected/views/web/layouts/2column.php (20)
+2015/10/27 16:00:29 [trace] [system.CModule] Loading "assetManager" application component
+in /var/www/nhenhang/protected/components/web/Controller.php (65)
+in /var/www/nhenhang/protected/controllers/web/IndexController.php (6)
+in /var/www/nhenhang/dev.php (38)
+2015/10/27 16:00:29 [trace] [system.CModule] Loading "log" application component
+in /var/www/nhenhang/dev.php (38)
+2015/10/27 16:00:29 [trace] [system.CModule] Loading "request" application component
+in /var/www/nhenhang/dev.php (38)
+2015/10/27 16:00:29 [trace] [system.CModule] Loading "urlManager" application component
+in /var/www/nhenhang/dev.php (38)
+2015/10/27 16:00:29 [trace] [system.CModule] Loading "cache" application component
+in /var/www/nhenhang/dev.php (38)
+2015/10/27 16:00:29 [trace] [system.caching.CMemCache] Serving "Yii.CUrlManager.rules" from cache
+in /var/www/nhenhang/dev.php (38)
+2015/10/27 16:00:29 [trace] [system.CModule] Loading "session" application component
+in /var/www/nhenhang/protected/components/web/Controller.php (16)
+in /var/www/nhenhang/dev.php (38)
+2015/10/27 16:00:29 [trace] [system.CModule] Loading "user" application component
+in /var/www/nhenhang/protected/components/web/Controller.php (35)
+in /var/www/nhenhang/dev.php (38)
+2015/10/27 16:00:29 [trace] [system.CModule] Loading "themeManager" application component
+in /var/www/nhenhang/protected/components/web/Controller.php (65)
+in /var/www/nhenhang/protected/controllers/web/IndexController.php (6)
+in /var/www/nhenhang/dev.php (38)
+2015/10/27 16:00:29 [trace] [system.CModule] Loading "widgetFactory" application component
+in /var/www/nhenhang/protected/views/web/layouts/2column.php (1)
+in /var/www/nhenhang/protected/components/web/Controller.php (65)
+in /var/www/nhenhang/protected/controllers/web/IndexController.php (6)
+2015/10/27 16:00:29 [trace] [system.CModule] Loading "SEO" application component
+in /var/www/nhenhang/protected/views/web/layouts/_header.php (8)
+in /var/www/nhenhang/protected/views/web/layouts/main.php (1)
+in /var/www/nhenhang/protected/views/web/layouts/2column.php (20)
+2015/10/27 16:00:29 [trace] [system.CModule] Loading "clientScript" application component
+in /var/www/nhenhang/protected/views/web/layouts/_header.php (16)
+in /var/www/nhenhang/protected/views/web/layouts/main.php (1)
+in /var/www/nhenhang/protected/views/web/layouts/2column.php (20)
+2015/10/27 16:00:29 [trace] [system.CModule] Loading "assetManager" application component
+in /var/www/nhenhang/protected/components/web/Controller.php (65)
+in /var/www/nhenhang/protected/controllers/web/IndexController.php (6)
+in /var/www/nhenhang/dev.php (38)
+2015/10/27 16:00:29 [trace] [system.CModule] Loading "log" application component
+in /var/www/nhenhang/dev.php (38)
+2015/10/27 16:00:29 [trace] [system.CModule] Loading "request" application component
+in /var/www/nhenhang/dev.php (38)
+2015/10/27 16:00:29 [trace] [system.CModule] Loading "urlManager" application component
+in /var/www/nhenhang/dev.php (38)
+2015/10/27 16:00:29 [trace] [system.CModule] Loading "cache" application component
+in /var/www/nhenhang/dev.php (38)
+2015/10/27 16:00:29 [trace] [system.caching.CMemCache] Serving "Yii.CUrlManager.rules" from cache
+in /var/www/nhenhang/dev.php (38)
+2015/10/27 16:00:29 [trace] [system.CModule] Loading "session" application component
+in /var/www/nhenhang/protected/components/web/Controller.php (16)
+in /var/www/nhenhang/dev.php (38)
+2015/10/27 16:00:29 [trace] [system.CModule] Loading "user" application component
+in /var/www/nhenhang/protected/components/web/Controller.php (35)
+in /var/www/nhenhang/dev.php (38)
+2015/10/27 16:00:29 [trace] [system.CModule] Loading "themeManager" application component
+in /var/www/nhenhang/protected/components/web/Controller.php (65)
+in /var/www/nhenhang/protected/controllers/web/IndexController.php (6)
+in /var/www/nhenhang/dev.php (38)
+2015/10/27 16:00:29 [trace] [system.CModule] Loading "widgetFactory" application component
+in /var/www/nhenhang/protected/views/web/layouts/2column.php (1)
+in /var/www/nhenhang/protected/components/web/Controller.php (65)
+in /var/www/nhenhang/protected/controllers/web/IndexController.php (6)
+2015/10/27 16:00:29 [trace] [system.CModule] Loading "SEO" application component
+in /var/www/nhenhang/protected/views/web/layouts/_header.php (8)
+in /var/www/nhenhang/protected/views/web/layouts/main.php (1)
+in /var/www/nhenhang/protected/views/web/layouts/2column.php (20)
+2015/10/27 16:00:29 [trace] [system.CModule] Loading "clientScript" application component
+in /var/www/nhenhang/protected/views/web/layouts/_header.php (16)
+in /var/www/nhenhang/protected/views/web/layouts/main.php (1)
+in /var/www/nhenhang/protected/views/web/layouts/2column.php (20)
+2015/10/27 16:00:29 [trace] [system.CModule] Loading "assetManager" application component
+in /var/www/nhenhang/protected/components/web/Controller.php (65)
+in /var/www/nhenhang/protected/controllers/web/IndexController.php (6)
+in /var/www/nhenhang/dev.php (38)
+2015/10/27 16:00:46 [trace] [system.CModule] Loading "log" application component
+in /var/www/nhenhang/dev.php (38)
+2015/10/27 16:00:46 [trace] [system.CModule] Loading "request" application component
+in /var/www/nhenhang/dev.php (38)
+2015/10/27 16:00:46 [trace] [system.CModule] Loading "urlManager" application component
+in /var/www/nhenhang/dev.php (38)
+2015/10/27 16:00:46 [trace] [system.CModule] Loading "cache" application component
+in /var/www/nhenhang/dev.php (38)
+2015/10/27 16:00:46 [trace] [system.caching.CMemCache] Serving "Yii.CUrlManager.rules" from cache
+in /var/www/nhenhang/dev.php (38)
+2015/10/27 16:00:46 [trace] [system.CModule] Loading "session" application component
+in /var/www/nhenhang/protected/components/wap/Controller.php (22)
+in /var/www/nhenhang/protected/components/wap/TController.php (8)
+in /var/www/nhenhang/dev.php (38)
+2015/10/27 16:00:46 [trace] [system.caching.CMemCache] Serving "BANNER_wap" from cache
+in /var/www/nhenhang/protected/models/wap/WapBannerModel.php (30)
+in /var/www/nhenhang/protected/components/wap/Controller.php (35)
+in /var/www/nhenhang/protected/components/wap/TController.php (8)
+2015/10/27 16:00:46 [trace] [system.caching.CMemCache] Serving "WAP_CONFIG" from cache
+in /var/www/nhenhang/protected/components/wap/Controller.php (38)
+in /var/www/nhenhang/protected/components/wap/TController.php (8)
+in /var/www/nhenhang/dev.php (38)
+2015/10/27 16:00:46 [trace] [system.caching.CMemCache] Serving "COLLECTION_HOTLIST_page_1_limit_8" from cache
+in /var/www/nhenhang/protected/components/common/MainContentModel.php (53)
+in /var/www/nhenhang/protected/controllers/touch/IndexController.php (15)
+in /var/www/nhenhang/dev.php (38)
+2015/10/27 16:00:46 [trace] [system.caching.CMemCache] Serving "COLLECTION_ITEMS_33_page_1_limit_8" from cache
+in /var/www/nhenhang/protected/models/db/CollectionModel.php (65)
+in /var/www/nhenhang/protected/models/db/CollectionModel.php (28)
+in /var/www/nhenhang/protected/components/common/MainContentModel.php (61)
+2015/10/27 16:00:46 [trace] [system.caching.CMemCache] Serving "COLLECTION_ALBUM_HOT_page_1_limit_6" from cache
+in /var/www/nhenhang/protected/components/common/MainActiveRecord.php (100)
+in /var/www/nhenhang/protected/models/wap/WapAlbumModel.php (60)
+in /var/www/nhenhang/protected/controllers/touch/IndexController.php (16)
+2015/10/27 16:00:46 [trace] [system.caching.CMemCache] Serving "COLLECTION_ITEMS_1_page_1_limit_6" from cache
+in /var/www/nhenhang/protected/models/db/CollectionModel.php (65)
+in /var/www/nhenhang/protected/models/db/CollectionModel.php (28)
+in /var/www/nhenhang/protected/components/common/MainActiveRecord.php (108)
+2015/10/27 16:00:46 [trace] [system.caching.CMemCache] Serving "COLLECTION_VIDEO_HOT_page_1_limit_6" from cache
+in /var/www/nhenhang/protected/components/common/MainActiveRecord.php (100)
+in /var/www/nhenhang/protected/controllers/touch/IndexController.php (17)
+in /var/www/nhenhang/dev.php (38)
+2015/10/27 16:00:46 [trace] [system.db.ar.CActiveRecord] VideoModel.findAll()
+in /var/www/nhenhang/protected/models/db/CollectionModel.php (67)
+in /var/www/nhenhang/protected/models/db/CollectionModel.php (28)
+in /var/www/nhenhang/protected/components/common/MainActiveRecord.php (108)
+2015/10/27 16:00:46 [trace] [system.CModule] Loading "db" application component
+in /var/www/nhenhang/protected/components/common/MainActiveRecord.php (35)
+in /var/www/nhenhang/protected/models/db/CollectionModel.php (67)
+in /var/www/nhenhang/protected/models/db/CollectionModel.php (28)
+2015/10/27 16:00:46 [trace] [system.db.CDbConnection] Opening DB connection
+in /var/www/nhenhang/protected/components/common/MainActiveRecord.php (35)
+in /var/www/nhenhang/protected/models/db/CollectionModel.php (67)
+in /var/www/nhenhang/protected/models/db/CollectionModel.php (28)
+2015/10/27 16:00:46 [trace] [system.caching.CMemCache] Serving "yii:dbschemamysql:host=10.0.9.194;dbname=nhacvn_v1_full:chacha:video" from cache
+in /var/www/nhenhang/protected/models/db/CollectionModel.php (67)
+in /var/www/nhenhang/protected/models/db/CollectionModel.php (28)
+in /var/www/nhenhang/protected/components/common/MainActiveRecord.php (108)
+2015/10/27 16:00:46 [trace] [system.caching.CMemCache] Serving "yii:dbschemamysql:host=10.0.9.194;dbname=nhacvn_v1_full:chacha:video_statistic" from cache
+in /var/www/nhenhang/protected/models/db/CollectionModel.php (67)
+in /var/www/nhenhang/protected/models/db/CollectionModel.php (28)
+in /var/www/nhenhang/protected/components/common/MainActiveRecord.php (108)
+2015/10/27 16:00:46 [trace] [system.db.CDbCommand] Querying SQL: SELECT `t`.`id` AS `t0_c0`, `t`.`code` AS `t0_c1`, `t`.`name` AS `t0_c2`, `t`.`url_key` AS `t0_c3`, `t`.`lyrics` AS `t0_c4`, `t`.`song_id` AS `t0_c5`, `t`.`genre_name` AS `t0_c6`, `t`.`composer_id` AS `t0_c7`, `t`.`composer_name` AS `t0_c8`, `t`.`artist_name` AS `t0_c9`, `t`.`owner` AS `t0_c10`, `t`.`source` AS `t0_c11`, `t`.`source_link` AS `t0_c12`, `t`.`national` AS `t0_c13`, `t`.`language` AS `t0_c14`, `t`.`created_by` AS `t0_c15`, `t`.`approved_by` AS `t0_c16`, `t`.`updated_by` AS `t0_c17`, `t`.`cp_id` AS `t0_c18`, `t`.`source_path` AS `t0_c19`, `t`.`allow_download` AS `t0_c20`, `t`.`download_price` AS `t0_c21`, `t`.`listen_price` AS `t0_c22`, `t`.`duration` AS `t0_c23`, `t`.`max_bitrate` AS `t0_c24`, `t`.`profile_ids` AS `t0_c25`, `t`.`created_time` AS `t0_c26`, `t`.`updated_time` AS `t0_c27`, `t`.`copyright` AS `t0_c28`, `t`.`related_right` AS `t0_c29`, `t`.`active_fromtime` AS `t0_c30`, `t`.`active_totime` AS `t0_c31`, `t`.`sorder` AS `t0_c32`, `t`.`status` AS `t0_c33`, `t`.`custom_rank` AS `t0_c34`, `t`.`cmc_id` AS `t0_c35`, `t`.`is_hot` AS `t0_c36`, `ss`.`video_id` AS `t1_c0`, `ss`.`played_count` AS `t1_c1`, `ss`.`downloaded_count` AS `t1_c2` FROM `video` `t` INNER JOIN collection_item t2 ON t.id=t2.item_id LEFT JOIN `video_statistic` `ss` ON (`ss`.`video_id`=`t`.`id`)  WHERE (t.status=1 AND t2.collect_id=:COLLECT_ID) GROUP BY t2.id ORDER BY t2.sorder ASC, t2.id DESC LIMIT 6. Bound with :COLLECT_ID='3'
+in /var/www/nhenhang/protected/models/db/CollectionModel.php (67)
+in /var/www/nhenhang/protected/models/db/CollectionModel.php (28)
+in /var/www/nhenhang/protected/components/common/MainActiveRecord.php (108)
+2015/10/27 16:00:46 [trace] [system.caching.CMemCache] Saving "COLLECTION_ITEMS_3_page_1_limit_6" to cache
+in /var/www/nhenhang/protected/models/db/CollectionModel.php (68)
+in /var/www/nhenhang/protected/models/db/CollectionModel.php (28)
+in /var/www/nhenhang/protected/components/common/MainActiveRecord.php (108)
+2015/10/27 16:00:46 [trace] [system.db.ar.CActiveRecord] CollectionModel.findByAttributes()
+in /var/www/nhenhang/protected/components/common/MainActiveRecord.php (102)
+in /var/www/nhenhang/protected/controllers/touch/IndexController.php (18)
+in /var/www/nhenhang/dev.php (38)
+2015/10/27 16:00:46 [trace] [system.caching.CMemCache] Serving "yii:dbschemamysql:host=10.0.9.194;dbname=nhacvn_v1_full:chacha:collection" from cache
+in /var/www/nhenhang/protected/components/common/MainActiveRecord.php (102)
+in /var/www/nhenhang/protected/controllers/touch/IndexController.php (18)
+in /var/www/nhenhang/dev.php (38)
+2015/10/27 16:00:46 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `collection` `t` WHERE `t`.`code`=:yp0 LIMIT 1. Bound with :yp0='SONG_HOT'
+in /var/www/nhenhang/protected/components/common/MainActiveRecord.php (102)
+in /var/www/nhenhang/protected/controllers/touch/IndexController.php (18)
+in /var/www/nhenhang/dev.php (38)
+2015/10/27 16:00:46 [trace] [system.caching.CMemCache] Saving "COLLECTION_SONG_HOT_page_1_limit_5" to cache
+in /var/www/nhenhang/protected/components/common/MainActiveRecord.php (103)
+in /var/www/nhenhang/protected/controllers/touch/IndexController.php (18)
+in /var/www/nhenhang/dev.php (38)
+2015/10/27 16:00:46 [trace] [system.db.ar.CActiveRecord] SongModel.findAll()
+in /var/www/nhenhang/protected/models/db/CollectionModel.php (67)
+in /var/www/nhenhang/protected/models/db/CollectionModel.php (28)
+in /var/www/nhenhang/protected/components/common/MainActiveRecord.php (108)
+2015/10/27 16:00:46 [trace] [system.db.CDbCommand] Querying SQL: SHOW FULL COLUMNS FROM `song`
+in /var/www/nhenhang/protected/models/db/CollectionModel.php (67)
+in /var/www/nhenhang/protected/models/db/CollectionModel.php (28)
+in /var/www/nhenhang/protected/components/common/MainActiveRecord.php (108)
+2015/10/27 16:00:46 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `song`
+in /var/www/nhenhang/protected/models/db/CollectionModel.php (67)
+in /var/www/nhenhang/protected/models/db/CollectionModel.php (28)
+in /var/www/nhenhang/protected/components/common/MainActiveRecord.php (108)
+2015/10/27 16:00:46 [trace] [system.caching.CMemCache] Saving "yii:dbschemamysql:host=10.0.9.194;dbname=nhacvn_v1_full:chacha:song" to cache
+in /var/www/nhenhang/protected/models/db/CollectionModel.php (67)
+in /var/www/nhenhang/protected/models/db/CollectionModel.php (28)
+in /var/www/nhenhang/protected/components/common/MainActiveRecord.php (108)
+2015/10/27 16:00:47 [trace] [system.db.CDbCommand] Querying SQL: SHOW FULL COLUMNS FROM `song_statistic`
+in /var/www/nhenhang/protected/models/db/CollectionModel.php (67)
+in /var/www/nhenhang/protected/models/db/CollectionModel.php (28)
+in /var/www/nhenhang/protected/components/common/MainActiveRecord.php (108)
+2015/10/27 16:00:47 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `song_statistic`
+in /var/www/nhenhang/protected/models/db/CollectionModel.php (67)
+in /var/www/nhenhang/protected/models/db/CollectionModel.php (28)
+in /var/www/nhenhang/protected/components/common/MainActiveRecord.php (108)
+2015/10/27 16:00:47 [trace] [system.caching.CMemCache] Saving "yii:dbschemamysql:host=10.0.9.194;dbname=nhacvn_v1_full:chacha:song_statistic" to cache
+in /var/www/nhenhang/protected/models/db/CollectionModel.php (67)
+in /var/www/nhenhang/protected/models/db/CollectionModel.php (28)
+in /var/www/nhenhang/protected/components/common/MainActiveRecord.php (108)
+2015/10/27 16:00:47 [trace] [system.db.CDbCommand] Querying SQL: SELECT `t`.`id` AS `t0_c0`, `t`.`code` AS `t0_c1`, `t`.`base_id` AS `t0_c2`, `t`.`name` AS `t0_c3`, `t`.`url_key` AS `t0_c4`, `t`.`composer_id` AS `t0_c5`, `t`.`composer_name` AS `t0_c6`, `t`.`artist_name` AS `t0_c7`, `t`.`artist_object` AS `t0_c8`, `t`.`lyrics` AS `t0_c9`, `t`.`owner` AS `t0_c10`, `t`.`source` AS `t0_c11`, `t`.`source_link` AS `t0_c12`, `t`.`national` AS `t0_c13`, `t`.`language` AS `t0_c14`, `t`.`cp_id` AS `t0_c15`, `t`.`duration` AS `t0_c16`, `t`.`max_bitrate` AS `t0_c17`, `t`.`profile_ids` AS `t0_c18`, `t`.`created_by` AS `t0_c19`, `t`.`approved_by` AS `t0_c20`, `t`.`updated_by` AS `t0_c21`, `t`.`source_path` AS `t0_c22`, `t`.`allow_download` AS `t0_c23`, `t`.`download_price` AS `t0_c24`, `t`.`listen_price` AS `t0_c25`, `t`.`has_rbt` AS `t0_c26`, `t`.`rbt_codes` AS `t0_c27`, `t`.`created_time` AS `t0_c28`, `t`.`updated_time` AS `t0_c29`, `t`.`copyright` AS `t0_c30`, `t`.`related_right` AS `t0_c31`, `t`.`active_fromtime` AS `t0_c32`, `t`.`active_totime` AS `t0_c33`, `t`.`custom_rank` AS `t0_c34`, `t`.`video_id` AS `t0_c35`, `t`.`video_name` AS `t0_c36`, `t`.`sorder` AS `t0_c37`, `t`.`status` AS `t0_c38`, `t`.`cmc_id` AS `t0_c39`, `t`.`lossless` AS `t0_c40`, `t`.`is_hot` AS `t0_c41`, `ss`.`song_id` AS `t1_c0`, `ss`.`played_count` AS `t1_c1`, `ss`.`downloaded_count` AS `t1_c2` FROM `song` `t` INNER JOIN collection_item t2 ON t.id=t2.item_id LEFT JOIN `song_statistic` `ss` ON (`ss`.`song_id`=`t`.`id`)  WHERE (t.status=1 AND t2.collect_id=:COLLECT_ID) GROUP BY t2.id ORDER BY t2.sorder ASC, t2.id DESC LIMIT 5. Bound with :COLLECT_ID='11'
+in /var/www/nhenhang/protected/models/db/CollectionModel.php (67)
+in /var/www/nhenhang/protected/models/db/CollectionModel.php (28)
+in /var/www/nhenhang/protected/components/common/MainActiveRecord.php (108)
+2015/10/27 16:00:47 [trace] [system.caching.CMemCache] Saving "COLLECTION_ITEMS_11_page_1_limit_5" to cache
+in /var/www/nhenhang/protected/models/db/CollectionModel.php (68)
+in /var/www/nhenhang/protected/models/db/CollectionModel.php (28)
+in /var/www/nhenhang/protected/components/common/MainActiveRecord.php (108)
+2015/10/27 16:00:47 [trace] [system.db.CDbCommand] Querying SQL: SHOW FULL COLUMNS FROM `news`
+in /var/www/nhenhang/protected/models/wap/WapNewsModel.php (33)
+in /var/www/nhenhang/protected/models/wap/WapNewsModel.php (33)
+in /var/www/nhenhang/protected/controllers/touch/IndexController.php (19)
+2015/10/27 16:00:47 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `news`
+in /var/www/nhenhang/protected/models/wap/WapNewsModel.php (33)
+in /var/www/nhenhang/protected/models/wap/WapNewsModel.php (33)
+in /var/www/nhenhang/protected/controllers/touch/IndexController.php (19)
+2015/10/27 16:00:47 [trace] [system.caching.CMemCache] Saving "yii:dbschemamysql:host=10.0.9.194;dbname=nhacvn_v1_full:chacha:news" to cache
+in /var/www/nhenhang/protected/models/wap/WapNewsModel.php (33)
+in /var/www/nhenhang/protected/models/wap/WapNewsModel.php (33)
+in /var/www/nhenhang/protected/controllers/touch/IndexController.php (19)
+2015/10/27 16:00:47 [trace] [system.db.ar.CActiveRecord] WapNewsModel.findAll()
+in /var/www/nhenhang/protected/models/wap/WapNewsModel.php (33)
+in /var/www/nhenhang/protected/controllers/touch/IndexController.php (19)
+in /var/www/nhenhang/dev.php (38)
+2015/10/27 16:00:47 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `news` `t` WHERE `t`.`status` = 1 ORDER BY id desc LIMIT 5
+in /var/www/nhenhang/protected/models/wap/WapNewsModel.php (33)
+in /var/www/nhenhang/protected/controllers/touch/IndexController.php (19)
+in /var/www/nhenhang/dev.php (38)
+2015/10/27 16:00:47 [trace] [system.db.ar.CActiveRecord] CollectionModel.findByAttributes()
+in /var/www/nhenhang/protected/components/common/MainActiveRecord.php (102)
+in /var/www/nhenhang/protected/controllers/touch/IndexController.php (20)
+in /var/www/nhenhang/dev.php (38)
+2015/10/27 16:00:47 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `collection` `t` WHERE `t`.`code`=:yp0 LIMIT 1. Bound with :yp0='VIDEO_PLAYLIST_HOT'
+in /var/www/nhenhang/protected/components/common/MainActiveRecord.php (102)
+in /var/www/nhenhang/protected/controllers/touch/IndexController.php (20)
+in /var/www/nhenhang/dev.php (38)
+2015/10/27 16:00:47 [trace] [system.caching.CMemCache] Saving "COLLECTION_VIDEO_PLAYLIST_HOT_page_1_limit_6" to cache
+in /var/www/nhenhang/protected/components/common/MainActiveRecord.php (103)
+in /var/www/nhenhang/protected/controllers/touch/IndexController.php (20)
+in /var/www/nhenhang/dev.php (38)
+2015/10/27 16:00:47 [trace] [system.CModule] Loading "themeManager" application component
+in /var/www/nhenhang/protected/controllers/touch/IndexController.php (23)
+in /var/www/nhenhang/dev.php (38)
+2015/10/27 16:00:47 [trace] [system.CModule] Loading "coreMessages" application component
+in /var/www/nhenhang/protected/controllers/touch/IndexController.php (23)
+in /var/www/nhenhang/dev.php (38)
+2015/10/27 16:00:47 [error] [exception.CException] exception 'CException' with message 'IndexController cannot find the requested view "index".' in /home/tiennt/Downloads/website_biofood/framework/web/CController.php:878
+Stack trace:
+#0 /home/tiennt/Downloads/website_biofood/framework/web/CController.php(782): CController->renderPartial('index', Array, true)
+#1 /var/www/nhenhang/protected/controllers/touch/IndexController.php(23): CController->render('index', Array)
+#2 /home/tiennt/Downloads/website_biofood/framework/web/actions/CInlineAction.php(49): IndexController->actionIndex()
+#3 /home/tiennt/Downloads/website_biofood/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#4 /home/tiennt/Downloads/website_biofood/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#5 /home/tiennt/Downloads/website_biofood/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 /home/tiennt/Downloads/website_biofood/framework/web/CWebApplication.php(282): CController->run('')
+#7 /home/tiennt/Downloads/website_biofood/framework/web/CWebApplication.php(141): CWebApplication->runController('')
+#8 /home/tiennt/Downloads/website_biofood/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#9 /var/www/nhenhang/dev.php(38): CApplication->run()
+#10 {main}
+REQUEST_URI=/dev.php
+---
+2015/10/27 16:00:47 [trace] [system.CModule] Loading "errorHandler" application component
+2015/10/27 16:00:44 [trace] [system.CModule] Loading "log" application component
+in /var/www/nhenhang/dev.php (38)
+2015/10/27 16:00:44 [trace] [system.CModule] Loading "request" application component
+in /var/www/nhenhang/dev.php (38)
+2015/10/27 16:00:44 [trace] [system.CModule] Loading "urlManager" application component
+in /var/www/nhenhang/dev.php (38)
+2015/10/27 16:00:44 [trace] [system.CModule] Loading "cache" application component
+in /var/www/nhenhang/dev.php (38)
+2015/10/27 16:00:44 [trace] [system.caching.CMemCache] Saving "Yii.CUrlManager.rules" to cache
+in /var/www/nhenhang/dev.php (38)
+2015/10/27 16:00:44 [trace] [system.CModule] Loading "session" application component
+in /var/www/nhenhang/protected/components/wap/Controller.php (22)
+in /var/www/nhenhang/protected/components/wap/TController.php (8)
+in /var/www/nhenhang/dev.php (38)
+2015/10/27 16:00:45 [trace] [system.db.ar.CActiveRecord] BannerModel.findAll()
+in /var/www/nhenhang/protected/models/db/BannerModel.php (101)
+in /var/www/nhenhang/protected/models/wap/WapBannerModel.php (32)
+in /var/www/nhenhang/protected/components/wap/Controller.php (35)
+2015/10/27 16:00:45 [trace] [system.CModule] Loading "db" application component
+in /var/www/nhenhang/protected/components/common/MainActiveRecord.php (35)
+in /var/www/nhenhang/protected/models/db/BannerModel.php (101)
+in /var/www/nhenhang/protected/models/wap/WapBannerModel.php (32)
+2015/10/27 16:00:45 [trace] [system.db.CDbConnection] Opening DB connection
+in /var/www/nhenhang/protected/components/common/MainActiveRecord.php (35)
+in /var/www/nhenhang/protected/models/db/BannerModel.php (101)
+in /var/www/nhenhang/protected/models/wap/WapBannerModel.php (32)
+2015/10/27 16:00:45 [trace] [system.db.CDbCommand] Querying SQL: SHOW FULL COLUMNS FROM `banner`
+in /var/www/nhenhang/protected/models/db/BannerModel.php (101)
+in /var/www/nhenhang/protected/models/wap/WapBannerModel.php (32)
+in /var/www/nhenhang/protected/components/wap/Controller.php (35)
+2015/10/27 16:00:45 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `banner`
+in /var/www/nhenhang/protected/models/db/BannerModel.php (101)
+in /var/www/nhenhang/protected/models/wap/WapBannerModel.php (32)
+in /var/www/nhenhang/protected/components/wap/Controller.php (35)
+2015/10/27 16:00:45 [trace] [system.caching.CMemCache] Saving "yii:dbschemamysql:host=10.0.9.194;dbname=nhacvn_v1_full:chacha:banner" to cache
+in /var/www/nhenhang/protected/models/db/BannerModel.php (101)
+in /var/www/nhenhang/protected/models/wap/WapBannerModel.php (32)
+in /var/www/nhenhang/protected/components/wap/Controller.php (35)
+2015/10/27 16:00:45 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `banner` `t` WHERE channel = :Channel  AND expired_time > :expired_time AND status =:ST ORDER BY  sorder asc, id desc. Bound with :Channel='wap', :expired_time='2015-10-27', :ST='1'
+in /var/www/nhenhang/protected/models/db/BannerModel.php (101)
+in /var/www/nhenhang/protected/models/wap/WapBannerModel.php (32)
+in /var/www/nhenhang/protected/components/wap/Controller.php (35)
+2015/10/27 16:00:45 [trace] [system.caching.CMemCache] Saving "BANNER_wap" to cache
+in /var/www/nhenhang/protected/models/wap/WapBannerModel.php (33)
+in /var/www/nhenhang/protected/components/wap/Controller.php (35)
+in /var/www/nhenhang/protected/components/wap/TController.php (8)
+2015/10/27 16:00:45 [trace] [system.db.ar.CActiveRecord] ConfigModel.findAll()
+in /var/www/nhenhang/protected/models/db/ConfigModel.php (34)
+in /var/www/nhenhang/protected/components/wap/Controller.php (40)
+in /var/www/nhenhang/protected/components/wap/TController.php (8)
+2015/10/27 16:00:45 [trace] [system.db.CDbCommand] Querying SQL: SHOW FULL COLUMNS FROM `config`
+in /var/www/nhenhang/protected/models/db/ConfigModel.php (34)
+in /var/www/nhenhang/protected/components/wap/Controller.php (40)
+in /var/www/nhenhang/protected/components/wap/TController.php (8)
+2015/10/27 16:00:45 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `config`
+in /var/www/nhenhang/protected/models/db/ConfigModel.php (34)
+in /var/www/nhenhang/protected/components/wap/Controller.php (40)
+in /var/www/nhenhang/protected/components/wap/TController.php (8)
+2015/10/27 16:00:45 [trace] [system.caching.CMemCache] Saving "yii:dbschemamysql:host=10.0.9.194;dbname=nhacvn_v1_full:chacha:config" to cache
+in /var/www/nhenhang/protected/models/db/ConfigModel.php (34)
+in /var/www/nhenhang/protected/components/wap/Controller.php (40)
+in /var/www/nhenhang/protected/components/wap/TController.php (8)
+2015/10/27 16:00:45 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `config` `t` WHERE channel=:CHANNEL OR channel = 'all'. Bound with :CHANNEL='wap'
+in /var/www/nhenhang/protected/models/db/ConfigModel.php (34)
+in /var/www/nhenhang/protected/components/wap/Controller.php (40)
+in /var/www/nhenhang/protected/components/wap/TController.php (8)
+2015/10/27 16:00:45 [trace] [system.caching.CMemCache] Saving "yii:dbquerymysql:host=10.0.9.194;dbname=nhacvn_v1_full:chacha:SELECT * FROM `config` `t` WHERE channel=:CHANNEL OR channel = 'all':a:1:{s:8:":CHANNEL";s:3:"wap";}" to cache
+in /var/www/nhenhang/protected/models/db/ConfigModel.php (34)
+in /var/www/nhenhang/protected/components/wap/Controller.php (40)
+in /var/www/nhenhang/protected/components/wap/TController.php (8)
+2015/10/27 16:00:45 [trace] [system.caching.CMemCache] Saving "WAP_CONFIG" to cache
+in /var/www/nhenhang/protected/components/wap/Controller.php (41)
+in /var/www/nhenhang/protected/components/wap/TController.php (8)
+in /var/www/nhenhang/dev.php (38)
+2015/10/27 16:00:45 [trace] [system.db.ar.CActiveRecord] CollectionModel.findByAttributes()
+in /var/www/nhenhang/protected/components/common/MainContentModel.php (55)
+in /var/www/nhenhang/protected/controllers/touch/IndexController.php (15)
+in /var/www/nhenhang/dev.php (38)
+2015/10/27 16:00:45 [trace] [system.db.CDbCommand] Querying SQL: SHOW FULL COLUMNS FROM `collection`
+in /var/www/nhenhang/protected/components/common/MainContentModel.php (55)
+in /var/www/nhenhang/protected/controllers/touch/IndexController.php (15)
+in /var/www/nhenhang/dev.php (38)
+2015/10/27 16:00:45 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `collection`
+in /var/www/nhenhang/protected/components/common/MainContentModel.php (55)
+in /var/www/nhenhang/protected/controllers/touch/IndexController.php (15)
+in /var/www/nhenhang/dev.php (38)
+2015/10/27 16:00:45 [trace] [system.caching.CMemCache] Saving "yii:dbschemamysql:host=10.0.9.194;dbname=nhacvn_v1_full:chacha:collection" to cache
+in /var/www/nhenhang/protected/components/common/MainContentModel.php (55)
+in /var/www/nhenhang/protected/controllers/touch/IndexController.php (15)
+in /var/www/nhenhang/dev.php (38)
+2015/10/27 16:00:45 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `collection` `t` WHERE `t`.`code`=:yp0 LIMIT 1. Bound with :yp0='HOTLIST'
+in /var/www/nhenhang/protected/components/common/MainContentModel.php (55)
+in /var/www/nhenhang/protected/controllers/touch/IndexController.php (15)
+in /var/www/nhenhang/dev.php (38)
+2015/10/27 16:00:45 [trace] [system.caching.CMemCache] Saving "COLLECTION_HOTLIST_page_1_limit_8" to cache
+in /var/www/nhenhang/protected/components/common/MainContentModel.php (56)
+in /var/www/nhenhang/protected/controllers/touch/IndexController.php (15)
+in /var/www/nhenhang/dev.php (38)
+2015/10/27 16:00:45 [trace] [system.db.ar.CActiveRecord] AlbumModel.findAll()
+in /var/www/nhenhang/protected/models/db/CollectionModel.php (67)
+in /var/www/nhenhang/protected/models/db/CollectionModel.php (28)
+in /var/www/nhenhang/protected/components/common/MainContentModel.php (61)
+2015/10/27 16:00:45 [trace] [system.db.CDbCommand] Querying SQL: SHOW FULL COLUMNS FROM `album`
+in /var/www/nhenhang/protected/models/db/CollectionModel.php (67)
+in /var/www/nhenhang/protected/models/db/CollectionModel.php (28)
+in /var/www/nhenhang/protected/components/common/MainContentModel.php (61)
+2015/10/27 16:00:45 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `album`
+in /var/www/nhenhang/protected/models/db/CollectionModel.php (67)
+in /var/www/nhenhang/protected/models/db/CollectionModel.php (28)
+in /var/www/nhenhang/protected/components/common/MainContentModel.php (61)
+2015/10/27 16:00:45 [trace] [system.caching.CMemCache] Saving "yii:dbschemamysql:host=10.0.9.194;dbname=nhacvn_v1_full:chacha:album" to cache
+in /var/www/nhenhang/protected/models/db/CollectionModel.php (67)
+in /var/www/nhenhang/protected/models/db/CollectionModel.php (28)
+in /var/www/nhenhang/protected/components/common/MainContentModel.php (61)
+2015/10/27 16:00:45 [trace] [system.db.CDbCommand] Querying SQL: SHOW FULL COLUMNS FROM `album_statistic`
+in /var/www/nhenhang/protected/models/db/CollectionModel.php (67)
+in /var/www/nhenhang/protected/models/db/CollectionModel.php (28)
+in /var/www/nhenhang/protected/components/common/MainContentModel.php (61)
+2015/10/27 16:00:45 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `album_statistic`
+in /var/www/nhenhang/protected/models/db/CollectionModel.php (67)
+in /var/www/nhenhang/protected/models/db/CollectionModel.php (28)
+in /var/www/nhenhang/protected/components/common/MainContentModel.php (61)
+2015/10/27 16:00:45 [trace] [system.caching.CMemCache] Saving "yii:dbschemamysql:host=10.0.9.194;dbname=nhacvn_v1_full:chacha:album_statistic" to cache
+in /var/www/nhenhang/protected/models/db/CollectionModel.php (67)
+in /var/www/nhenhang/protected/models/db/CollectionModel.php (28)
+in /var/www/nhenhang/protected/components/common/MainContentModel.php (61)
+2015/10/27 16:00:45 [trace] [system.db.CDbCommand] Querying SQL: SELECT `t`.`id` AS `t0_c0`, `t`.`name` AS `t0_c1`, `t`.`url_key` AS `t0_c2`, `t`.`type` AS `t0_c3`, `t`.`genre_id` AS `t0_c4`, `t`.`artist_name` AS `t0_c5`, `t`.`song_count` AS `t0_c6`, `t`.`price` AS `t0_c7`, `t`.`publisher` AS `t0_c8`, `t`.`published_date` AS `t0_c9`, `t`.`description` AS `t0_c10`, `t`.`created_by` AS `t0_c11`, `t`.`approved_by` AS `t0_c12`, `t`.`updated_by` AS `t0_c13`, `t`.`cp_id` AS `t0_c14`, `t`.`created_time` AS `t0_c15`, `t`.`updated_time` AS `t0_c16`, `t`.`active_fromtime` AS `t0_c17`, `t`.`active_totime` AS `t0_c18`, `t`.`sorder` AS `t0_c19`, `t`.`status` AS `t0_c20`, `t`.`cmc_id` AS `t0_c21`, `t`.`is_hot` AS `t0_c22`, `t`.`playlist_favourite` AS `t0_c23`, `t`.`user_id` AS `t0_c24`, `t`.`user_phone` AS `t0_c25`, `t`.`user_name` AS `t0_c26`, `as`.`album_id` AS `t1_c0`, `as`.`played_count` AS `t1_c1` FROM `album` `t` INNER JOIN collection_item t2 ON t.id=t2.item_id LEFT JOIN `album_statistic` `as` ON (`as`.`album_id`=`t`.`id`)  WHERE (t.status=1 AND t2.collect_id=:COLLECT_ID) GROUP BY t2.id ORDER BY t2.sorder ASC, t2.id DESC LIMIT 8. Bound with :COLLECT_ID='33'
+in /var/www/nhenhang/protected/models/db/CollectionModel.php (67)
+in /var/www/nhenhang/protected/models/db/CollectionModel.php (28)
+in /var/www/nhenhang/protected/components/common/MainContentModel.php (61)
+2015/10/27 16:00:46 [trace] [system.caching.CMemCache] Saving "COLLECTION_ITEMS_33_page_1_limit_8" to cache
+in /var/www/nhenhang/protected/models/db/CollectionModel.php (68)
+in /var/www/nhenhang/protected/models/db/CollectionModel.php (28)
+in /var/www/nhenhang/protected/components/common/MainContentModel.php (61)
+2015/10/27 16:00:46 [trace] [system.db.ar.CActiveRecord] CollectionModel.findByAttributes()
+in /var/www/nhenhang/protected/components/common/MainActiveRecord.php (102)
+in /var/www/nhenhang/protected/models/wap/WapAlbumModel.php (60)
+in /var/www/nhenhang/protected/controllers/touch/IndexController.php (16)
+2015/10/27 16:00:46 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `collection` `t` WHERE `t`.`code`=:yp0 LIMIT 1. Bound with :yp0='ALBUM_HOT'
+in /var/www/nhenhang/protected/components/common/MainActiveRecord.php (102)
+in /var/www/nhenhang/protected/models/wap/WapAlbumModel.php (60)
+in /var/www/nhenhang/protected/controllers/touch/IndexController.php (16)
+2015/10/27 16:00:46 [trace] [system.caching.CMemCache] Saving "COLLECTION_ALBUM_HOT_page_1_limit_6" to cache
+in /var/www/nhenhang/protected/components/common/MainActiveRecord.php (103)
+in /var/www/nhenhang/protected/models/wap/WapAlbumModel.php (60)
+in /var/www/nhenhang/protected/controllers/touch/IndexController.php (16)
+2015/10/27 16:00:46 [trace] [system.db.ar.CActiveRecord] AlbumModel.findAll()
+in /var/www/nhenhang/protected/models/db/CollectionModel.php (67)
+in /var/www/nhenhang/protected/models/db/CollectionModel.php (28)
+in /var/www/nhenhang/protected/components/common/MainActiveRecord.php (108)
+2015/10/27 16:00:46 [trace] [system.db.CDbCommand] Querying SQL: SELECT `t`.`id` AS `t0_c0`, `t`.`name` AS `t0_c1`, `t`.`url_key` AS `t0_c2`, `t`.`type` AS `t0_c3`, `t`.`genre_id` AS `t0_c4`, `t`.`artist_name` AS `t0_c5`, `t`.`song_count` AS `t0_c6`, `t`.`price` AS `t0_c7`, `t`.`publisher` AS `t0_c8`, `t`.`published_date` AS `t0_c9`, `t`.`description` AS `t0_c10`, `t`.`created_by` AS `t0_c11`, `t`.`approved_by` AS `t0_c12`, `t`.`updated_by` AS `t0_c13`, `t`.`cp_id` AS `t0_c14`, `t`.`created_time` AS `t0_c15`, `t`.`updated_time` AS `t0_c16`, `t`.`active_fromtime` AS `t0_c17`, `t`.`active_totime` AS `t0_c18`, `t`.`sorder` AS `t0_c19`, `t`.`status` AS `t0_c20`, `t`.`cmc_id` AS `t0_c21`, `t`.`is_hot` AS `t0_c22`, `t`.`playlist_favourite` AS `t0_c23`, `t`.`user_id` AS `t0_c24`, `t`.`user_phone` AS `t0_c25`, `t`.`user_name` AS `t0_c26`, `as`.`album_id` AS `t1_c0`, `as`.`played_count` AS `t1_c1` FROM `album` `t` INNER JOIN collection_item t2 ON t.id=t2.item_id LEFT JOIN `album_statistic` `as` ON (`as`.`album_id`=`t`.`id`)  WHERE (t.status=1 AND t2.collect_id=:COLLECT_ID) GROUP BY t2.id ORDER BY t2.sorder ASC, t2.id DESC LIMIT 6. Bound with :COLLECT_ID='1'
+in /var/www/nhenhang/protected/models/db/CollectionModel.php (67)
+in /var/www/nhenhang/protected/models/db/CollectionModel.php (28)
+in /var/www/nhenhang/protected/components/common/MainActiveRecord.php (108)
+2015/10/27 16:00:46 [trace] [system.caching.CMemCache] Saving "COLLECTION_ITEMS_1_page_1_limit_6" to cache
+in /var/www/nhenhang/protected/models/db/CollectionModel.php (68)
+in /var/www/nhenhang/protected/models/db/CollectionModel.php (28)
+in /var/www/nhenhang/protected/components/common/MainActiveRecord.php (108)
+2015/10/27 16:00:46 [trace] [system.db.ar.CActiveRecord] CollectionModel.findByAttributes()
+in /var/www/nhenhang/protected/components/common/MainActiveRecord.php (102)
+in /var/www/nhenhang/protected/controllers/touch/IndexController.php (17)
+in /var/www/nhenhang/dev.php (38)
+2015/10/27 16:00:46 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `collection` `t` WHERE `t`.`code`=:yp0 LIMIT 1. Bound with :yp0='VIDEO_HOT'
+in /var/www/nhenhang/protected/components/common/MainActiveRecord.php (102)
+in /var/www/nhenhang/protected/controllers/touch/IndexController.php (17)
+in /var/www/nhenhang/dev.php (38)
+2015/10/27 16:00:46 [trace] [system.caching.CMemCache] Saving "COLLECTION_VIDEO_HOT_page_1_limit_6" to cache
+in /var/www/nhenhang/protected/components/common/MainActiveRecord.php (103)
+in /var/www/nhenhang/protected/controllers/touch/IndexController.php (17)
+in /var/www/nhenhang/dev.php (38)
+2015/10/27 16:00:46 [trace] [system.db.ar.CActiveRecord] VideoModel.findAll()
+in /var/www/nhenhang/protected/models/db/CollectionModel.php (67)
+in /var/www/nhenhang/protected/models/db/CollectionModel.php (28)
+in /var/www/nhenhang/protected/components/common/MainActiveRecord.php (108)
+2015/10/27 16:00:46 [trace] [system.db.CDbCommand] Querying SQL: SHOW FULL COLUMNS FROM `video`
+in /var/www/nhenhang/protected/models/db/CollectionModel.php (67)
+in /var/www/nhenhang/protected/models/db/CollectionModel.php (28)
+in /var/www/nhenhang/protected/components/common/MainActiveRecord.php (108)
+2015/10/27 16:00:46 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `video`
+in /var/www/nhenhang/protected/models/db/CollectionModel.php (67)
+in /var/www/nhenhang/protected/models/db/CollectionModel.php (28)
+in /var/www/nhenhang/protected/components/common/MainActiveRecord.php (108)
+2015/10/27 16:00:46 [trace] [system.caching.CMemCache] Saving "yii:dbschemamysql:host=10.0.9.194;dbname=nhacvn_v1_full:chacha:video" to cache
+in /var/www/nhenhang/protected/models/db/CollectionModel.php (67)
+in /var/www/nhenhang/protected/models/db/CollectionModel.php (28)
+in /var/www/nhenhang/protected/components/common/MainActiveRecord.php (108)
+2015/10/27 16:00:46 [trace] [system.db.CDbCommand] Querying SQL: SHOW FULL COLUMNS FROM `video_statistic`
+in /var/www/nhenhang/protected/models/db/CollectionModel.php (67)
+in /var/www/nhenhang/protected/models/db/CollectionModel.php (28)
+in /var/www/nhenhang/protected/components/common/MainActiveRecord.php (108)
+2015/10/27 16:00:46 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `video_statistic`
+in /var/www/nhenhang/protected/models/db/CollectionModel.php (67)
+in /var/www/nhenhang/protected/models/db/CollectionModel.php (28)
+in /var/www/nhenhang/protected/components/common/MainActiveRecord.php (108)
+2015/10/27 16:00:46 [trace] [system.caching.CMemCache] Saving "yii:dbschemamysql:host=10.0.9.194;dbname=nhacvn_v1_full:chacha:video_statistic" to cache
+in /var/www/nhenhang/protected/models/db/CollectionModel.php (67)
+in /var/www/nhenhang/protected/models/db/CollectionModel.php (28)
+in /var/www/nhenhang/protected/components/common/MainActiveRecord.php (108)
+2015/10/27 16:00:46 [trace] [system.db.CDbCommand] Querying SQL: SELECT `t`.`id` AS `t0_c0`, `t`.`code` AS `t0_c1`, `t`.`name` AS `t0_c2`, `t`.`url_key` AS `t0_c3`, `t`.`lyrics` AS `t0_c4`, `t`.`song_id` AS `t0_c5`, `t`.`genre_name` AS `t0_c6`, `t`.`composer_id` AS `t0_c7`, `t`.`composer_name` AS `t0_c8`, `t`.`artist_name` AS `t0_c9`, `t`.`owner` AS `t0_c10`, `t`.`source` AS `t0_c11`, `t`.`source_link` AS `t0_c12`, `t`.`national` AS `t0_c13`, `t`.`language` AS `t0_c14`, `t`.`created_by` AS `t0_c15`, `t`.`approved_by` AS `t0_c16`, `t`.`updated_by` AS `t0_c17`, `t`.`cp_id` AS `t0_c18`, `t`.`source_path` AS `t0_c19`, `t`.`allow_download` AS `t0_c20`, `t`.`download_price` AS `t0_c21`, `t`.`listen_price` AS `t0_c22`, `t`.`duration` AS `t0_c23`, `t`.`max_bitrate` AS `t0_c24`, `t`.`profile_ids` AS `t0_c25`, `t`.`created_time` AS `t0_c26`, `t`.`updated_time` AS `t0_c27`, `t`.`copyright` AS `t0_c28`, `t`.`related_right` AS `t0_c29`, `t`.`active_fromtime` AS `t0_c30`, `t`.`active_totime` AS `t0_c31`, `t`.`sorder` AS `t0_c32`, `t`.`status` AS `t0_c33`, `t`.`custom_rank` AS `t0_c34`, `t`.`cmc_id` AS `t0_c35`, `t`.`is_hot` AS `t0_c36`, `ss`.`video_id` AS `t1_c0`, `ss`.`played_count` AS `t1_c1`, `ss`.`downloaded_count` AS `t1_c2` FROM `video` `t` INNER JOIN collection_item t2 ON t.id=t2.item_id LEFT JOIN `video_statistic` `ss` ON (`ss`.`video_id`=`t`.`id`)  WHERE (t.status=1 AND t2.collect_id=:COLLECT_ID) GROUP BY t2.id ORDER BY t2.sorder ASC, t2.id DESC LIMIT 6. Bound with :COLLECT_ID='3'
+in /var/www/nhenhang/protected/models/db/CollectionModel.php (67)
+in /var/www/nhenhang/protected/models/db/CollectionModel.php (28)
+in /var/www/nhenhang/protected/components/common/MainActiveRecord.php (108)
+2015/10/27 16:00:46 [trace] [system.caching.CMemCache] Saving "COLLECTION_ITEMS_3_page_1_limit_6" to cache
+in /var/www/nhenhang/protected/models/db/CollectionModel.php (68)
+in /var/www/nhenhang/protected/models/db/CollectionModel.php (28)
+in /var/www/nhenhang/protected/components/common/MainActiveRecord.php (108)
+2015/10/27 16:00:46 [trace] [system.caching.CMemCache] Serving "COLLECTION_SONG_HOT_page_1_limit_5" from cache
+in /var/www/nhenhang/protected/components/common/MainActiveRecord.php (100)
+in /var/www/nhenhang/protected/controllers/touch/IndexController.php (18)
+in /var/www/nhenhang/dev.php (38)
+2015/10/27 16:00:46 [trace] [system.db.ar.CActiveRecord] SongModel.findAll()
+in /var/www/nhenhang/protected/models/db/CollectionModel.php (67)
+in /var/www/nhenhang/protected/models/db/CollectionModel.php (28)
+in /var/www/nhenhang/protected/components/common/MainActiveRecord.php (108)
+2015/10/27 16:00:46 [trace] [system.caching.CMemCache] Serving "yii:dbschemamysql:host=10.0.9.194;dbname=nhacvn_v1_full:chacha:song" from cache
+in /var/www/nhenhang/protected/models/db/CollectionModel.php (67)
+in /var/www/nhenhang/protected/models/db/CollectionModel.php (28)
+in /var/www/nhenhang/protected/components/common/MainActiveRecord.php (108)
+2015/10/27 16:00:47 [trace] [system.db.CDbCommand] Querying SQL: SHOW FULL COLUMNS FROM `song_statistic`
+in /var/www/nhenhang/protected/models/db/CollectionModel.php (67)
+in /var/www/nhenhang/protected/models/db/CollectionModel.php (28)
+in /var/www/nhenhang/protected/components/common/MainActiveRecord.php (108)
+2015/10/27 16:00:47 [trace] [system.db.CDbCommand] Querying SQL: SHOW CREATE TABLE `song_statistic`
+in /var/www/nhenhang/protected/models/db/CollectionModel.php (67)
+in /var/www/nhenhang/protected/models/db/CollectionModel.php (28)
+in /var/www/nhenhang/protected/components/common/MainActiveRecord.php (108)
+2015/10/27 16:00:47 [trace] [system.caching.CMemCache] Saving "yii:dbschemamysql:host=10.0.9.194;dbname=nhacvn_v1_full:chacha:song_statistic" to cache
+in /var/www/nhenhang/protected/models/db/CollectionModel.php (67)
+in /var/www/nhenhang/protected/models/db/CollectionModel.php (28)
+in /var/www/nhenhang/protected/components/common/MainActiveRecord.php (108)
+2015/10/27 16:00:47 [trace] [system.db.CDbCommand] Querying SQL: SELECT `t`.`id` AS `t0_c0`, `t`.`code` AS `t0_c1`, `t`.`base_id` AS `t0_c2`, `t`.`name` AS `t0_c3`, `t`.`url_key` AS `t0_c4`, `t`.`composer_id` AS `t0_c5`, `t`.`composer_name` AS `t0_c6`, `t`.`artist_name` AS `t0_c7`, `t`.`artist_object` AS `t0_c8`, `t`.`lyrics` AS `t0_c9`, `t`.`owner` AS `t0_c10`, `t`.`source` AS `t0_c11`, `t`.`source_link` AS `t0_c12`, `t`.`national` AS `t0_c13`, `t`.`language` AS `t0_c14`, `t`.`cp_id` AS `t0_c15`, `t`.`duration` AS `t0_c16`, `t`.`max_bitrate` AS `t0_c17`, `t`.`profile_ids` AS `t0_c18`, `t`.`created_by` AS `t0_c19`, `t`.`approved_by` AS `t0_c20`, `t`.`updated_by` AS `t0_c21`, `t`.`source_path` AS `t0_c22`, `t`.`allow_download` AS `t0_c23`, `t`.`download_price` AS `t0_c24`, `t`.`listen_price` AS `t0_c25`, `t`.`has_rbt` AS `t0_c26`, `t`.`rbt_codes` AS `t0_c27`, `t`.`created_time` AS `t0_c28`, `t`.`updated_time` AS `t0_c29`, `t`.`copyright` AS `t0_c30`, `t`.`related_right` AS `t0_c31`, `t`.`active_fromtime` AS `t0_c32`, `t`.`active_totime` AS `t0_c33`, `t`.`custom_rank` AS `t0_c34`, `t`.`video_id` AS `t0_c35`, `t`.`video_name` AS `t0_c36`, `t`.`sorder` AS `t0_c37`, `t`.`status` AS `t0_c38`, `t`.`cmc_id` AS `t0_c39`, `t`.`lossless` AS `t0_c40`, `t`.`is_hot` AS `t0_c41`, `ss`.`song_id` AS `t1_c0`, `ss`.`played_count` AS `t1_c1`, `ss`.`downloaded_count` AS `t1_c2` FROM `song` `t` INNER JOIN collection_item t2 ON t.id=t2.item_id LEFT JOIN `song_statistic` `ss` ON (`ss`.`song_id`=`t`.`id`)  WHERE (t.status=1 AND t2.collect_id=:COLLECT_ID) GROUP BY t2.id ORDER BY t2.sorder ASC, t2.id DESC LIMIT 5. Bound with :COLLECT_ID='11'
+in /var/www/nhenhang/protected/models/db/CollectionModel.php (67)
+in /var/www/nhenhang/protected/models/db/CollectionModel.php (28)
+in /var/www/nhenhang/protected/components/common/MainActiveRecord.php (108)
+2015/10/27 16:00:47 [trace] [system.caching.CMemCache] Saving "COLLECTION_ITEMS_11_page_1_limit_5" to cache
+in /var/www/nhenhang/protected/models/db/CollectionModel.php (68)
+in /var/www/nhenhang/protected/models/db/CollectionModel.php (28)
+in /var/www/nhenhang/protected/components/common/MainActiveRecord.php (108)
+2015/10/27 16:00:47 [trace] [system.caching.CMemCache] Serving "yii:dbschemamysql:host=10.0.9.194;dbname=nhacvn_v1_full:chacha:news" from cache
+in /var/www/nhenhang/protected/models/wap/WapNewsModel.php (33)
+in /var/www/nhenhang/protected/models/wap/WapNewsModel.php (33)
+in /var/www/nhenhang/protected/controllers/touch/IndexController.php (19)
+2015/10/27 16:00:47 [trace] [system.db.ar.CActiveRecord] WapNewsModel.findAll()
+in /var/www/nhenhang/protected/models/wap/WapNewsModel.php (33)
+in /var/www/nhenhang/protected/controllers/touch/IndexController.php (19)
+in /var/www/nhenhang/dev.php (38)
+2015/10/27 16:00:47 [trace] [system.db.CDbCommand] Querying SQL: SELECT * FROM `news` `t` WHERE `t`.`status` = 1 ORDER BY id desc LIMIT 5
+in /var/www/nhenhang/protected/models/wap/WapNewsModel.php (33)
+in /var/www/nhenhang/protected/controllers/touch/IndexController.php (19)
+in /var/www/nhenhang/dev.php (38)
+2015/10/27 16:00:47 [trace] [system.caching.CMemCache] Serving "COLLECTION_VIDEO_PLAYLIST_HOT_page_1_limit_6" from cache
+in /var/www/nhenhang/protected/components/common/MainActiveRecord.php (100)
+in /var/www/nhenhang/protected/controllers/touch/IndexController.php (20)
+in /var/www/nhenhang/dev.php (38)
+2015/10/27 16:00:47 [trace] [system.CModule] Loading "themeManager" application component
+in /var/www/nhenhang/protected/controllers/touch/IndexController.php (23)
+in /var/www/nhenhang/dev.php (38)
+2015/10/27 16:00:47 [trace] [system.CModule] Loading "coreMessages" application component
+in /var/www/nhenhang/protected/controllers/touch/IndexController.php (23)
+in /var/www/nhenhang/dev.php (38)
+2015/10/27 16:00:48 [error] [exception.CException] exception 'CException' with message 'IndexController cannot find the requested view "index".' in /home/tiennt/Downloads/website_biofood/framework/web/CController.php:878
+Stack trace:
+#0 /home/tiennt/Downloads/website_biofood/framework/web/CController.php(782): CController->renderPartial('index', Array, true)
+#1 /var/www/nhenhang/protected/controllers/touch/IndexController.php(23): CController->render('index', Array)
+#2 /home/tiennt/Downloads/website_biofood/framework/web/actions/CInlineAction.php(49): IndexController->actionIndex()
+#3 /home/tiennt/Downloads/website_biofood/framework/web/CController.php(308): CInlineAction->runWithParams(Array)
+#4 /home/tiennt/Downloads/website_biofood/framework/web/CController.php(286): CController->runAction(Object(CInlineAction))
+#5 /home/tiennt/Downloads/website_biofood/framework/web/CController.php(265): CController->runActionWithFilters(Object(CInlineAction), Array)
+#6 /home/tiennt/Downloads/website_biofood/framework/web/CWebApplication.php(282): CController->run('')
+#7 /home/tiennt/Downloads/website_biofood/framework/web/CWebApplication.php(141): CWebApplication->runController('')
+#8 /home/tiennt/Downloads/website_biofood/framework/base/CApplication.php(180): CWebApplication->processRequest()
+#9 /var/www/nhenhang/dev.php(38): CApplication->run()
+#10 {main}
+REQUEST_URI=/dev.php
+---
+2015/10/27 16:00:48 [trace] [system.CModule] Loading "errorHandler" application component
+2015/10/27 16:00:52 [trace] [system.CModule] Loading "log" application component
+in /var/www/nhenhang/dev.php (38)
+2015/10/27 16:00:52 [trace] [system.CModule] Loading "request" application component
+in /var/www/nhenhang/dev.php (38)
+2015/10/27 16:00:52 [trace] [system.CModule] Loading "urlManager" application component
+in /var/www/nhenhang/dev.php (38)
+2015/10/27 16:00:52 [trace] [system.CModule] Loading "cache" application component
+in /var/www/nhenhang/dev.php (38)
+2015/10/27 16:00:52 [trace] [system.caching.CMemCache] Serving "Yii.CUrlManager.rules" from cache
+in /var/www/nhenhang/dev.php (38)
+2015/10/27 16:00:52 [trace] [system.CModule] Loading "session" application component
+in /var/www/nhenhang/protected/components/web/Controller.php (16)
+in /var/www/nhenhang/dev.php (38)
+2015/10/27 16:00:52 [trace] [system.CModule] Loading "user" application component
+in /var/www/nhenhang/protected/components/web/Controller.php (35)
+in /var/www/nhenhang/dev.php (38)
+2015/10/27 16:00:52 [trace] [system.CModule] Loading "themeManager" application component
+in /var/www/nhenhang/protected/components/web/Controller.php (65)
+in /var/www/nhenhang/protected/controllers/web/IndexController.php (6)
+in /var/www/nhenhang/dev.php (38)
+2015/10/27 16:00:52 [trace] [system.CModule] Loading "widgetFactory" application component
+in /var/www/nhenhang/protected/views/web/layouts/2column.php (1)
+in /var/www/nhenhang/protected/components/web/Controller.php (65)
+in /var/www/nhenhang/protected/controllers/web/IndexController.php (6)
+2015/10/27 16:00:52 [trace] [system.CModule] Loading "SEO" application component
+in /var/www/nhenhang/protected/views/web/layouts/_header.php (8)
+in /var/www/nhenhang/protected/views/web/layouts/main.php (1)
+in /var/www/nhenhang/protected/views/web/layouts/2column.php (20)
+2015/10/27 16:00:52 [trace] [system.CModule] Loading "clientScript" application component
+in /var/www/nhenhang/protected/views/web/layouts/_header.php (16)
+in /var/www/nhenhang/protected/views/web/layouts/main.php (1)
+in /var/www/nhenhang/protected/views/web/layouts/2column.php (20)
+2015/10/27 16:00:52 [trace] [system.CModule] Loading "assetManager" application component
+in /var/www/nhenhang/protected/components/web/Controller.php (65)
+in /var/www/nhenhang/protected/controllers/web/IndexController.php (6)
+in /var/www/nhenhang/dev.php (38)
+2015/10/27 16:03:24 [trace] [system.CModule] Loading "log" application component
+in /var/www/nhenhang/dev.php (38)
+2015/10/27 16:03:24 [trace] [system.CModule] Loading "request" application component
+in /var/www/nhenhang/dev.php (38)
+2015/10/27 16:03:24 [trace] [system.CModule] Loading "urlManager" application component
+in /var/www/nhenhang/dev.php (38)
+2015/10/27 16:03:24 [trace] [system.CModule] Loading "cache" application component
+in /var/www/nhenhang/dev.php (38)
+2015/10/27 16:03:24 [trace] [system.caching.CMemCache] Serving "Yii.CUrlManager.rules" from cache
+in /var/www/nhenhang/dev.php (38)
+2015/10/27 16:03:24 [trace] [system.CModule] Loading "session" application component
+in /var/www/nhenhang/protected/components/web/Controller.php (16)
+in /var/www/nhenhang/dev.php (38)
+2015/10/27 16:03:24 [trace] [system.CModule] Loading "user" application component
+in /var/www/nhenhang/protected/components/web/Controller.php (35)
+in /var/www/nhenhang/dev.php (38)
+2015/10/27 16:03:24 [trace] [system.CModule] Loading "themeManager" application component
+in /var/www/nhenhang/protected/components/web/Controller.php (65)
+in /var/www/nhenhang/protected/controllers/web/IndexController.php (6)
+in /var/www/nhenhang/dev.php (38)
+2015/10/27 16:03:24 [trace] [system.CModule] Loading "widgetFactory" application component
+in /var/www/nhenhang/protected/views/web/layouts/2column.php (1)
+in /var/www/nhenhang/protected/components/web/Controller.php (65)
+in /var/www/nhenhang/protected/controllers/web/IndexController.php (6)
+2015/10/27 16:03:24 [trace] [system.CModule] Loading "SEO" application component
+in /var/www/nhenhang/protected/views/web/layouts/_header.php (8)
+in /var/www/nhenhang/protected/views/web/layouts/main.php (1)
+in /var/www/nhenhang/protected/views/web/layouts/2column.php (20)
+2015/10/27 16:03:24 [trace] [system.CModule] Loading "clientScript" application component
+in /var/www/nhenhang/protected/views/web/layouts/_header.php (16)
+in /var/www/nhenhang/protected/views/web/layouts/main.php (1)
+in /var/www/nhenhang/protected/views/web/layouts/2column.php (20)
+2015/10/27 16:03:24 [trace] [system.CModule] Loading "assetManager" application component
+in /var/www/nhenhang/protected/components/web/Controller.php (65)
+in /var/www/nhenhang/protected/controllers/web/IndexController.php (6)
+in /var/www/nhenhang/dev.php (38)
+2015/10/27 16:03:25 [trace] [system.CModule] Loading "log" application component
+in /var/www/nhenhang/dev.php (38)
+2015/10/27 16:03:25 [trace] [system.CModule] Loading "request" application component
+in /var/www/nhenhang/dev.php (38)
+2015/10/27 16:03:25 [trace] [system.CModule] Loading "urlManager" application component
+in /var/www/nhenhang/dev.php (38)
+2015/10/27 16:03:25 [trace] [system.CModule] Loading "cache" application component
+in /var/www/nhenhang/dev.php (38)
+2015/10/27 16:03:25 [trace] [system.caching.CMemCache] Serving "Yii.CUrlManager.rules" from cache
+in /var/www/nhenhang/dev.php (38)
+2015/10/27 16:03:25 [trace] [system.CModule] Loading "session" application component
+in /var/www/nhenhang/protected/components/web/Controller.php (16)
+in /var/www/nhenhang/dev.php (38)
+2015/10/27 16:03:25 [trace] [system.CModule] Loading "user" application component
+in /var/www/nhenhang/protected/components/web/Controller.php (35)
+in /var/www/nhenhang/dev.php (38)
+2015/10/27 16:03:25 [trace] [system.CModule] Loading "themeManager" application component
+in /var/www/nhenhang/protected/components/web/Controller.php (65)
+in /var/www/nhenhang/protected/controllers/web/IndexController.php (6)
+in /var/www/nhenhang/dev.php (38)
+2015/10/27 16:03:25 [trace] [system.CModule] Loading "widgetFactory" application component
+in /var/www/nhenhang/protected/views/web/layouts/2column.php (1)
+in /var/www/nhenhang/protected/components/web/Controller.php (65)
+in /var/www/nhenhang/protected/controllers/web/IndexController.php (6)
+2015/10/27 16:03:25 [trace] [system.CModule] Loading "SEO" application component
+in /var/www/nhenhang/protected/views/web/layouts/_header.php (8)
+in /var/www/nhenhang/protected/views/web/layouts/main.php (1)
+in /var/www/nhenhang/protected/views/web/layouts/2column.php (20)
+2015/10/27 16:03:25 [trace] [system.CModule] Loading "clientScript" application component
+in /var/www/nhenhang/protected/views/web/layouts/_header.php (16)
+in /var/www/nhenhang/protected/views/web/layouts/main.php (1)
+in /var/www/nhenhang/protected/views/web/layouts/2column.php (20)
+2015/10/27 16:03:25 [trace] [system.CModule] Loading "assetManager" application component
+in /var/www/nhenhang/protected/components/web/Controller.php (65)
+in /var/www/nhenhang/protected/controllers/web/IndexController.php (6)
+in /var/www/nhenhang/dev.php (38)
+2015/10/27 16:06:31 [trace] [system.CModule] Loading "log" application component
+in /var/www/nhenhang/dev.php (38)
+2015/10/27 16:06:31 [trace] [system.CModule] Loading "request" application component
+in /var/www/nhenhang/dev.php (38)
+2015/10/27 16:06:31 [trace] [system.CModule] Loading "urlManager" application component
+in /var/www/nhenhang/dev.php (38)
+2015/10/27 16:06:31 [trace] [system.CModule] Loading "cache" application component
+in /var/www/nhenhang/dev.php (38)
+2015/10/27 16:06:31 [trace] [system.caching.CMemCache] Serving "Yii.CUrlManager.rules" from cache
+in /var/www/nhenhang/dev.php (38)
+2015/10/27 16:06:31 [trace] [system.CModule] Loading "session" application component
+in /var/www/nhenhang/protected/components/web/Controller.php (16)
+in /var/www/nhenhang/dev.php (38)
+2015/10/27 16:06:31 [trace] [system.CModule] Loading "user" application component
+in /var/www/nhenhang/protected/components/web/Controller.php (35)
+in /var/www/nhenhang/dev.php (38)
+2015/10/27 16:06:31 [trace] [system.CModule] Loading "themeManager" application component
+in /var/www/nhenhang/protected/components/web/Controller.php (65)
+in /var/www/nhenhang/protected/controllers/web/IndexController.php (6)
+in /var/www/nhenhang/dev.php (38)
+2015/10/27 16:06:31 [trace] [system.CModule] Loading "widgetFactory" application component
+in /var/www/nhenhang/protected/views/web/layouts/2column.php (1)
+in /var/www/nhenhang/protected/components/web/Controller.php (65)
+in /var/www/nhenhang/protected/controllers/web/IndexController.php (6)
+2015/10/27 16:06:31 [trace] [system.CModule] Loading "SEO" application component
+in /var/www/nhenhang/protected/views/web/layouts/_header.php (8)
+in /var/www/nhenhang/protected/views/web/layouts/main.php (1)
+in /var/www/nhenhang/protected/views/web/layouts/2column.php (20)
+2015/10/27 16:06:31 [trace] [system.CModule] Loading "clientScript" application component
+in /var/www/nhenhang/protected/views/web/layouts/_header.php (16)
+in /var/www/nhenhang/protected/views/web/layouts/main.php (1)
+in /var/www/nhenhang/protected/views/web/layouts/2column.php (20)
+2015/10/27 16:06:31 [trace] [system.CModule] Loading "assetManager" application component
+in /var/www/nhenhang/protected/components/web/Controller.php (65)
+in /var/www/nhenhang/protected/controllers/web/IndexController.php (6)
+in /var/www/nhenhang/dev.php (38)
+2015/10/27 16:07:51 [trace] [system.CModule] Loading "log" application component
+in /var/www/nhenhang/dev.php (38)
+2015/10/27 16:07:51 [trace] [system.CModule] Loading "request" application component
+in /var/www/nhenhang/dev.php (38)
+2015/10/27 16:07:51 [trace] [system.CModule] Loading "urlManager" application component
+in /var/www/nhenhang/dev.php (38)
+2015/10/27 16:07:51 [trace] [system.CModule] Loading "cache" application component
+in /var/www/nhenhang/dev.php (38)
+2015/10/27 16:07:51 [trace] [system.caching.CMemCache] Serving "Yii.CUrlManager.rules" from cache
+in /var/www/nhenhang/dev.php (38)
+2015/10/27 16:07:51 [trace] [system.CModule] Loading "session" application component
+in /var/www/nhenhang/protected/components/web/Controller.php (16)
+in /var/www/nhenhang/dev.php (38)
+2015/10/27 16:07:51 [trace] [system.CModule] Loading "user" application component
+in /var/www/nhenhang/protected/components/web/Controller.php (35)
+in /var/www/nhenhang/dev.php (38)
+2015/10/27 16:07:51 [trace] [system.CModule] Loading "themeManager" application component
+in /var/www/nhenhang/protected/components/web/Controller.php (65)
+in /var/www/nhenhang/protected/controllers/web/IndexController.php (6)
+in /var/www/nhenhang/dev.php (38)
+2015/10/27 16:07:51 [trace] [system.CModule] Loading "widgetFactory" application component
+in /var/www/nhenhang/protected/views/web/layouts/2column.php (1)
+in /var/www/nhenhang/protected/components/web/Controller.php (65)
+in /var/www/nhenhang/protected/controllers/web/IndexController.php (6)
+2015/10/27 16:07:51 [trace] [system.CModule] Loading "SEO" application component
+in /var/www/nhenhang/protected/views/web/layouts/_header.php (8)
+in /var/www/nhenhang/protected/views/web/layouts/main.php (1)
+in /var/www/nhenhang/protected/views/web/layouts/2column.php (20)
+2015/10/27 16:07:51 [trace] [system.CModule] Loading "clientScript" application component
+in /var/www/nhenhang/protected/views/web/layouts/_header.php (16)
+in /var/www/nhenhang/protected/views/web/layouts/main.php (1)
+in /var/www/nhenhang/protected/views/web/layouts/2column.php (20)
+2015/10/27 16:07:51 [trace] [system.CModule] Loading "assetManager" application component
+in /var/www/nhenhang/protected/components/web/Controller.php (65)
+in /var/www/nhenhang/protected/controllers/web/IndexController.php (6)
+in /var/www/nhenhang/dev.php (38)
+2015/10/27 16:07:53 [trace] [system.CModule] Loading "log" application component
+in /var/www/nhenhang/dev.php (38)
+2015/10/27 16:07:54 [trace] [system.CModule] Loading "request" application component
+in /var/www/nhenhang/dev.php (38)
+2015/10/27 16:07:54 [trace] [system.CModule] Loading "urlManager" application component
+in /var/www/nhenhang/dev.php (38)
+2015/10/27 16:07:54 [trace] [system.CModule] Loading "cache" application component
+in /var/www/nhenhang/dev.php (38)
+2015/10/27 16:07:54 [trace] [system.caching.CMemCache] Serving "Yii.CUrlManager.rules" from cache
+in /var/www/nhenhang/dev.php (38)
+2015/10/27 16:07:54 [trace] [system.CModule] Loading "session" application component
+in /var/www/nhenhang/protected/components/web/Controller.php (16)
+in /var/www/nhenhang/dev.php (38)
+2015/10/27 16:07:54 [trace] [system.CModule] Loading "user" application component
+in /var/www/nhenhang/protected/components/web/Controller.php (35)
+in /var/www/nhenhang/dev.php (38)
+2015/10/27 16:07:54 [trace] [system.CModule] Loading "themeManager" application component
+in /var/www/nhenhang/protected/components/web/Controller.php (65)
+in /var/www/nhenhang/protected/controllers/web/IndexController.php (6)
+in /var/www/nhenhang/dev.php (38)
+2015/10/27 16:07:54 [trace] [system.CModule] Loading "widgetFactory" application component
+in /var/www/nhenhang/protected/views/web/layouts/2column.php (1)
+in /var/www/nhenhang/protected/components/web/Controller.php (65)
+in /var/www/nhenhang/protected/controllers/web/IndexController.php (6)
+2015/10/27 16:07:54 [trace] [system.CModule] Loading "SEO" application component
+in /var/www/nhenhang/protected/views/web/layouts/_header.php (8)
+in /var/www/nhenhang/protected/views/web/layouts/main.php (1)
+in /var/www/nhenhang/protected/views/web/layouts/2column.php (20)
+2015/10/27 16:07:54 [trace] [system.CModule] Loading "clientScript" application component
+in /var/www/nhenhang/protected/views/web/layouts/_header.php (16)
+in /var/www/nhenhang/protected/views/web/layouts/main.php (1)
+in /var/www/nhenhang/protected/views/web/layouts/2column.php (20)
+2015/10/27 16:07:54 [trace] [system.CModule] Loading "assetManager" application component
+in /var/www/nhenhang/protected/components/web/Controller.php (65)
+in /var/www/nhenhang/protected/controllers/web/IndexController.php (6)
+in /var/www/nhenhang/dev.php (38)
+2015/10/27 16:12:08 [trace] [system.CModule] Loading "log" application component
+in /var/www/nhenhang/dev.php (38)
+2015/10/27 16:12:08 [trace] [system.CModule] Loading "request" application component
+in /var/www/nhenhang/dev.php (38)
+2015/10/27 16:12:08 [trace] [system.CModule] Loading "urlManager" application component
+in /var/www/nhenhang/dev.php (38)
+2015/10/27 16:12:08 [trace] [system.CModule] Loading "session" application component
+in /var/www/nhenhang/protected/components/web/Controller.php (16)
+in /var/www/nhenhang/dev.php (38)
+2015/10/27 16:12:08 [trace] [system.CModule] Loading "user" application component
+in /var/www/nhenhang/protected/components/web/Controller.php (35)
+in /var/www/nhenhang/dev.php (38)
+2015/10/27 16:12:08 [trace] [system.CModule] Loading "themeManager" application component
+in /var/www/nhenhang/protected/components/web/Controller.php (65)
+in /var/www/nhenhang/protected/controllers/web/IndexController.php (6)
+in /var/www/nhenhang/dev.php (38)
+2015/10/27 16:12:08 [trace] [system.CModule] Loading "widgetFactory" application component
+in /var/www/nhenhang/protected/views/web/layouts/2column.php (1)
+in /var/www/nhenhang/protected/components/web/Controller.php (65)
+in /var/www/nhenhang/protected/controllers/web/IndexController.php (6)
+2015/10/27 16:12:08 [trace] [system.CModule] Loading "SEO" application component
+in /var/www/nhenhang/protected/views/web/layouts/_header.php (8)
+in /var/www/nhenhang/protected/views/web/layouts/main.php (1)
+in /var/www/nhenhang/protected/views/web/layouts/2column.php (20)
+2015/10/27 16:12:08 [trace] [system.CModule] Loading "clientScript" application component
+in /var/www/nhenhang/protected/views/web/layouts/_header.php (16)
+in /var/www/nhenhang/protected/views/web/layouts/main.php (1)
+in /var/www/nhenhang/protected/views/web/layouts/2column.php (20)
+2015/10/27 16:12:08 [trace] [system.CModule] Loading "assetManager" application component
+in /var/www/nhenhang/protected/components/web/Controller.php (65)
+in /var/www/nhenhang/protected/controllers/web/IndexController.php (6)
+in /var/www/nhenhang/dev.php (38)
+2015/10/27 16:14:24 [trace] [system.CModule] Loading "log" application component
+in /var/www/nhenhang/dev.php (38)
+2015/10/27 16:14:24 [trace] [system.CModule] Loading "request" application component
+in /var/www/nhenhang/dev.php (38)
+2015/10/27 16:14:24 [trace] [system.CModule] Loading "urlManager" application component
+in /var/www/nhenhang/dev.php (38)
+2015/10/27 16:14:24 [trace] [system.CModule] Loading "session" application component
+in /var/www/nhenhang/protected/components/web/Controller.php (16)
+in /var/www/nhenhang/dev.php (38)
+2015/10/27 16:14:24 [trace] [system.CModule] Loading "user" application component
+in /var/www/nhenhang/protected/components/web/Controller.php (35)
+in /var/www/nhenhang/dev.php (38)
+2015/10/27 16:14:24 [trace] [system.CModule] Loading "themeManager" application component
+in /var/www/nhenhang/protected/components/web/Controller.php (65)
+in /var/www/nhenhang/protected/controllers/web/IndexController.php (6)
+in /var/www/nhenhang/dev.php (38)
+2015/10/27 16:14:24 [trace] [system.CModule] Loading "widgetFactory" application component
+in /var/www/nhenhang/protected/views/web/layouts/2column.php (1)
+in /var/www/nhenhang/protected/components/web/Controller.php (65)
+in /var/www/nhenhang/protected/controllers/web/IndexController.php (6)
+2015/10/27 16:14:24 [trace] [system.CModule] Loading "SEO" application component
+in /var/www/nhenhang/protected/views/web/layouts/_header.php (8)
+in /var/www/nhenhang/protected/views/web/layouts/main.php (1)
+in /var/www/nhenhang/protected/views/web/layouts/2column.php (20)
+2015/10/27 16:14:24 [trace] [system.CModule] Loading "clientScript" application component
+in /var/www/nhenhang/protected/views/web/layouts/_header.php (16)
+in /var/www/nhenhang/protected/views/web/layouts/main.php (1)
+in /var/www/nhenhang/protected/views/web/layouts/2column.php (20)
+2015/10/27 16:14:24 [trace] [system.CModule] Loading "assetManager" application component
+in /var/www/nhenhang/protected/components/web/Controller.php (65)
+in /var/www/nhenhang/protected/controllers/web/IndexController.php (6)
+in /var/www/nhenhang/dev.php (38)

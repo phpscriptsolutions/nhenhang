@@ -1,0 +1,29 @@
+<settings>
+    <thousands_separator>.</thousands_separator>
+    <decimals_separator>,</decimals_separator>
+    <strings>
+        <no_data><?php echo Yii::t('admin','Không tìm thấy dữ liệu')?></no_data>
+    </strings>
+	<data_type>csv</data_type>
+	<plot_area>
+		<margins>
+			<left>100</left>
+			<top>20</top>
+			<right>50</right>
+			<bottom>50</bottom>
+		</margins>
+	</plot_area>
+	<values>
+		<x>
+			<color>#999</color>
+			<text_size>10</text_size>
+		</x>
+		<y_left>
+			<color>#999</color>
+			<text_size>10</text_size>
+			<min>0</min>
+			<inside>false</inside>
+		</y_left>
+	</values>	
+    <?php echo $content; ?> 
+</settings>

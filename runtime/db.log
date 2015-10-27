@@ -1,0 +1,10 @@
+2015/10/27 20:28:11 [error] [system.db.CDbCommand] CDbCommand::fetchAll() failed: SQLSTATE[42S02]: Base table or view not found: 1146 Table 'nhenhang.ChapterModel' doesn't exist. The SQL statement executed was: SHOW FULL COLUMNS FROM `ChapterModel`.
+in /var/www/html/nhenhang/protected/models/db/ChapterModel.php (15)
+in /var/www/html/nhenhang/protected/controllers/web/HomeController.php (4)
+in /var/www/html/nhenhang/dev.php (38)
+2015/10/27 20:29:33 [error] [system.db.CDbCommand] CDbCommand::fetch() failed: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ':slug' at line 3. The SQL statement executed was: SELECT *
+FROM `chapter_50`
+WHERE story_slug:slug. Bound with :slug='50-Sac-Thai-Fifty-Shades-of-Grey'.
+in /var/www/html/nhenhang/protected/models/db/ChapterModel.php (14)
+in /var/www/html/nhenhang/protected/controllers/web/HomeController.php (5)
+in /var/www/html/nhenhang/dev.php (38)

@@ -1,0 +1,71 @@
+*{
+    font-family: "HongHa", "Arial", "Sans-Serif";
+    font-size: 9pt;
+}
+
+.inter, .inter *
+{
+    font-family: "Arial", "Sans-Serif";
+}
+
+.top-most
+{
+    font-family: "HongHa", "Myriad Pro" , Sans-Serif;
+}
+
+.top-most *
+{
+    font-family: HongHa, "Myriad Pro" , Sans-Serif;
+}
+
+.top-most a
+{
+    font-family: HongHa, "Myriad Pro";
+}
+
+.sub-hd1
+{
+    font-family: HongHa, "Myriad Pro" , Sans-Serif;
+}
+
+.menu .main-menu .submenu ul li a
+{
+    font-family:"HongHa", Arial;
+}
+
+
+/*------------------------------------------------------------*/
+@font-face
+{
+    font-family: "HongHa";
+    src: url( "font/kh/suwannaphum.eot" ) /* EOT file for IE */;
+}
+@font-face
+{
+    font-family: "HongHa";
+    src: url( "font/kh/suwannaphum.TTF" ) /* TTF file for CSS3 browsers */;
+}
+
+@font-face
+{
+    font-family: "HongHa";
+    src: url( "font/kh/Nokora-Bold.eot" ) /* EOT file for IE */;
+    font-weight:bold;
+}
+@font-face
+{
+    font-family: "HongHa";
+    src: url( "font/kh/Nokora-Bold.TTF" ) /* TTF file for CSS3 browsers */;
+    font-weight:bold;
+}
+
+@font-face
+{
+    font-family: "HongHa2";
+    src: url( "font/kh/UVNHongHaHep_B.eot" ) /* EOT file for IE */;
+}
+@font-face
+{
+    font-family: "HongHa2";
+    src: url( "font/kh/UVNHongHaHep_B.TTF" ) /* TTF file for CSS3 browsers */;
+}

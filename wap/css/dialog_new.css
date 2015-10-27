@@ -1,0 +1,130 @@
+/* 
+    Document   : dialog_new
+    Created on : Oct 30, 2012, 10:24:13 AM
+    Author     : Administrator
+    Description:
+        Purpose of the stylesheet follows.
+*/
+
+/* 
+   TODO customize this sample style
+   Syntax recommendation http://www.w3.org/TR/REC-CSS2/
+*/
+
+root { 
+    display: block;
+}
+* {
+    margin: 0;
+    padding: 0;
+}
+.dialog-box .ui-dialog-titlebar.ui-widget-header.ui-corner-all.ui-helper-clearfix{
+    background: #FFFFFF ;
+    padding: 0;
+    margin: 0;
+    border: 0px ;
+    border-bottom: 3px solid #30AFEA !important ;
+    border-radius: 0px !important;
+    height: auto;
+    overflow: hidden;
+    
+}
+
+
+.ui-helper-clearfix:after
+{
+   
+    
+}
+.ui-dialog .ui-dialog-title {
+    color: #006699;
+    float: left;
+    font-size: 12pt;
+    font-weight: bold;
+    line-height: 30px;
+    padding-left: 10px;
+    
+}
+.ui-dialog-title
+{
+    
+}
+.ui-dialog .ui-dialog-content
+{    
+    margin: 5px 0;
+    padding: 10px 10px !important;
+    
+}
+.register_btn{
+    background: #30AFEA;
+}
+
+.ui-widget input, .ui-widget select, .ui-widget button {    
+    color: white;
+    font-family: Verdana,Arial,sans-serif;
+    font-size: 12px;
+    height: 30px;    
+    
+}
+.ui-widget input[type="submit"]{
+    background: none repeat scroll 0 0 #30AFEA;
+    margin-left: 5px;
+}
+
+.ui-dialog .ui-dialog-titlebar-close span {
+    background: url("../images/close-icon-popup.png") ;
+    height: 14px;
+    width: 14px;
+}
+.ui-dialog-content ui-widget-content
+{
+    font-size: 12pt;
+    font-family: arial;
+    color: black;
+}
+#error_msg
+{
+    padding: 0;
+    font-size: 12pt;
+    font-family: Arial;
+    color: black; 
+    padding: 0 15px;
+    text-align: justify;
+}
+#error_play{
+    height: auto !important;
+    min-height: 0;
+    overflow: hidden;
+    width: auto;
+    padding-top: 10px;
+}
+ 
+#register_btn:hover{
+    background: #99BD02;
+}
+#continue_btn:hover
+{
+   background: #99BD02;
+}
+#dontask_btn:hover
+{
+   background: #99BD02;
+}
+
+.ui-dialog *{
+    font-family: Arial !important;    
+}
+.ui-dialog .alertText{
+    font-size: 13px !important;
+    text-align: justify;
+}
+.ui-dialog input[type="submit"]{
+    border: none !important;
+}
+#confirm_play input{
+    background-color: #30AFEA;
+    padding: 4px 10px;    
+    font-size: 12px;
+    cursor: pointer;
+    margin: 1px;
+}
