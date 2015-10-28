@@ -191,4 +191,16 @@ class StoryModel extends BaseStoryModel
 
 		return self::model()->find($criteria);
 	}
+
+	public function getStoryByAuthor($author,$limit = 4){
+		$criteria = new CDbCriteria();
+		$criteria->condition = 'author=:author';
+		$criteria->params = array(
+			':author'=> $author
+		);
+		$criteria->limit = $limit;
+		$criteria->order = 'RAND()';
+
+		return self::model()->findAll($criteria);
+	}
 }

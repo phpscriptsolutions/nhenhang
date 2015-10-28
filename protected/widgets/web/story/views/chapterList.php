@@ -75,54 +75,22 @@
         </div>
         <div class="relate-content">
             <ul class="box">
+                <?php foreach($storyAuthor as $item):?>
                 <li class="story-item">
                     <div class="cover">
                         <a href="">
-                            <img src="http://static.truyenfull.vn/poster/lh3/-55HGpltQybY/ViCBisUo4SI/AAAAAAAABsw/n3VauqiRf6Q/w129-h192-Ic42/dai-duong-tuu-do.jpg"/>
+                            <img width="129" src="<?php echo Yii::app()->getBaseUrl(true).
+                                '/public/images/'.$item->category_slug.'/'.$item->story_slug.'-md.jpg';?>"
+                                 onerror="this.src='<?php echo Yii::app()->getBaseUrl(true)?>/public/images/tien-hiep/Dan-Tu-md.jpg'"/>
                         </a>
                     </div>
                     <div class="info">
                         <div class="info-name">
-                            <a href=""><h4>Mùa hoa sen</h4></a>
+                            <a href=""><h4><?php echo $item->story_name;?></h4></a>
                         </div>
                     </div>
                 </li>
-                <li class="story-item">
-                    <div class="cover">
-                        <a href="">
-                            <img src="http://static.truyenfull.vn/poster/lh3/-55HGpltQybY/ViCBisUo4SI/AAAAAAAABsw/n3VauqiRf6Q/w129-h192-Ic42/dai-duong-tuu-do.jpg"/>
-                        </a>
-                    </div>
-                    <div class="info">
-                        <div class="info-name">
-                            <a href=""><h4>Mùa hoa sen</h4></a>
-                        </div>
-                    </div>
-                </li>
-                <li class="story-item">
-                    <div class="cover">
-                        <a href="">
-                            <img  src="http://static.truyenfull.vn/poster/lh3/-55HGpltQybY/ViCBisUo4SI/AAAAAAAABsw/n3VauqiRf6Q/w129-h192-Ic42/dai-duong-tuu-do.jpg"/>
-                        </a>
-                    </div>
-                    <div class="info">
-                        <div class="info-name">
-                            <a href=""><h4>Mùa hoa sen</h4></a>
-                        </div>
-                    </div>
-                </li>
-                <li class="story-item">
-                    <div class="cover">
-                        <a href="">
-                            <img src="http://static.truyenfull.vn/poster/lh3/-55HGpltQybY/ViCBisUo4SI/AAAAAAAABsw/n3VauqiRf6Q/w129-h192-Ic42/dai-duong-tuu-do.jpg"/>
-                        </a>
-                    </div>
-                    <div class="info">
-                        <div class="info-name">
-                            <a href=""><h4>Mùa hoa sen</h4></a>
-                        </div>
-                    </div>
-                </li>
+                <?php endforeach;?>
             </ul>
         </div>
     </div>

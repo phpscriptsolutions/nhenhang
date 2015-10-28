@@ -3,8 +3,8 @@ class ChapterListWidget extends CWidget
 {
 
     public $story = null;
+    public $storyAuthor = null;
     public $pager = null;
-    public $storyRelate = null;
     public $chapters = null;
     public $options = array();
     public function run()
@@ -13,6 +13,7 @@ class ChapterListWidget extends CWidget
             'story'=>$this->story,
             'chapters' => $this->chapters,
             'options'=>  $this->options,
+            'storyAuthor' => $this->storyAuthor
         ));
     }
 }

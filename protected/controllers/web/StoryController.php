@@ -19,7 +19,8 @@ class StoryController extends Controller{
         $pager->setPageSize($limit);
 
         $chapters = $chapter->getChapterByStory($table,$slug,50,$pager->getOffset(),'id,chapter_number,chapter_slug,chapter_name');
+        $storyAuthor = StoryModel::model()->getStoryByAuthor($story->author);
 
-        $this->render('view',compact('pager','story','chapters'));
+        $this->render('view',compact('pager','story','chapters','storyAuthor'));
     }
 }

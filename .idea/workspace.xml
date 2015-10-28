@@ -2,9 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="05b04c9e-5a48-494e-aa60-d4309363e0e1" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/web/images/content_loading.gif" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/protected/widgets/web/story/ChapterListWidget.php" afterPath="$PROJECT_DIR$/protected/widgets/web/story/ChapterListWidget.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/protected/controllers/web/StoryController.php" afterPath="$PROJECT_DIR$/protected/controllers/web/StoryController.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/protected/models/db/StoryModel.php" afterPath="$PROJECT_DIR$/protected/models/db/StoryModel.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/protected/widgets/web/story/views/chapterList.php" afterPath="$PROJECT_DIR$/protected/widgets/web/story/views/chapterList.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/protected/views/web/story/view.php" afterPath="$PROJECT_DIR$/protected/views/web/story/view.php" />
     </list>
     <ignored path="nhenhang.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -26,11 +28,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="StoryModel.php" pinned="false" current-in-tab="false">
+      <file leaf-file-name="StoryModel.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/protected/models/db/StoryModel.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-8.75">
-              <caret line="185" column="38" selection-start-line="185" selection-start-column="38" selection-end-line="185" selection-end-column="38" />
+            <state vertical-scroll-proportion="0.78167117">
+              <caret line="201" column="36" selection-start-line="201" selection-start-column="36" selection-end-line="201" selection-end-column="36" />
               <folding />
             </state>
           </provider>
@@ -39,8 +41,8 @@
       <file leaf-file-name="StoryController.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/protected/controllers/web/StoryController.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-13.333333">
-              <caret line="20" column="128" selection-start-line="20" selection-start-column="128" selection-end-line="20" selection-end-column="128" />
+            <state vertical-scroll-proportion="-14.0">
+              <caret line="21" column="75" selection-start-line="21" selection-start-column="75" selection-end-line="21" selection-end-column="75" />
               <folding />
             </state>
           </provider>
@@ -49,8 +51,8 @@
       <file leaf-file-name="view.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/protected/views/web/story/view.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-0.0">
-              <caret line="0" column="5" selection-start-line="0" selection-start-column="5" selection-end-line="0" selection-end-column="5" />
+            <state vertical-scroll-proportion="-2.6666667">
+              <caret line="4" column="31" selection-start-line="4" selection-start-column="31" selection-end-line="4" selection-end-column="31" />
               <folding />
             </state>
           </provider>
@@ -59,8 +61,8 @@
       <file leaf-file-name="ChapterListWidget.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/protected/widgets/web/story/ChapterListWidget.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-3.3333333">
-              <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+            <state vertical-scroll-proportion="-10.0">
+              <caret line="15" column="47" selection-start-line="15" selection-start-column="47" selection-end-line="15" selection-end-column="47" />
               <folding />
             </state>
           </provider>
@@ -76,11 +78,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="chapterList.php" pinned="false" current-in-tab="true">
+      <file leaf-file-name="chapterList.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/protected/widgets/web/story/views/chapterList.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.21011673">
-              <caret line="69" column="80" selection-start-line="69" selection-start-column="80" selection-end-line="69" selection-end-column="80" />
+            <state vertical-scroll-proportion="-6.5555553">
+              <caret line="77" column="52" selection-start-line="77" selection-start-column="52" selection-end-line="77" selection-end-column="52" />
               <folding />
             </state>
           </provider>
@@ -89,8 +91,8 @@
       <file leaf-file-name="storyList.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/protected/widgets/web/story/views/storyList.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-6.2222223">
-              <caret line="12" column="40" selection-start-line="12" selection-start-column="40" selection-end-line="12" selection-end-column="40" />
+            <state vertical-scroll-proportion="-8.888889">
+              <caret line="16" column="203" selection-start-line="15" selection-start-column="20" selection-end-line="16" selection-end-column="203" />
               <folding />
             </state>
           </provider>
@@ -166,14 +168,14 @@
         <option value="$PROJECT_DIR$/protected/controllers/web/HomeController.php" />
         <option value="$PROJECT_DIR$/protected/views/web/home/index.php" />
         <option value="$PROJECT_DIR$/protected/views/web/layouts/_header.php" />
-        <option value="$PROJECT_DIR$/protected/models/db/StoryModel.php" />
         <option value="$PROJECT_DIR$/protected/controllers/web/IndexController.php" />
         <option value="$PROJECT_DIR$/protected/models/db/ChapterModel.php" />
-        <option value="$PROJECT_DIR$/protected/controllers/web/StoryController.php" />
-        <option value="$PROJECT_DIR$/protected/widgets/web/story/ChapterListWidget.php" />
-        <option value="$PROJECT_DIR$/protected/views/web/story/view.php" />
         <option value="$PROJECT_DIR$/web/css/style.css" />
+        <option value="$PROJECT_DIR$/protected/widgets/web/story/ChapterListWidget.php" />
         <option value="$PROJECT_DIR$/protected/widgets/web/story/views/chapterList.php" />
+        <option value="$PROJECT_DIR$/protected/views/web/story/view.php" />
+        <option value="$PROJECT_DIR$/protected/controllers/web/StoryController.php" />
+        <option value="$PROJECT_DIR$/protected/models/db/StoryModel.php" />
       </list>
     </option>
   </component>
@@ -936,14 +938,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/protected/models/db/StoryModel.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-8.75">
-          <caret line="185" column="38" selection-start-line="185" selection-start-column="38" selection-end-line="185" selection-end-column="38" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/protected/controllers/web/IndexController.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-3.0">
@@ -960,34 +954,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/protected/controllers/web/StoryController.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-13.333333">
-          <caret line="20" column="128" selection-start-line="20" selection-start-column="128" selection-end-line="20" selection-end-column="128" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/protected/widgets/web/story/StoryListWidget.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-0.0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="17" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/protected/widgets/web/story/ChapterListWidget.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-3.3333333">
-          <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/protected/views/web/story/view.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="5" selection-start-line="0" selection-start-column="5" selection-end-line="0" selection-end-column="5" />
           <folding />
         </state>
       </provider>
@@ -1002,16 +972,48 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/protected/widgets/web/story/views/storyList.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-6.2222223">
-          <caret line="12" column="40" selection-start-line="12" selection-start-column="40" selection-end-line="12" selection-end-column="40" />
+        <state vertical-scroll-proportion="-8.888889">
+          <caret line="16" column="203" selection-start-line="15" selection-start-column="20" selection-end-line="16" selection-end-column="203" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/protected/widgets/web/story/ChapterListWidget.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-10.0">
+          <caret line="15" column="47" selection-start-line="15" selection-start-column="47" selection-end-line="15" selection-end-column="47" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/protected/widgets/web/story/views/chapterList.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.21011673">
-          <caret line="69" column="80" selection-start-line="69" selection-start-column="80" selection-end-line="69" selection-end-column="80" />
+        <state vertical-scroll-proportion="-6.5555553">
+          <caret line="77" column="52" selection-start-line="77" selection-start-column="52" selection-end-line="77" selection-end-column="52" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/protected/views/web/story/view.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-2.6666667">
+          <caret line="4" column="31" selection-start-line="4" selection-start-column="31" selection-end-line="4" selection-end-column="31" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/protected/controllers/web/StoryController.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-14.0">
+          <caret line="21" column="75" selection-start-line="21" selection-start-column="75" selection-end-line="21" selection-end-column="75" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/protected/models/db/StoryModel.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.78167117">
+          <caret line="201" column="36" selection-start-line="201" selection-start-column="36" selection-end-line="201" selection-end-column="36" />
           <folding />
         </state>
       </provider>
