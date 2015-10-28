@@ -14,71 +14,16 @@
     </div>
     <div class="story-chapter">
         <div class="story-chapter-title">
-            <h3>Danh Sách Chương</h3>
+            <h3>Nội dung truyện</h3>
         </div>
-        <?php if(!empty($chapters) && count($chapters)):
-            $total = count($chapters);
-            if($total>25){
-                $total = 25;
-            }
-            ?>
-
-        <div class="col-md-6 col-sm-12 col-xs-12">
-            <ul>
-                <?php
-                $table = substr($story->story_slug,0,2);
-                for($i = 0; $i<$total;$i++):
-                    $chapter = $chapters[$i];
-                    $obj = array('obj_type'=>'chapter','slug'=>$story['story_slug'].'-'.$chapter['chapter_slug'],'id'=>$chapter['id'],'table'=>$table);
-                    $link = URLHelper::makeUrl($obj);
-                    ?>
-                <li>
-                    <a href="<?php echo $link;?>">
-                        <h4><?php echo $chapter['chapter_name'];?></h4>
-                    </a>
-                </li>
-
-                <?php endfor;?>
-
-            </ul>
-        </div>
-            <?php if(count($chapters)>25):?>
-            <div class="col-md-6 col-sm-12 col-xs-12">
-                <ul>
-                    <?php for($i = 25; $i<50;$i++):
-                        $chapter = $chapters[$i];
-                        $obj = array('obj_type'=>'chapter','slug'=>$story['story_slug'].'-'.$chapter['chapter_slug'],'id'=>$chapter['id'],'table'=>$table);
-                        $link = URLHelper::makeUrl($obj);
-                        ?>
-                        <li>
-                            <a href="<?php echo $link;?>">
-                                <h4><?php echo $chapter['chapter_name'];?></h4>
-                            </a>
-                        </li>
-
-                    <?php endfor;?>
-
-                </ul>
-            </div>
-            <?php endif;?>
+        <div class="detail-chapter">
+        <?php if(!empty($chapter)):?>
+            <?php echo $chapter['content'];?>
         <?php else:?>
             <div class="text-center">
                 Truyện Đang Được Cập Nhật.
             </div>
         <?php endif;?>
-        <div class="paginagion">
-            <?php
-            $this->widget("application.widgets.web.common.VLinkPager", array (
-                "pages" => $pager,
-                "suffix"=>"gr",
-                "object_link"=>null,
-                "maxButtonCount" => Yii::app()->params["paging"]["pager_max_button_count"],
-                "header" => "",
-                "htmlOptions" => array (
-                    "class" => "pager"
-                )
-            ) );
-            ?>
         </div>
     </div>
     <div class="box-relate">

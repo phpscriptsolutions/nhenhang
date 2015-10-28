@@ -30,7 +30,7 @@ class URLHelper {
     {
     	Yii::import("application.vendors.Hashids.*");
     	$hashids = new Hashids(Yii::app()->params["hash_url"]);
-    	
+
     	$prefix = $sufix = "";
 		$id = $hashids->encode($object["id"]);
 
@@ -71,9 +71,9 @@ class URLHelper {
 					$suffix = "bx";
 					break;*/
 
-				case "category":
-					$prefix = "truyen-";
-					$suffix = "tr";
+				case "chapter":
+					$prefix = '';
+					$suffix = $object['table'];
 					break;
     		}
     	}

@@ -24,6 +24,20 @@ class ChapterModel{
         }
     }
 
+    public function getChapterById($table,$chapterId,$select = null){
+        try {
+            $command = Yii::app()->db->createCommand();
+            if (!empty($select)) {
+                $command->select($select);
+            }
+            $command->from($table);
+            $command->where('id = :chapterId', array(':chapterId' => $chapterId));
+            return $command->queryRow();
+        }catch (Exception $ex){
+            return null;
+        }
+    }
+
     public function countChapterByStory($table,$story_slug){
         try {
             $command = Yii::app()->db->createCommand();
