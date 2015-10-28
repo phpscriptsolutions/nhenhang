@@ -10,7 +10,7 @@ $this->widget('application.widgets.web.story.StoryListWidget',
     $this->widget("application.widgets.web.common.VLinkPager", array (
         "pages" => $pager,
         "suffix"=>"gr",
-        "object_link"=>array("category"=>$category->category_slug,'name'=>$category->category_name,'hot'=>$isHot),
+        "object_link"=>array('obj_type'=>'category',"slug"=>$category->category_slug,'id'=>$category->id,'other'=>array('hot'=>$isHot)),
         "maxButtonCount" => Yii::app()->params["paging"]["pager_max_button_count"],
         "header" => "",
         "htmlOptions" => array (

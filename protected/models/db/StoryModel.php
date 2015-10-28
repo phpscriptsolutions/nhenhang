@@ -11,6 +11,50 @@ class StoryModel extends BaseStoryModel
 		return parent::model($className);
 	}
 
+	public function countStoryByCategoryId($cateId=null,$select = null,$isHot = false){
+		$criteria = new CDbCriteria();
+
+		if(!empty($select)){
+			$criteria->select = $select;
+		}
+
+		if(!empty($categorySlug)){
+			$criteria->condition = 'category_id=:categoryId';
+			$criteria->params = array(
+				':categoryId'=> $cateId
+			);
+		}
+
+		if($isHot){
+			$criteria->addCondition('hot=1');
+		}
+
+		return self::model()->count($criteria);
+	}
+
+	public function getStoryByCategoryId($cateId=null,$limit=12,$offset = 0,$select = null,$isHot = false){
+		$criteria = new CDbCriteria();
+
+		if(!empty($select)){
+			$criteria->select = $select;
+		}
+
+		if(!empty($categorySlug)){
+			$criteria->condition = 'category_id=:categoryId';
+			$criteria->params = array(
+				':categoryId'=> $cateId
+			);
+		}
+		if($isHot){
+			$criteria->addCondition('hot=1');
+		}
+
+		$criteria->limit = $limit;
+		$criteria->offset = $offset;
+
+		return self::model()->findAll($criteria);
+	}
+
 	public function countStoryByCategory($categorySlug=null,$select = null,$isHot = false){
 		$criteria = new CDbCriteria();
 

@@ -10,7 +10,7 @@ class HomeController extends Controller{
     }
 
     public function actionCategory(){
-        $categorySlug = Yii::app()->request->getParam('category','ngon-tinh');
+        $id = Yii::app()->request->getParam('id',1);
         $isHot = Yii::app()->request->getParam('hot',null);
         $limit = 32;
         if(empty($isHot)){
@@ -19,18 +19,18 @@ class HomeController extends Controller{
             $isHot = true;
         }
         //lay thong tin categroy
-        $category = CategoryModel::model()->find('category_slug=:category_slug',array(':category_slug'=>$categorySlug));
+        $category = CategoryModel::model()->findByPk($id);
 
         if(empty($category)){
             $this->forward('index/error');
             Yii::app()->end();
         }
 
-        $total = StoryModel::model()->countStoryByCategory($categorySlug,null, $isHot);
+        $total = StoryModel::model()->countStoryByCategoryId($id,null, $isHot);
         $pager = new CPagination($total);
         $pager->setPageSize($limit);
 
-        $stories = StoryModel::model()->getStoryByCategory($categorySlug,$limit,
+        $stories = StoryModel::model()->getStoryByCategoryId($id,$limit,
             $pager->getOffset(),'id,category_name,category_slug,story_name,story_slug,lastest_chapter,hot,status', $isHot);
 
         $this->render('category',compact('total','pager','stories','category','isHot'));

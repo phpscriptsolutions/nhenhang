@@ -280,7 +280,7 @@ footer section li h3{
     top: -2px;
 }
 
-.pager .next>a{
+.pager .next>a, .pager .previous>a{
     float:none;
 }
 

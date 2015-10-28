@@ -82,7 +82,7 @@ class VLinkPager extends CLinkPager {
 			}
 			switch ($this->suffix) {
 				case 'gr'://genre
-					$link = URLHelper::makeUrlGenre($object);
+					$link = URLHelper::makeUrl($object);
 					break;
 				case 'at'://genre
 				case 'ai'://artist_list
