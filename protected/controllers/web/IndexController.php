@@ -10,6 +10,7 @@ class IndexController extends Controller
 	{
 		$this->layout = 'application.views.web.layouts.main';
 		$error = Yii::app()->errorHandler->error;
+		die('co loi rui trong index/error');
 		$this->render('error', array('error'=>$error) );
 	}
 

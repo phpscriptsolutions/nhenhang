@@ -8,24 +8,32 @@
 class ChapterModel{
 
     public function getChapterByStory($table,$story_slug,$limit = 25,$offset = 0,$select = null){
-        $command = Yii::app()->db->createCommand();
-        if(!empty($select)){
-            $command->select($select);
+        try {
+            $command = Yii::app()->db->createCommand();
+            if (!empty($select)) {
+                $command->select($select);
+            }
+            $command->limit($limit);
+            $command->offset($offset);
+            $command->order('chapter_number asc');
+            $command->from($table);
+            $command->where('story_slug = :slug', array(':slug' => $story_slug));
+            return $command->queryAll();
+        }catch (Exception $ex){
+            return null;
         }
-        $command->limit($limit);
-        $command->offset($offset);
-        $command->order('chapter_number asc');
-        $command->from($table);
-        $command->where('story_slug = :slug', array(':slug'=>$story_slug));
-        return $command->queryAll();
     }
 
     public function countChapterByStory($table,$story_slug){
-        $command = Yii::app()->db->createCommand();
-        $command->select('COUNT(*) as total');
-        $command->from($table);
-        $command->where('story_slug = :slug', array(':slug'=>$story_slug));
-        $data = $command->queryRow();
-        return $data['total'];
+        try {
+            $command = Yii::app()->db->createCommand();
+            $command->select('COUNT(*) as total');
+            $command->from($table);
+            $command->where('story_slug = :slug', array(':slug' => $story_slug));
+            $data = $command->queryRow();
+            return $data['total'];
+        }catch (Exception $ex){
+            return 0;
+        }
     }
 }

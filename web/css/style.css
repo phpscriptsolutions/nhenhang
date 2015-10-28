@@ -419,3 +419,9 @@ footer section li h3{
     overflow: hidden;
     text-overflow: ellipsis;
 }
+
+.pager:before {
+    content: '';
+    display: table;
+    clear: both;
+}
