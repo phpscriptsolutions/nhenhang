@@ -45,7 +45,7 @@
             <?php if(count($chapters)>25):?>
             <div class="col-md-6 col-sm-12 col-xs-12">
                 <ul>
-                    <?php for($i = 25; $i<50;$i++):
+                    <?php for($i = 25; $i<count($chapters);$i++):
                         $chapter = $chapters[$i];
                         $obj = array('obj_type'=>'chapter','slug'=>$story['story_slug'].'-'.$chapter['chapter_slug'],'id'=>$chapter['id'],'table'=>$table);
                         $link = URLHelper::makeUrl($obj);
