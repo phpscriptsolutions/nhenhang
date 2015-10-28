@@ -19,4 +19,13 @@ class ChapterModel{
         $command->where('story_slug = :slug', array(':slug'=>$story_slug));
         return $command->queryAll();
     }
+
+    public function countChapterByStory($table,$story_slug){
+        $command = Yii::app()->db->createCommand();
+        $command->select('COUNT(*) as total');
+        $command->from($table);
+        $command->where('story_slug = :slug', array(':slug'=>$story_slug));
+        $data = $command->queryRow();
+        return $data['total'];
+    }
 }

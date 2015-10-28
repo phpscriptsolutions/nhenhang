@@ -181,4 +181,14 @@ class StoryModel extends BaseStoryModel
 
 		return self::model()->findAll($criteria);
 	}
+
+	public function getStoryBySlug($slug){
+		$criteria = new CDbCriteria();
+		$criteria->condition = 'story_slug=:slug';
+		$criteria->params = array(
+			':slug'=> $slug
+		);
+
+		return self::model()->find($criteria);
+	}
 }
