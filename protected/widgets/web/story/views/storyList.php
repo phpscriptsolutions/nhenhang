@@ -14,16 +14,16 @@
             </div>
             <div class="info">
                 <div class="info-name">
-                    <a href=""><h4><?php echo $story->story_name?></h4></a>
+                    <a href=""><h4 class="subtext"><?php echo $story->story_name?></h4></a>
                 </div>
                 <div class="info-author">
-                    <a href=""><h4><?php echo $story->author;?></h4></a>
+                    <a href=""><h4 class="subtext"><?php echo $story->author;?></h4></a>
                 </div>
                 <div class="info-category">
-                    <a href=""><h4><?php echo $story->category_name?></h4></a>
+                    <a href=""><h4 class="subtext"><?php echo $story->category_name?></h4></a>
                 </div>
                 <div class="info-category">
-                    <a href=""><h4><?php echo $story->lastest_chapter;?></h4></a>
+                    <a href=""><h4 class="subtext"><?php echo $story->lastest_chapter;?></h4></a>
                 </div>
             </div>
         </li>

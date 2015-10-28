@@ -413,3 +413,9 @@ footer section li h3{
     margin-top:30px;
     font-size:16px;
 }
+
+.subtext{
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
