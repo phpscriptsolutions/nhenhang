@@ -12,7 +12,7 @@ class HomeController extends Controller{
     public function actionCategory(){
         $categorySlug = Yii::app()->request->getParam('category','ngon-tinh');
         $isHot = Yii::app()->request->getParam('hot',null);
-        $isFull = Yii::app()->request->getParam('full',null);
+        $isFull = Yii::app()->request->getParam('s',null);
         $limit = 32;
         if(empty($isHot)){
             $isHot = false;
@@ -20,14 +20,14 @@ class HomeController extends Controller{
             $isHot = true;
         }
         //lay thong tin categroy
-        if(!in_array($categorySlug,array('truyen-hot','truyen-full'))) {
+        if(!in_array($categorySlug,array('truyen-hot','truyen-full','truyen-moi'))) {
             $category = CategoryModel::model()->find('category_slug=:category_slug', array(':category_slug' => $categorySlug));
         }else if($categorySlug == 'truyen-hot'){
             $category = new CategoryModel();
             $category->category_name = 'Truyện Hot';
             $category->category_slug = 'hot';
             $categorySlug = null;
-        }else if($categorySlug == 'truyen-full'){
+        }else if($categorySlug == 'truyen-full' || $categorySlug == 'truyen-moi'){
             $category = new CategoryModel();
             $category->category_name = 'Truyện Full';
             $category->category_slug = 'full';

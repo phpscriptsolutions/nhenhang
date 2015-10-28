@@ -86,7 +86,7 @@ a, a:hover, a:active, a:focus, a:visited{
 .sub-menu h3{
     font-size: 15px;
     width: 200px;
-    margin:15px;
+    margin:5px 15px;
 }
 
 .sub-menu li{

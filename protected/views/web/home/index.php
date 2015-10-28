@@ -18,7 +18,7 @@
                 'title'=>'Truyện HOT',
                 'link'=>$link
             ));
-        $link = Yii::app()->createUrl('home/category',array('category'=>'truyen-full','hot'=>false));
+        $link = Yii::app()->createUrl('home/category',array('category'=>'truyen-full','hot'=>false,'s'=>'Full'));
         $this->widget('application.widgets.web.story.StoryListWidget',
             array(
                 'stories'=>$fullStories,

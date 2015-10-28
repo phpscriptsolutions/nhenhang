@@ -30,7 +30,7 @@ class StoryModel extends BaseStoryModel
 		}
 
 		if($isFull){
-			$criteria->addCondition('status='.$isFull);
+			$criteria->addCondition('status="'.$isFull.'"');
 		}
 
 		return self::model()->count($criteria);
@@ -53,7 +53,7 @@ class StoryModel extends BaseStoryModel
 			$criteria->addCondition('hot=1');
 		}
 		if($isFull){
-			$criteria->addCondition('status='.$isFull);
+			$criteria->addCondition('status="'.$isFull.'"');
 		}
 
 		if(empty($order)){
@@ -86,7 +86,7 @@ class StoryModel extends BaseStoryModel
 			$criteria->addCondition('hot=1');
 		}
 		if($isFull){
-			$criteria->addCondition('status='.$isFull);
+			$criteria->addCondition('status="'.$isFull.'"');
 		}
 		return self::model()->count($criteria);
 	}
@@ -108,7 +108,7 @@ class StoryModel extends BaseStoryModel
 			$criteria->addCondition('hot=1');
 		}
 		if($isFull){
-			$criteria->addCondition('status='.$isFull);
+			$criteria->addCondition('status="'.$isFull.'"');
 		}
 		if(empty($order)){
 			$criteria->order = 'updated_time DESC';
@@ -121,7 +121,7 @@ class StoryModel extends BaseStoryModel
 		return self::model()->findAll($criteria);
 	}
 
-	public function countFullStoryByCategory($categorySlug=null,$select = null,$isHot = false, $isFull = null){
+	public function countFullStoryByCategory($categorySlug=null,$select = null,$isHot = false){
 		$criteria = new CDbCriteria();
 
 		if(!empty($select)){
@@ -143,16 +143,12 @@ class StoryModel extends BaseStoryModel
 
 		if($isHot){
 			$criteria->addCondition('hot=1');
-		}
-
-		if($isFull){
-			$criteria->addCondition('status='.$isFull);
 		}
 
 		return self::model()->count($criteria);
 	}
 
-	public function getFullStoryByCategory($categorySlug=null,$limit=12,$offset = 0,$select = null,$isHot = false, $isFull = null, $order = null){
+	public function getFullStoryByCategory($categorySlug=null,$limit=12,$offset = 0,$select = null,$isHot = false, $order = null){
 		$criteria = new CDbCriteria();
 
 		if(!empty($select)){
@@ -175,9 +171,6 @@ class StoryModel extends BaseStoryModel
 			$criteria->addCondition('hot=1');
 		}
 
-		if($isFull){
-			$criteria->addCondition('status='.$isFull);
-		}
 		if(empty($order)){
 			$criteria->order = 'updated_time DESC';
 		}else{
