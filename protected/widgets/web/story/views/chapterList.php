@@ -60,10 +60,20 @@
                 Truyện Đang Được Cập Nhật.
             </div>
         <?php endif;?>
-        <ul class="pager" id="yw0"><li class="previous hidden"><a class="" href="http://nhacvn.vn/album/nhac-au-my-hot-grjA">«</a></li>
-            <li class=" active"><a class="active" href="http://nhacvn.vn/album/nhac-au-my-hot-grjA">1</a></li>
-            <li class=""><a class="" href="http://nhacvn.vn/album/nhac-au-my-hot-grjA?p=2">2</a></li>
-            <li class="next"><a class="" href="http://nhacvn.vn/album/nhac-au-my-hot-grjA?p=2">»</a></li></ul>
+        <div class="paginagion">
+            <?php
+            $this->widget("application.widgets.web.common.VLinkPager", array (
+                "pages" => $pager,
+                "suffix"=>"gr",
+                "object_link"=>null,
+                "maxButtonCount" => Yii::app()->params["paging"]["pager_max_button_count"],
+                "header" => "",
+                "htmlOptions" => array (
+                    "class" => "pager"
+                )
+            ) );
+            ?>
+        </div>
     </div>
     <div class="box-relate">
         <div class="relate-header">
@@ -78,7 +88,7 @@
                 <?php foreach($storyAuthor as $item):?>
                 <li class="story-item">
                     <div class="cover">
-                        <a href="">
+                        <a href="<?php echo Yii::app()->createUrl('story/view',array('slug'=>$item->story_slug))?>">
                             <img width="129" src="<?php echo Yii::app()->getBaseUrl(true).
                                 '/public/images/'.$item->category_slug.'/'.$item->story_slug.'-md.jpg';?>"
                                  onerror="this.src='<?php echo Yii::app()->getBaseUrl(true)?>/public/images/tien-hiep/Dan-Tu-md.jpg'"/>
@@ -86,7 +96,7 @@
                     </div>
                     <div class="info">
                         <div class="info-name">
-                            <a href=""><h4><?php echo $item->story_name;?></h4></a>
+                            <a href="<?php echo Yii::app()->createUrl('story/view',array('slug'=>$item->story_slug))?>"><h4><?php echo $item->story_name;?></h4></a>
                         </div>
                     </div>
                 </li>
@@ -99,7 +109,10 @@
             <h3>Bình Luận</h3>
         </div>
         <div class="box-comment">
-            <div data-width="100%" class="fb-comments" data-href="http://developers.facebook.com/docs/plugins/comments/" data-numposts="5"></div>
+            <?php
+                $link =  Yii::app()->createAbsoluteUrl('story/view',array('slug'=>$story->story_slug));
+                $this->widget('application.widgets.web.common.FBComments',array('url'=>$link));
+            ?>
         </div>
     </div>
 </div>

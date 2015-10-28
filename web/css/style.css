@@ -425,3 +425,9 @@ footer section li h3{
     display: table;
     clear: both;
 }
+
+.story-chapter:after {
+    content: '';
+    display: table;
+    clear: both;
+}

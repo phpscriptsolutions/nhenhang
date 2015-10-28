@@ -97,8 +97,8 @@ return CMap::mergeArray(
                 ),
                 'social'=>array(
                     'facebook'=>array(
-                        'id'=>'1656805361206325',
-                        'secret'=>'a4a09e8d679c5a4e1971d653fdc2ee7b'
+                        'id'=>'1597299333836183',
+                        'secret'=>'85d2c16c50faccd7274d5861bf6e2925'
                     ),
                     'google'=>array(
                         'client_id'=>'268958024357-7ob4vv6rkn8giru5qidj3ncspst1rmah.apps.googleusercontent.com',

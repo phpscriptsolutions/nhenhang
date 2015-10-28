@@ -34,6 +34,7 @@ return CMap::mergeArray ( require (dirname ( __FILE__ ) . "/main.php"), array (
 							'sitemap.xml' => 'sitemap/xml',
 							'search'=>'search/index',
 							'the-loai/<category:[a-zA-Z0-9-_]+>'=>'home/category',
+							'Truyen-<slug:[a-zA-Z0-9-_]+>'=>'story/view',
 							'u/<u:[a-zA-Z0-9-_]+>'=>'user/detail',
 							'u/<u:[a-zA-Z0-9-_]+>/nhac-cua-toi'=>'user/myMusic',
 							'u/<u:[a-zA-Z0-9-_]+>/nghe-gan-day/<type:(song|video|album)>'=>'user/recent',

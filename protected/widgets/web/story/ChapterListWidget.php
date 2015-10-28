@@ -13,7 +13,8 @@ class ChapterListWidget extends CWidget
             'story'=>$this->story,
             'chapters' => $this->chapters,
             'options'=>  $this->options,
-            'storyAuthor' => $this->storyAuthor
+            'storyAuthor' => $this->storyAuthor,
+            'pager'=>$this->pager,
         ));
     }
 }

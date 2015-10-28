@@ -1,6 +1,6 @@
 <?php
 class FBComments extends CWidget{
-	public $url = "nhac.vn";
+	public $url = "nhenhang.com";
 	
 	public function init(){}
 	public function run(){
