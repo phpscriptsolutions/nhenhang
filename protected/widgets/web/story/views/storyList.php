@@ -25,7 +25,10 @@
                     <a href=""><h4 class="subtext"><?php echo $story->author;?></h4></a>
                 </div>
                 <div class="info-category">
-                    <a href=""><h4 class="subtext"><?php echo $story->category_name?></h4></a>
+                    <a href="<?php echo Yii::app()->createUrl('home/category',array(
+                        'category'=>$story->category_slug,
+                        'hot' => false,
+                    ))?>"><h4 class="subtext"><?php echo $story->category_name?></h4></a>
                 </div>
                 <div class="info-category">
                     <a href=""><h4 class="subtext"><?php echo $story->lastest_chapter;?></h4></a>
