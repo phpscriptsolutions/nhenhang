@@ -11,16 +11,19 @@
     ?>
     <div id="main-content" class="col-lg-9 col-md-9 col-sm-12 col-xs-12">
         <?php
+        $link = Yii::app()->createUrl('home/category',array('category'=>'truyen-hot','hot'=>true));
         $this->widget('application.widgets.web.story.StoryListWidget',
             array(
                 'stories'=>$hotStories,
                 'title'=>'Truyện HOT',
+                'link'=>$link
             ));
-
+        $link = Yii::app()->createUrl('home/category',array('category'=>'truyen-full','hot'=>false));
         $this->widget('application.widgets.web.story.StoryListWidget',
             array(
                 'stories'=>$fullStories,
                 'title'=>'Truyện FULL',
+                'link' => $link
             ));
         ?>
     </div>

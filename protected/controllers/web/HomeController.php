@@ -10,8 +10,9 @@ class HomeController extends Controller{
     }
 
     public function actionCategory(){
-        $id = Yii::app()->request->getParam('id',1);
+        $categorySlug = Yii::app()->request->getParam('category','ngon-tinh');
         $isHot = Yii::app()->request->getParam('hot',null);
+        $isFull = Yii::app()->request->getParam('full',null);
         $limit = 32;
         if(empty($isHot)){
             $isHot = false;
@@ -19,19 +20,30 @@ class HomeController extends Controller{
             $isHot = true;
         }
         //lay thong tin categroy
-        $category = CategoryModel::model()->findByPk($id);
+        if(!in_array($categorySlug,array('truyen-hot','truyen-full'))) {
+            $category = CategoryModel::model()->find('category_slug=:category_slug', array(':category_slug' => $categorySlug));
+        }else if($categorySlug == 'truyen-hot'){
+            $category = new CategoryModel();
+            $category->category_name = 'Truyện Hot';
+            $category->category_slug = 'hot';
+            $categorySlug = null;
+        }else if($categorySlug == 'truyen-full'){
+            $category = new CategoryModel();
+            $category->category_name = 'Truyện Full';
+            $category->category_slug = 'full';
+            $categorySlug = null;
+        }
 
         if(empty($category)){
             $this->forward('index/error');
             Yii::app()->end();
         }
-
-        $total = StoryModel::model()->countStoryByCategoryId($id,null, $isHot);
+        $total = StoryModel::model()->countStoryByCategory($categorySlug,null, $isHot,$isFull);
         $pager = new CPagination($total);
         $pager->setPageSize($limit);
 
-        $stories = StoryModel::model()->getStoryByCategoryId($id,$limit,
-            $pager->getOffset(),'id,category_name,category_slug,story_name,story_slug,lastest_chapter,hot,status', $isHot);
+        $stories = StoryModel::model()->getStoryByCategory($categorySlug,$limit,
+            $pager->getOffset(),'id,category_name,category_slug,story_name,story_slug,lastest_chapter,hot,status', $isHot,$isFull);
 
         $this->render('category',compact('total','pager','stories','category','isHot'));
     }

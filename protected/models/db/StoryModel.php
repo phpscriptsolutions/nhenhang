@@ -11,7 +11,7 @@ class StoryModel extends BaseStoryModel
 		return parent::model($className);
 	}
 
-	public function countStoryByCategoryId($cateId=null,$select = null,$isHot = false){
+	public function countStoryByCategoryId($cateId=null,$select = null,$isHot = false,$isFull = null){
 		$criteria = new CDbCriteria();
 
 		if(!empty($select)){
@@ -29,10 +29,14 @@ class StoryModel extends BaseStoryModel
 			$criteria->addCondition('hot=1');
 		}
 
+		if($isFull){
+			$criteria->addCondition('status='.$isFull);
+		}
+
 		return self::model()->count($criteria);
 	}
 
-	public function getStoryByCategoryId($cateId=null,$limit=12,$offset = 0,$select = null,$isHot = false){
+	public function getStoryByCategoryId($cateId=null,$limit=12,$offset = 0,$select = null,$isHot = false,$isFull = null, $order = null){
 		$criteria = new CDbCriteria();
 
 		if(!empty($select)){
@@ -48,6 +52,15 @@ class StoryModel extends BaseStoryModel
 		if($isHot){
 			$criteria->addCondition('hot=1');
 		}
+		if($isFull){
+			$criteria->addCondition('status='.$isFull);
+		}
+
+		if(empty($order)){
+			$criteria->order = 'updated_time DESC';
+		}else{
+			$criteria->order = $order;
+		}
 
 		$criteria->limit = $limit;
 		$criteria->offset = $offset;
@@ -55,7 +68,7 @@ class StoryModel extends BaseStoryModel
 		return self::model()->findAll($criteria);
 	}
 
-	public function countStoryByCategory($categorySlug=null,$select = null,$isHot = false){
+	public function countStoryByCategory($categorySlug=null,$select = null,$isHot = false, $isFull = null){
 		$criteria = new CDbCriteria();
 
 		if(!empty($select)){
@@ -72,11 +85,13 @@ class StoryModel extends BaseStoryModel
 		if($isHot){
 			$criteria->addCondition('hot=1');
 		}
-
+		if($isFull){
+			$criteria->addCondition('status='.$isFull);
+		}
 		return self::model()->count($criteria);
 	}
 
-	public function getStoryByCategory($categorySlug=null,$limit=12,$offset = 0,$select = null,$isHot = false){
+	public function getStoryByCategory($categorySlug=null,$limit=12,$offset = 0,$select = null,$isHot = false,$isFull = null, $order = null){
 		$criteria = new CDbCriteria();
 
 		if(!empty($select)){
@@ -92,14 +107,21 @@ class StoryModel extends BaseStoryModel
 		if($isHot){
 			$criteria->addCondition('hot=1');
 		}
-
+		if($isFull){
+			$criteria->addCondition('status='.$isFull);
+		}
+		if(empty($order)){
+			$criteria->order = 'updated_time DESC';
+		}else{
+			$criteria->order = $order;
+		}
 		$criteria->limit = $limit;
 		$criteria->offset = $offset;
 
 		return self::model()->findAll($criteria);
 	}
 
-	public function countFullStoryByCategory($categorySlug=null,$select = null,$isHot = false){
+	public function countFullStoryByCategory($categorySlug=null,$select = null,$isHot = false, $isFull = null){
 		$criteria = new CDbCriteria();
 
 		if(!empty($select)){
@@ -123,10 +145,14 @@ class StoryModel extends BaseStoryModel
 			$criteria->addCondition('hot=1');
 		}
 
+		if($isFull){
+			$criteria->addCondition('status='.$isFull);
+		}
+
 		return self::model()->count($criteria);
 	}
 
-	public function getFullStoryByCategory($categorySlug=null,$limit=12,$offset = 0,$select = null,$isHot = false){
+	public function getFullStoryByCategory($categorySlug=null,$limit=12,$offset = 0,$select = null,$isHot = false, $isFull = null, $order = null){
 		$criteria = new CDbCriteria();
 
 		if(!empty($select)){
@@ -147,6 +173,15 @@ class StoryModel extends BaseStoryModel
 		}
 		if($isHot){
 			$criteria->addCondition('hot=1');
+		}
+
+		if($isFull){
+			$criteria->addCondition('status='.$isFull);
+		}
+		if(empty($order)){
+			$criteria->order = 'updated_time DESC';
+		}else{
+			$criteria->order = $order;
 		}
 		$criteria->limit = $limit;
 		$criteria->offset = $offset;

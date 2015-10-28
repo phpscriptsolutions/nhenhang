@@ -1,6 +1,11 @@
 <div class="box">
     <div class="box-title">
-        <a href=""><h2><?php echo $title;?></h2></a>
+        <?php if(empty($link)):?>
+            <h2><?php echo $title;?></h2>
+        <?php else:?>
+            <a href="<?php echo $link?>"><h2><?php echo $title;?></h2></a>
+        <?php endif;?>
+
     </div>
     <?php if(!empty($stories) && count($stories)):?>
     <ul>

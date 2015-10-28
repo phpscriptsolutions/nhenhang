@@ -5,7 +5,7 @@ return CMap::mergeArray ( require (dirname ( __FILE__ ) . "/main.php"), array (
 		"controllerPath" => _APP_PATH_ . DIRECTORY_SEPARATOR . "protected" . DIRECTORY_SEPARATOR . "controllers" . DIRECTORY_SEPARATOR . "web",
 		"viewPath" => _APP_PATH_ . DIRECTORY_SEPARATOR . "protected" . DIRECTORY_SEPARATOR . "views" . DIRECTORY_SEPARATOR . "web",
 		'theme' => 'default',
-		'defaultController' => 'index',
+		'defaultController' => 'home',
 		// autoloading model and component classes
 		"import" => array (
 				"application.models.web.*",
@@ -33,7 +33,7 @@ return CMap::mergeArray ( require (dirname ( __FILE__ ) . "/main.php"), array (
 							'sitemap/<t:(song|video|genre|artist|album)><p:\d+>' => array('sitemap/xml', 'urlSuffix'=>'.xml', 'caseSensitive'=>false) ,
 							'sitemap.xml' => 'sitemap/xml',
 							'search'=>'search/index',
-							'bai-hat'=>'song',
+							'the-loai/<category:[a-zA-Z0-9-_]+>'=>'home/category',
 							'u/<u:[a-zA-Z0-9-_]+>'=>'user/detail',
 							'u/<u:[a-zA-Z0-9-_]+>/nhac-cua-toi'=>'user/myMusic',
 							'u/<u:[a-zA-Z0-9-_]+>/nghe-gan-day/<type:(song|video|album)>'=>'user/recent',
