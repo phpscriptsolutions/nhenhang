@@ -67,10 +67,10 @@
     </div>
     <div class="box-relate">
         <div class="relate-header">
-            <img width="60" src="images/author.jpg">
+            <img width="60" src="<?php echo Yii::app()->getBaseUrl(true);?>/web/images/author.jpg">
             <div class="relate-info">
-                <a href=""><h3>Nguyễn Thành Tiến</h3></a>
-                <a href=""><h4>Truyện Ngôn Tình</h4></a>
+                <a href=""><h3><?php echo $story->author?></h3></a>
+                <a href=""><h4><?php echo $story->category_name;?></h4></a>
             </div>
         </div>
         <div class="relate-content">
