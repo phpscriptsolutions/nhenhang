@@ -167,7 +167,7 @@ a, a:hover, a:active, a:focus, a:visited{
     -webkit-transform: translateX(-50%);
     -o-transform: translateX(-50%);
     -moz-transform: translateX(-50%);
-
+    margin:3px;
 }
 
 .info-author h4{
