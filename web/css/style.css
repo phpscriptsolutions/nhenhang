@@ -86,7 +86,7 @@ a, a:hover, a:active, a:focus, a:visited{
 .sub-menu h3{
     font-size: 15px;
     width: 200px;
-    margin:15px;
+    margin:5px 15px;
 }
 
 .sub-menu li{
@@ -167,7 +167,7 @@ a, a:hover, a:active, a:focus, a:visited{
     -webkit-transform: translateX(-50%);
     -o-transform: translateX(-50%);
     -moz-transform: translateX(-50%);
-
+    margin:3px;
 }
 
 .info-author h4{
@@ -280,7 +280,7 @@ footer section li h3{
     top: -2px;
 }
 
-.pager .next>a{
+.pager .next>a, .pager .previous>a{
     float:none;
 }
 
@@ -412,4 +412,22 @@ footer section li h3{
 .detail-chapter{
     margin-top:30px;
     font-size:16px;
+}
+
+.subtext{
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.pager:before {
+    content: '';
+    display: table;
+    clear: both;
+}
+
+.story-chapter:after {
+    content: '';
+    display: table;
+    clear: both;
 }

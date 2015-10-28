@@ -1,0 +1,10 @@
+Options +FollowSymLinks
+#IndexIgnore */*
+RewriteEngine on
+
+# if a directory or a file exists, use it directly
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+
+# otherwise forward it to index.php
+RewriteRule !\.(js|ico|gif|jpe?g|png|css|swf|mp3|wav)$ index.php [L]

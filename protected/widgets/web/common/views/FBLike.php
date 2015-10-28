@@ -1,0 +1,3 @@
+<!--<a href="#share"  onclick="sharethis('<?php /*echo $name; */?>','<?php /*echo $url; */?>')" ></a>
+<iframe width="100" src="//www.facebook.com/plugins/like.php?href=<?php /*echo $url; */?>&amp;width=450&amp;height=21&amp;colorscheme=light&amp;layout=button_count&amp;action=like&amp;show_faces=false&amp;send=false&amp;locale=en_US" scrolling="no" frameborder="0" style="border:none; overflow:hidden; height:20px;float: right" allowTransparency="true"></iframe>-->
+<div class="fb-like" data-href="<?php echo $url;?>" data-layout="button_count" data-action="like" data-show-faces="true" data-share="true"></div>

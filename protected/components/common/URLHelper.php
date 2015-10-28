@@ -36,7 +36,7 @@ class URLHelper {
 
     	if(isset($object["obj_type"])){
     		switch ($object["obj_type"]) {
-    			case "album":
+    			/*case "album":
     				$prefix = "album-";
     				$suffix = "ab";
     				break;
@@ -69,18 +69,15 @@ class URLHelper {
 				case "bxh":
 					$prefix = "bang-xep-hang-";
 					$suffix = "bx";
+					break;*/
+
+				case "category":
+					$prefix = "truyen-";
+					$suffix = "tr";
 					break;
     		}
     	}
-		$urlKey = $prefix.Common::makeFriendlyUrl($object["name"]);
-
-		if(isset($object["artist"]) && $object["artist"] != ""){
-			$urlKey = $prefix.Common::makeFriendlyUrl($object["name"]."-".$object["artist"]);
-		}
-		if($object["obj_type"]=='playlist'){
-			$urlKey = $prefix.Common::makeFriendlyUrl($object["name"]);
-		}
-
+		$urlKey = $prefix.$object["slug"];
 		$params = array("url_key" => $urlKey,"code"=>$suffix.$id);
 		if(isset($object['other'])){
 			foreach($object['other'] as $key => $ac){

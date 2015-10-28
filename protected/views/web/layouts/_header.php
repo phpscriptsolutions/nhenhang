@@ -32,29 +32,41 @@ if (!Yii::app()->user->isGuest){
 
 $controller = Yii::app()->controller;
 $action = $this->action->id;
+$categories = CategoryModel::model()->findAll();
 ?>
 <div id="header">
     <header>
         <div class="logo">
-            <a href="nhenhang.com"><h1>Nhenhang.com</h1></a>
+            <a href="<?php echo Yii::app()->getBaseUrl(true);?>"><h1>Nhenhang.com</h1></a>
         </div>
         <ul class="menu">
             <li class="menu-li">
                 <a href="#"><h2>Danh sách</h2></a>
                 <ul class="sub-menu">
-                    <li><a href=""><h3>Truyện mới cập nhật</h3></a></li>
-                    <li><a href=""><h3>Truyện HOT</h3></a></li>
-                    <li><a href=""><h3>Truyện FULL</h3></a></li>
+                    <li><a href="<?php echo Yii::app()->createUrl('home/category',array(
+                            'category'=>'truyen-moi',
+                            'hot' => false,
+                            's'=>'Đang ra'
+                        ))?>"><h3>Truyện mới cập nhật</h3></a></li>
+                    <li><a href="<?php echo Yii::app()->createUrl('home/category',array(
+                            'category'=>'truyen-hot',
+                            'hot' => true
+                        ))?>"><h3>Truyện HOT</h3></a></li>
+                    <li><a href="<?php echo Yii::app()->createUrl('home/category',array(
+                            'category'=>'truyen-full',
+                            'hot' => false,
+                        ))?>"><h3>Truyện FULL</h3></a></li>
                 </ul>
             </li>
             <li class="menu-li">
                 <a href="#"><h2>Thể loại</h2></a>
                 <ul class="sub-menu">
-                    <li><a href=""><h3>Truyện Ngôn tình</h3></a></li>
-                    <li><a href=""><h3>Truyện Kiếm Hiệp</h3></a></li>
-                    <li><a href=""><h3>Truyện Tiên Hiệp</h3></a></li>
-                    <li><a href=""><h3>Truyện Võng Du</h3></a></li>
-                    <li><a href=""><h3>Truyện Trinh Thám</h3></a></li>
+                    <?php foreach($categories as $category):?>
+                    <li><a href="<?php echo Yii::app()->createUrl('home/category',array(
+                            'category'=>$category->category_slug,
+                            'hot' => false,
+                        ))?>"><h3><?php echo $category->category_name;?></h3></a></li>
+                    <?php endforeach;?>
                 </ul>
             </li>
             <li class="menu-li">|</li>
