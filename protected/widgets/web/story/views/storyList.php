@@ -9,7 +9,7 @@
             <div class="cover">
                 <a href="">
                     <img width="129" src="<?php echo Yii::app()->getBaseUrl(true).
-                        '/public/images/'.$story->category_slug.'/'.$story->story_slug.'-md.jpg';?>"/>
+                        '/public/images/'.$story->category_slug.'/'.$story->story_slug.'-md.jpg';?>" onerror="this.src='<?php echo Yii::app()->getBaseUrl(true)?>/public/images/tien-hiep/Dan-Tu-md.jpg'"/>
                 </a>
             </div>
             <div class="info">
