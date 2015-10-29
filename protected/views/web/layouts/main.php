@@ -1,6 +1,6 @@
 <?php include_once '_header.php';?>
 <body <?php echo (($controller->id == 'artist' && $action == 'view') || ($controller->id == 'user' && $action == 'detail'))? 'class="artist"' : ''; ?>>
-<?php //include_once 'ga.php'?>
+<?php include_once 'ga.php'?>
 <?php //include_once '_social_connect.php'?>
 <div class="wraper">
     <?php echo $content ?>
