@@ -1,5 +1,9 @@
 <?php
 class StoryController extends Controller{
+    public function init(){
+        parent::init();
+        $this->layout = 'application.views.web.layouts.main';
+    }
     public function actionView(){
         $slug = trim(Yii::app()->request->getParam('slug',null));
         $limit = 50;
