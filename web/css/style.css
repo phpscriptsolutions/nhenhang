@@ -83,6 +83,15 @@ a, a:hover, a:active, a:focus, a:visited{
     font-size: 16px;
 }
 
+.menu .li-social{
+    margin-top: 8px;
+    vertical-align: middle;
+}
+
+.story-chapter li {
+    margin-top: 20px;
+}
+
 .sub-menu h3{
     font-size: 15px;
     width: 200px;
