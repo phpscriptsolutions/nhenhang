@@ -25,7 +25,8 @@ if('computer'==$deviceType){
 	$config=_APP_PATH_.'/protected/config/web.php';
 }else{
 	ini_set('session.name', 'MOBILE');
-	$config=_APP_PATH_.'/protected/config/touch.php';
+	//$config=_APP_PATH_.'/protected/config/touch.php';
+	$config=_APP_PATH_.'/protected/config/web.php';
 }
 require_once($yii);
 Yii::createWebApplication($config)->run();
