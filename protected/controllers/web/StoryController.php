@@ -40,10 +40,24 @@ class StoryController extends Controller{
             Yii::app()->end();
         }
 
+        //lay next va previous chapter
+        $chapterIds = array($chapterInfo['chapter_number']-1,$chapterInfo['chapter_number']+1);
+        $otherChapter = $chapter->getOtherChapterByChapterNumber($table,$chapterInfo['story_id'],$chapterIds);
+        $previous = $next = null;
+        if(!empty($otherChapter)) {
+            foreach ($otherChapter as $r) {
+                if ($r['chapter_number'] == $chapterIds[0]) {
+                    $previous = $r;
+                } else if ($r['chapter_number'] == $chapterIds[1]) {
+                    $next = $r;
+                }
+            }
+        }
+
         //get story Info
         $story = StoryModel::model()->findByPk($chapterInfo['story_id']);
 
-        $this->render('detail',compact('story','chapterInfo'));
+        $this->render('detail',compact('story','chapterInfo','previous','next'));
     }
 
     public function actionAjax(){
