@@ -431,3 +431,12 @@ footer section li h3{
     display: table;
     clear: both;
 }
+
+.comment-li{
+    background:url(../images/icsn.png) no-repeat 0 -21px;
+    width: 82px;
+    text-indent: -999px;
+    position: absolute;
+    margin-left: 10px;
+    cursor: pointer;
+}

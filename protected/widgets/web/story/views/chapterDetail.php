@@ -4,10 +4,14 @@
             <h1><?php echo $story->story_name?></h1>
             <h2><?php echo $story->category_name;?></h2>
             <a href=""><h2><?php echo $story->lastest_chapter?></h2></a>
+            <?php $linkFb =  Yii::app()->createAbsoluteUrl('story/view',array('slug'=>$story->story_slug));?>
             <ul class="social">
-                <li>Facebook</li>
-                <li>Google+</li>
-                <li>Bình Luận</li>
+                <li>
+                    <?php $this->widget("application.widgets.web.common.FBLike", array(
+                        "url" => $linkFb,
+                    ));?>
+                </li>
+                <li class="comment-li crollto" rel="box-comment">Bình Luận</li>
             </ul>
         </div>
         <i class="icon icon-star"></i>
@@ -59,10 +63,9 @@
         <div class="story-chapter-title">
             <h3>Bình Luận</h3>
         </div>
-        <div class="box-comment">
+        <div class="box-comment" id="box-comment">
             <?php
-                $link =  Yii::app()->createAbsoluteUrl('story/view',array('slug'=>$story->story_slug));
-                $this->widget('application.widgets.web.common.FBComments',array('url'=>$link));
+                $this->widget('application.widgets.web.common.FBComments',array('url'=>$linkFb));
             ?>
         </div>
     </div>
