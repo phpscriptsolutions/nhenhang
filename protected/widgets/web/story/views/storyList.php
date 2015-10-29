@@ -22,7 +22,7 @@
                     <a href="<?php echo Yii::app()->createUrl('story/view',array('slug'=>$story->story_slug))?>"><h4 class="subtext"><?php echo $story->story_name?></h4></a>
                 </div>
                 <div class="info-author">
-                    <a href=""><h4 class="subtext"><?php echo $story->author;?></h4></a>
+                    <a href=""><h4 class="subtext"><?php echo (!empty($story->author))?$story->author:'Truyện Full';?></h4></a>
                 </div>
                 <div class="info-category">
                     <a href="<?php echo Yii::app()->createUrl('home/category',array(

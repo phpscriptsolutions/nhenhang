@@ -44,61 +44,8 @@ class SiteController extends Controller {
     	$id = $parse[0];
     	$_GET["id"] = $id;
     	$_GET["url_key"] = Yii::app()->request->getParam('url_key');
-    	switch ($prefix){
-    		case "pl":
-    		case "tr":
-    			$this->forward("home/category",true);
-    			break;
-			case "pu":
-    			$this->forward("playlist/view",true);
-    			break;
-    		case "so":
-    			$this->forward("song/view",true);
-    			break;
-    		case "mv":
-    			$this->forward("video/view",true);
-    			break;
-			case "cs":
-				$this->forward("collection/view",true);
-				break;
-			case "vp":
-				$this->forward("videoplaylist/chart",true);
-				break;
-			case "ca":
-				$this->forward("/playall/artist",true);
-				break;
-			case "va":
-				$this->forward("/videoplaylist/artist",true);
-				break;
-			case "hl":
-				$this->forward("html/view",true);
-				break;
-			case "bx":
-				$dataBxhId = array(
-					'song_VN'=>1,
-					'song_KOR'=>2,
-					'song_QTE'=>3,
-					'video_VN'=>4,
-					'video_KOR'=>5,
-					'video_QTE'=>6,
-					'album_VN'=>7,
-					'album_KOR'=>8,
-					'album_QTE'=>9
-				);
-				$key = array_search ($id, $dataBxhId);
-				$keyEx = explode('_',$key);
-				$_GET["type"] = $keyEx[0];
-				$_GET["genre"] = $keyEx[1];
-				/*$week = Yii::app()->request->getParam('week');
-				if(is_numeric($week)) {
-					$_GET['week'] = $week;
-				}*/
-				$this->forward("chart/index",true);
-				break;
-			default:
-				$this->forward("index/error",true);
-				break;
-    	}
+		$_GET['prefix'] = $prefix;
+		$this->forward("story/detail",true);
     }
 	public function actionUrl2()
 	{
