@@ -6,6 +6,19 @@
  * Time: 20:17
  */
 class ChapterModel{
+    public function getOtherChapterByChapterNumber($table,$storyId,$chapterNumbers){
+        try {
+            $command = Yii::app()->db->createCommand();
+            $command->select('id,chapter_number,chapter_slug,chapter_name');
+            $command->from($table);
+            $command->where(array('in','chapter_number',$chapterNumbers));
+            $command->andwhere('story_id = :storyId', array(':storyId' => $storyId));
+            return $command->queryAll();
+        }catch (Exception $ex){
+            return null;
+        }
+    }
+
     public function getChapterByStoryId($table,$storyId,$limit = 25,$offset = 0,$select = null){
         try {
             $command = Yii::app()->db->createCommand();

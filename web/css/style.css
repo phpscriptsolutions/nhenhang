@@ -398,12 +398,10 @@ footer section li h3{
     padding: 10px 0;
 }
 
-.des-info .list-story img, .des-info .hot-title{
-    display: inline-block;
-}
 
 .des-info .list-story img{
     margin-right: 5px;
+    float: left;
 }
 .des-info .hot-title h4{
     font-size: 14px;
@@ -430,4 +428,30 @@ footer section li h3{
     content: '';
     display: table;
     clear: both;
+}
+
+.comment-li{
+    background:url(../images/icsn.png) no-repeat 0 -21px;
+    width: 82px;
+    text-indent: -9999px;
+    position: absolute;
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+.des-info .list-story li:after {
+    clear: both;
+    content: '';
+    display: table;
+}
+
+.other-chapter.text-center a {
+    border: 1px solid rgba(0,0,0,0.3);
+    border-radius: 3px;
+    padding: 3px 5px;
+    margin-left: 10px;
+}
+
+.other-chapter{
+    margin-top: 30px;
 }

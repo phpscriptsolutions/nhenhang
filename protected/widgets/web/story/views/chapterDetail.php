@@ -4,10 +4,14 @@
             <h1><?php echo $story->story_name?></h1>
             <h2><?php echo $story->category_name;?></h2>
             <a href=""><h2><?php echo $story->lastest_chapter?></h2></a>
+            <?php $linkFb =  Yii::app()->createAbsoluteUrl('story/view',array('slug'=>$story->story_slug));?>
             <ul class="social">
-                <li>Facebook</li>
-                <li>Google+</li>
-                <li>Bình Luận</li>
+                <li>
+                    <?php $this->widget("application.widgets.web.common.FBLike", array(
+                        "url" => $linkFb,
+                    ));?>
+                </li>
+                <li class="comment-li crollto" rel="box-comment">Bình Luận</li>
             </ul>
         </div>
         <i class="icon icon-star"></i>
@@ -24,6 +28,21 @@
                 Truyện Đang Được Cập Nhật.
             </div>
         <?php endif;?>
+        </div>
+        <div class="other-chapter text-center">
+            <?php $table = substr($story->story_slug,0,2); if(!empty($previous)):
+                $obj = array('obj_type'=>'chapter','slug'=>$story['story_slug'].'-'.$previous['chapter_slug'],'id'=>$previous['id'],'table'=>$table);
+                $link = URLHelper::makeUrl($obj);
+                ?>
+                <a href="<?php echo $link;?>">Chương Trước</a>
+            <?php endif;?>
+            <?php if(!empty($next)):
+                $obj = array('obj_type'=>'chapter','slug'=>$story['story_slug'].'-'.$next['chapter_slug'],'id'=>$next['id'],'table'=>$table);
+                $link = URLHelper::makeUrl($obj);
+                ?>
+
+                <a href="<?php echo $link;?>">Chương Sau</a>
+            <?php endif;?>
         </div>
     </div>
     <div class="box-relate">
@@ -59,10 +78,9 @@
         <div class="story-chapter-title">
             <h3>Bình Luận</h3>
         </div>
-        <div class="box-comment">
+        <div class="box-comment" id="box-comment">
             <?php
-                $link =  Yii::app()->createAbsoluteUrl('story/view',array('slug'=>$story->story_slug));
-                $this->widget('application.widgets.web.common.FBComments',array('url'=>$link));
+                $this->widget('application.widgets.web.common.FBComments',array('url'=>$linkFb));
             ?>
         </div>
     </div>

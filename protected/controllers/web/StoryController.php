@@ -1,5 +1,9 @@
 <?php
 class StoryController extends Controller{
+    public function init(){
+        parent::init();
+        $this->layout = 'application.views.web.layouts.main';
+    }
     public function actionView(){
         $slug = trim(Yii::app()->request->getParam('slug',null));
         $limit = 50;
@@ -36,9 +40,40 @@ class StoryController extends Controller{
             Yii::app()->end();
         }
 
+        //lay next va previous chapter
+        $chapterIds = array($chapterInfo['chapter_number']-1,$chapterInfo['chapter_number']+1);
+        $otherChapter = $chapter->getOtherChapterByChapterNumber($table,$chapterInfo['story_id'],$chapterIds);
+        $previous = $next = null;
+        if(!empty($otherChapter)) {
+            foreach ($otherChapter as $r) {
+                if ($r['chapter_number'] == $chapterIds[0]) {
+                    $previous = $r;
+                } else if ($r['chapter_number'] == $chapterIds[1]) {
+                    $next = $r;
+                }
+            }
+        }
+
         //get story Info
         $story = StoryModel::model()->findByPk($chapterInfo['story_id']);
 
-        $this->render('detail',compact('story','chapterInfo'));
+        $this->render('detail',compact('story','chapterInfo','previous','next'));
+    }
+
+    public function actionAjax(){
+        $type = Yii::app()->request->getParam('type','full');
+        $isFull = null;
+        $isHot = false;
+        if($type == 'full'){
+            $isFull = 'Full';
+            $title = 'Truyện FULL';
+        }else{
+            $isHot = false; //khi co hot thi chuyen thanh true
+            $title = 'Truyện HOT';
+        }
+        $stories = StoryModel::model()->getStoryByCategory(null,10,
+            0,'id,category_name,category_slug,story_name,story_slug,lastest_chapter,hot,status', $isHot,$isFull);
+
+        $this->renderPartial('ajax',compact('stories','title'));
     }
 }
