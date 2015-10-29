@@ -5,6 +5,8 @@ class ChapterDetailWidget extends CWidget
     public $story = null;
     public $pager = null;
     public $chapter = null;
+    public $previous = null;
+    public $next = null;
     public $options = array();
     public function run()
     {
@@ -15,6 +17,8 @@ class ChapterDetailWidget extends CWidget
             'options'=>  $this->options,
             'storyAuthor' => $storyAuthor,
             'pager'=>$this->pager,
+            'previous'=>$this->previous,
+            'next'=>$this->next,
         ));
     }
 }

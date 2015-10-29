@@ -444,3 +444,14 @@ footer section li h3{
     content: '';
     display: table;
 }
+
+.other-chapter.text-center a {
+    border: 1px solid rgba(0,0,0,0.3);
+    border-radius: 3px;
+    padding: 3px 5px;
+    margin-left: 10px;
+}
+
+.other-chapter{
+    margin-top: 30px;
+}

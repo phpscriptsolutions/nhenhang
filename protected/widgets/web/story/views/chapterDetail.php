@@ -29,6 +29,21 @@
             </div>
         <?php endif;?>
         </div>
+        <div class="other-chapter text-center">
+            <?php $table = substr($story->story_slug,0,2); if(!empty($previous)):
+                $obj = array('obj_type'=>'chapter','slug'=>$story['story_slug'].'-'.$previous['chapter_slug'],'id'=>$previous['id'],'table'=>$table);
+                $link = URLHelper::makeUrl($obj);
+                ?>
+                <a href="<?php echo $link;?>">Chương Trước</a>
+            <?php endif;?>
+            <?php if(!empty($next)):
+                $obj = array('obj_type'=>'chapter','slug'=>$story['story_slug'].'-'.$next['chapter_slug'],'id'=>$next['id'],'table'=>$table);
+                $link = URLHelper::makeUrl($obj);
+                ?>
+
+                <a href="<?php echo $link;?>">Chương Sau</a>
+            <?php endif;?>
+        </div>
     </div>
     <div class="box-relate">
         <div class="relate-header">
