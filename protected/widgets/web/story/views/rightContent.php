@@ -1,13 +1,14 @@
 <div class="slidebar-group">
     <div class="info-story">
         <div class="info-story-header">
-            <img src="http://static.truyenfull.vn/poster/lh3/-55HGpltQybY/ViCBisUo4SI/AAAAAAAABsw/n3VauqiRf6Q/w129-h192-Ic42/dai-duong-tuu-do.jpg" width="90"/>
+            <img src="<?php echo Yii::app()->getBaseUrl(true).'/public/images/'.$story->category_slug.'/'.$story->story_slug.'-md.jpg';?>"
+                 onerror="this.src='<?php echo Yii::app()->getBaseUrl(true)?>/public/images/tien-hiep/Dan-Tu-md.jpg'" width="90"/>
             <div class="info-story-more">
-                <h3>Tôi thấy hoa vàng trên cỏ xanh</h3>
-                <a href=""><h4>Truyện Ngôn Tình</h4></a>
+                <h3><?php echo $story->story_name;?></h3>
+                <a href="<?php echo Yii::app()->createUrl('story/view',array('slug'=>$story->story_slug))?>"><h4><?php echo $story->category_name;?></h4></a>
                 <ul>
-                    <li>Facebook</li>
-                    <li>Google+</li>
+                    <li class="gp-icon">Android</li>
+                    <li class="comment-li crollto" rel="box-comment">Bình Luận</li>
                 </ul>
             </div>
         </div>
@@ -16,105 +17,17 @@
     <div class="description">
         <div class="des-title">Giới Thiệu</div>
         <div class="des-info">
-            Bạn đang nghe album: Dạ Vũ của ca sĩ: Nhiều Ca Sĩ gồm: 10 bài, với các tác phẩm như: Anh Là Mặt Trời, Mưa Đêm, Nỗi Đau Dịu Dàng. Album được phát hành bởi: ASIA 001 vào năm 1988
+            <?php echo (!empty($story->description))?$story->description:'Đang cập nhật.';?>
         </div>
     </div>
 </div>
-<div class="slidebar-group">
-    <div class="description">
-        <div class="des-title"><a href=""><h3>Truyện HOT</h3></a></div>
-        <div class="des-info">
-            <ul class="list-story">
-                <li>
-                    <a href="">
-                        <img src="http://static.truyenfull.vn/poster/lh3/-55HGpltQybY/ViCBisUo4SI/AAAAAAAABsw/n3VauqiRf6Q/w129-h192-Ic42/dai-duong-tuu-do.jpg" width="38"/>
-                    </a>
-                    <a href="" class="hot-title">
-                        <h4>Mùa yêu đầu tiên</h4>
-                    </a>
-                </li>
-                <li>
-                    <a href="">
-                        <img src="http://static.truyenfull.vn/poster/lh3/-55HGpltQybY/ViCBisUo4SI/AAAAAAAABsw/n3VauqiRf6Q/w129-h192-Ic42/dai-duong-tuu-do.jpg" width="38"/>
-                    </a>
-                    <a href="" class="hot-title">
-                        <h4>Mùa yêu đầu tiên</h4>
-                    </a>
-                </li>
-                <li>
-                    <a href="">
-                        <img src="http://static.truyenfull.vn/poster/lh3/-55HGpltQybY/ViCBisUo4SI/AAAAAAAABsw/n3VauqiRf6Q/w129-h192-Ic42/dai-duong-tuu-do.jpg" width="38"/>
-                    </a>
-                    <a href="" class="hot-title">
-                        <h4>Mùa yêu đầu tiên</h4>
-                    </a>
-                </li>
-                <li>
-                    <a href="">
-                        <img src="http://static.truyenfull.vn/poster/lh3/-55HGpltQybY/ViCBisUo4SI/AAAAAAAABsw/n3VauqiRf6Q/w129-h192-Ic42/dai-duong-tuu-do.jpg" width="38"/>
-                    </a>
-                    <a href="" class="hot-title">
-                        <h4>Mùa yêu đầu tiên</h4>
-                    </a>
-                </li>
-                <li>
-                    <a href="">
-                        <img src="http://static.truyenfull.vn/poster/lh3/-55HGpltQybY/ViCBisUo4SI/AAAAAAAABsw/n3VauqiRf6Q/w129-h192-Ic42/dai-duong-tuu-do.jpg" width="38"/>
-                    </a>
-                    <a href="" class="hot-title">
-                        <h4>Mùa yêu đầu tiên</h4>
-                    </a>
-                </li>
-            </ul>
-        </div>
-    </div>
+<div class="slidebar-group" id="story-list-hot">
 </div>
-<div class="slidebar-group">
-    <div class="description">
-        <div class="des-title"><a href=""><h3>Truyện FULL</h3></a></div>
-        <div class="des-info">
-            <ul class="list-story">
-                <li>
-                    <a href="">
-                        <img src="http://static.truyenfull.vn/poster/lh3/-55HGpltQybY/ViCBisUo4SI/AAAAAAAABsw/n3VauqiRf6Q/w129-h192-Ic42/dai-duong-tuu-do.jpg" width="38"/>
-                    </a>
-                    <a href="" class="hot-title">
-                        <h4>Mùa yêu đầu tiên</h4>
-                    </a>
-                </li>
-                <li>
-                    <a href="">
-                        <img src="http://static.truyenfull.vn/poster/lh3/-55HGpltQybY/ViCBisUo4SI/AAAAAAAABsw/n3VauqiRf6Q/w129-h192-Ic42/dai-duong-tuu-do.jpg" width="38"/>
-                    </a>
-                    <a href="" class="hot-title">
-                        <h4>Mùa yêu đầu tiên</h4>
-                    </a>
-                </li>
-                <li>
-                    <a href="">
-                        <img src="http://static.truyenfull.vn/poster/lh3/-55HGpltQybY/ViCBisUo4SI/AAAAAAAABsw/n3VauqiRf6Q/w129-h192-Ic42/dai-duong-tuu-do.jpg" width="38"/>
-                    </a>
-                    <a href="" class="hot-title">
-                        <h4>Mùa yêu đầu tiên</h4>
-                    </a>
-                </li>
-                <li>
-                    <a href="">
-                        <img src="http://static.truyenfull.vn/poster/lh3/-55HGpltQybY/ViCBisUo4SI/AAAAAAAABsw/n3VauqiRf6Q/w129-h192-Ic42/dai-duong-tuu-do.jpg" width="38"/>
-                    </a>
-                    <a href="" class="hot-title">
-                        <h4>Mùa yêu đầu tiên</h4>
-                    </a>
-                </li>
-                <li>
-                    <a href="">
-                        <img src="http://static.truyenfull.vn/poster/lh3/-55HGpltQybY/ViCBisUo4SI/AAAAAAAABsw/n3VauqiRf6Q/w129-h192-Ic42/dai-duong-tuu-do.jpg" width="38"/>
-                    </a>
-                    <a href="" class="hot-title">
-                        <h4>Mùa yêu đầu tiên</h4>
-                    </a>
-                </li>
-            </ul>
-        </div>
-    </div>
+<div class="slidebar-group" id="story-list-full">
 </div>
+
+<script type="text/javascript" src="<?php echo Yii::app()->getBaseUrl(true)?>/web/js/story.js"></script>
+<script>
+    story.loadList('hot');
+    story.loadList('full');
+</script>

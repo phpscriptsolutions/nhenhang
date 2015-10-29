@@ -45,4 +45,21 @@ class StoryController extends Controller{
 
         $this->render('detail',compact('story','chapterInfo'));
     }
+
+    public function actionAjax(){
+        $type = Yii::app()->request->getParam('type','full');
+        $isFull = null;
+        $isHot = false;
+        if($type == 'full'){
+            $isFull = 'Full';
+            $title = 'Truyện FULL';
+        }else{
+            $isHot = false; //khi co hot thi chuyen thanh true
+            $title = 'Truyện HOT';
+        }
+        $stories = StoryModel::model()->getStoryByCategory(null,10,
+            0,'id,category_name,category_slug,story_name,story_slug,lastest_chapter,hot,status', $isHot,$isFull);
+
+        $this->renderPartial('ajax',compact('stories','title'));
+    }
 }

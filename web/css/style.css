@@ -398,12 +398,10 @@ footer section li h3{
     padding: 10px 0;
 }
 
-.des-info .list-story img, .des-info .hot-title{
-    display: inline-block;
-}
 
 .des-info .list-story img{
     margin-right: 5px;
+    float: left;
 }
 .des-info .hot-title h4{
     font-size: 14px;
@@ -435,8 +433,14 @@ footer section li h3{
 .comment-li{
     background:url(../images/icsn.png) no-repeat 0 -21px;
     width: 82px;
-    text-indent: -999px;
+    text-indent: -9999px;
     position: absolute;
     margin-left: 10px;
     cursor: pointer;
+}
+
+.des-info .list-story li:after {
+    clear: both;
+    content: '';
+    display: table;
 }
