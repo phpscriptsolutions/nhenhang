@@ -71,8 +71,9 @@ $categories = CategoryModel::model()->findAll();
             </li>
             <li class="menu-li">|</li>
             <li class="menu-li li-social">
-                <div class="gg-social">Google+</div>
-                <div class="fb-social">Facebook</div>
+                <?php $this->widget("application.widgets.web.common.FBLike", array(
+                    "url" => Yii::app()->getBaseUrl(true),
+                ));?>
             </li>
         </ul>
         <ul class="menu-search">
