@@ -1,9 +1,8 @@
 <div class="chapter-info">
     <div class="story-header">
         <div class="story-header-info">
-            <h1><?php echo $story->story_name?></h1>
-            <h2><?php echo $story->category_name;?></h2>
-            <a href=""><h2><?php echo $story->lastest_chapter?></h2></a>
+            <h1><?php echo 'Truyện: '.$story->story_name?></h1>
+            <h2 class="chapter_name subtext">Đang đọc: <?php echo $chapter['chapter_name'];?></h2>
             <?php $linkFb =  Yii::app()->createAbsoluteUrl('story/view',array('slug'=>$story->story_slug));?>
             <ul class="social">
                 <li>

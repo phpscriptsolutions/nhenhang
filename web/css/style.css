@@ -166,7 +166,11 @@ a, a:hover, a:active, a:focus, a:visited{
     position: relative;
     margin-top:10px;
 }
-
+.chapter_name{
+    font-size: 18px !important;
+    font-weight: bold;
+    line-height: 18px !important;
+}
 .thumbnail{
     border: none;
 }
