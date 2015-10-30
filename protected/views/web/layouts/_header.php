@@ -16,10 +16,11 @@
 $cs = Yii::app()->getClientScript();
 $cs->registerCssFile(Yii::app()->request->baseUrl."/web/css/bootstrap.min.css?v=".time());
 $cs->registerCssFile(Yii::app()->request->baseUrl."/web/css/style.css?v=".time());
-$cs->registerCoreScript('jquery');
+$cs->registerScriptFile(Yii::app()->request->baseUrl."/web/js/jquery.js");
 $cs->registerCoreScript('jquery.ui');
 $cs->registerScriptFile(Yii::app()->request->baseUrl."/web/js/jquery.mousewheel.js");
 $cs->registerScriptFile(Yii::app()->request->baseUrl."/web/js/jquery.jscrollpane.min.js");
+$cs->registerScriptFile(Yii::app()->request->baseUrl."/web/js/bootstrap.min.js");
 $cs->registerScriptFile(Yii::app()->request->baseUrl."/web/js/hashids.min.js");
 $cs->registerScriptFile(Yii::app()->request->baseUrl."/web/js/_common.js");
 $cs->registerScriptFile(Yii::app()->request->baseUrl."/web/js/main.js");
@@ -35,77 +36,162 @@ $action = $this->action->id;
 $categories = CategoryModel::model()->findAll();
 ?>
 <div id="header">
-    <header>
-        <div class="logo">
-            <a href="<?php echo Yii::app()->getBaseUrl(true);?>"><h1>Nhenhang.com</h1></a>
-        </div>
-        <ul class="menu">
-            <li class="menu-li">
-                <a href="#"><h2>Danh sách</h2></a>
-                <ul class="sub-menu">
+    <nav id="nav-first" class="navbar navbar-default">
+        <div class="container-fluid">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="true">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="<?php echo Yii::app()->getBaseUrl(true);?>">Nhenhang.com</a>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1" aria-expanded="true">
+                <ul class="nav navbar-nav">
+                    <li><a href="<?php echo Yii::app()->createUrl('home/category',array(
+                            'category'=>'truyen-hot',
+                            'hot' => true
+                        ))?>">Truyện HOT</a></li>
+                    <li><a href="<?php echo Yii::app()->createUrl('home/category',array(
+                            'category'=>'truyen-full',
+                            'hot' => false,
+                        ))?>">Truyện FULL</a></li>
                     <li><a href="<?php echo Yii::app()->createUrl('home/category',array(
                             'category'=>'truyen-moi',
                             'hot' => false,
                             's'=>'Đang ra'
-                        ))?>"><h3>Truyện mới cập nhật</h3></a></li>
-                    <li><a href="<?php echo Yii::app()->createUrl('home/category',array(
-                            'category'=>'truyen-hot',
-                            'hot' => true
-                        ))?>"><h3>Truyện HOT</h3></a></li>
-                    <li><a href="<?php echo Yii::app()->createUrl('home/category',array(
-                            'category'=>'truyen-full',
-                            'hot' => false,
-                        ))?>"><h3>Truyện FULL</h3></a></li>
+                        ))?>">Truyện mới cập nhật</a></li>
+                    <li><a href="javascript:void(0);">|</a></li>
+                    <li class="li-social">
+                        <a href="javascript:void(0);">
+                        <?php $this->widget("application.widgets.web.common.FBLike", array(
+                            "url" => Yii::app()->getBaseUrl(true),
+                        ));?>
+                        </a>
+                    </li>
                 </ul>
-            </li>
-            <li class="menu-li">
-                <a href="#"><h2>Thể loại</h2></a>
-                <ul class="sub-menu">
-                    <?php foreach($categories as $category):?>
-                    <li><a href="<?php echo Yii::app()->createUrl('home/category',array(
-                            'category'=>$category->category_slug,
-                            'hot' => false,
-                        ))?>"><h3><?php echo $category->category_name;?></h3></a></li>
-                    <?php endforeach;?>
-                </ul>
-            </li>
-            <li class="menu-li">|</li>
-            <li class="menu-li li-social">
-                <?php $this->widget("application.widgets.web.common.FBLike", array(
-                    "url" => Yii::app()->getBaseUrl(true),
-                ));?>
-            </li>
-        </ul>
-        <ul class="menu-search">
-            <form action="" method="">
-                <li class="li-text">
-                    <input type="text" name="ten-truyen" placeholder="Tìm kiếm truyện" size="40"/>
-                </li>
-                <li class="li-submit">
-                    <button type="submit" name="tim-kiem">Tìm</button>
-                </li>
-            </form>
-        </ul>
-    </header>
+                <form class="navbar-form navbar-right" role="search">
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Search">
+                    </div>
+                    <button type="submit" class="btn btn-default">Tìm kiếm</button>
+                </form>
+            </div><!-- /.navbar-collapse -->
+        </div><!-- /.container-fluid -->
+    </nav>
 
-    <!-- menu-category-->
-    <div class="menu-category">
-        <ul>
-            <li><a href=""><h3>Truyện Ngôn tình</h3></a></li>
-            <li>|</li>
-            <li><a href=""><h3>Truyện Kiếm Hiệp</h3></a></li>
-            <li>|</li>
-            <li><a href=""><h3>Truyện Tiên Hiệp</h3></a></li>
-            <li>|</li>
-            <li><a href=""><h3>Truyện Võng Du</h3></a></li>
-            <li>|</li>
-            <li><a href=""><h3>Truyện Trinh Thám</h3></a></li>
-            <li>|</li>
-            <li><a href=""><h3>Truyện Kinh Dị</h3></a></li>
-            <li>|</li>
-            <li><a href=""><h3>Truyện Ma</h3></a></li>
-            <li>|</li>
-            <li><a href=""><h3>Truyện Teen</h3></a></li>
-        </ul>
-    </div>
+    <nav id="nav-second" class="navbar navbar-default">
+        <div class="container-fluid">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-2" aria-expanded="true">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="<?php echo Yii::app()->getBaseUrl(true);?>">Danh Mục</a>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-2" aria-expanded="true">
+                <ul class="nav navbar-nav">
+                    <li><a href="<?php echo Yii::app()->createUrl('home/category',array(
+                            'category'=>'ngon-tinh',
+                        ))?>">Ngôn Tình</a></li>
+                    <li><a href="<?php echo Yii::app()->createUrl('home/category',array(
+                            'category'=>'kiem-hiep',
+                        ))?>">Kiếm Hiệp</a></li>
+                    <li><a href="<?php echo Yii::app()->createUrl('home/category',array(
+                            'category'=>'tien-hiep',
+                        ))?>">Tiên Hiệp</a></li>
+                    <li><a href="<?php echo Yii::app()->createUrl('home/category',array(
+                            'category'=>'xuyen-khong',
+                        ))?>">Xuyên Không</a></li>
+                    <li><a href="<?php echo Yii::app()->createUrl('home/category',array(
+                            'category'=>'do-thi',
+                        ))?>">Đô Thị</a></li>
+                    <li><a href="<?php echo Yii::app()->createUrl('home/category',array(
+                            'category'=>'vong-du',
+                        ))?>">Võng Du</a></li>
+                    <li><a href="<?php echo Yii::app()->createUrl('home/category',array(
+                            'category'=>'huyen-huyen',
+                        ))?>">Huyền Huyễn</a></li>
+                    <li><a href="<?php echo Yii::app()->createUrl('home/category',array(
+                            'category'=>'truyen-teen',
+                        ))?>">Truyện Teen</a></li>
+                    <li><a href="<?php echo Yii::app()->createUrl('home/category',array(
+                            'category'=>'di-gioi',
+                        ))?>">Dị Giới</a></li>
+                    <li><a href="<?php echo Yii::app()->createUrl('home/category',array(
+                            'category'=>'lich-su',
+                        ))?>">Lịch Sử</a></li>
+                    <li><a href="<?php echo Yii::app()->createUrl('home/category',array(
+                            'category'=>'trong-sinh',
+                        ))?>">Trọng Sinh</a></li>
+                    <li><a href="<?php echo Yii::app()->createUrl('home/category',array(
+                            'category'=>'trinh-tham',
+                        ))?>">Trinh Thám</a></li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Truyện Khác <span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="<?php echo Yii::app()->createUrl('home/category',array(
+                                    'category'=>'khoa-huyen',
+                                ))?>">Khoa Huyền</a></li>
+                            <li><a href="<?php echo Yii::app()->createUrl('home/category',array(
+                                    'category'=>'di-nang',
+                                ))?>">Dị Năng</a></li>
+                            <li><a href="<?php echo Yii::app()->createUrl('home/category',array(
+                                    'category'=>'quan-su',
+                                ))?>">Quân Sự</a></li>
+                            <li><a href="<?php echo Yii::app()->createUrl('home/category',array(
+                                    'category'=>'tham-hiem',
+                                ))?>">Thám Hiểm</a></li>
+                            <li><a href="<?php echo Yii::app()->createUrl('home/category',array(
+                                    'category'=>'linh-di',
+                                ))?>">Linh Dị</a></li>
+                            <li><a href="<?php echo Yii::app()->createUrl('home/category',array(
+                                    'category'=>'sac',
+                                ))?>">Sắc</a></li>
+                            <li><a href="<?php echo Yii::app()->createUrl('home/category',array(
+                                    'category'=>'cung-dau',
+                                ))?>">Cung Đấu</a></li>
+                            <li><a href="<?php echo Yii::app()->createUrl('home/category',array(
+                                    'category'=>'nu-cuong',
+                                ))?>">Nữ Cường</a></li>
+                            <li><a href="<?php echo Yii::app()->createUrl('home/category',array(
+                                    'category'=>'gia-dau',
+                                ))?>">Gia Đấu</a></li>
+                            <li><a href="<?php echo Yii::app()->createUrl('home/category',array(
+                                    'category'=>'dong-phuong',
+                                ))?>">Đông Phương</a></li>
+
+                            <li><a href="<?php echo Yii::app()->createUrl('home/category',array(
+                                    'category'=>'dam-my',
+                                ))?>">Đam Mỹ</a></li>
+                            <li><a href="<?php echo Yii::app()->createUrl('home/category',array(
+                                    'category'=>'bach-hop',
+                                ))?>">Bách Hợp</a></li>
+                            <li><a href="<?php echo Yii::app()->createUrl('home/category',array(
+                                    'category'=>'hai-huoc',
+                                ))?>">Hài Hước</a></li>
+                            <li><a href="<?php echo Yii::app()->createUrl('home/category',array(
+                                    'category'=>'dien-van',
+                                ))?>">Điền Văn</a></li>
+                            <li><a href="<?php echo Yii::app()->createUrl('home/category',array(
+                                    'category'=>'co-dai',
+                                ))?>">Cổ Đại</a></li>
+                            <li><a href="<?php echo Yii::app()->createUrl('home/category',array(
+                                    'category'=>'mat-the',
+                                ))?>">Mạt Thế</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div><!-- /.navbar-collapse -->
+        </div><!-- /.container-fluid -->
+    </nav>
 </div>

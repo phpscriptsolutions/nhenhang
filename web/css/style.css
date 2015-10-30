@@ -14,15 +14,24 @@ body{
     width: 100%;
     z-index: 9;
 }
-header{
-    background:#131418;
+#nav-first{
+    background:#131418 !important;
     height: 58px;
     box-sizing: border-box;
     width: 100%;
+    margin-bottom: 0 !important;
 }
 
-header h1,header h2, header h3{
-    color:#fff;
+#bs-example-navbar-collapse-1{
+    background:#131418 !important;
+}
+
+#nav-second{
+    z-index: -1;
+}
+
+nav h1,header h2, header h3,#nav-first a{
+    color:#fff !important;
 }
 
 header h2{

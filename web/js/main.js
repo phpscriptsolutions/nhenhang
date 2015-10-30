@@ -147,7 +147,7 @@ var NhacVnCoreJs = {
     init: function(){
         NhacVnCoreJs.userId = $("#user_id").text();
         NhacVnCoreJs.userPage = $("#user_page").val();
-        $(".addsongtmpl").live('click',function() {
+        $(".addsongtmpl").bind('click',function() {
             userId = $("#user_id").text();
             if(userId == 0){
                 addDialoglogin_form_dialog();
@@ -164,13 +164,13 @@ var NhacVnCoreJs = {
             $('#dialog-myplaylist-box .mp-f2').removeClass('show');
             $('#dialog-myplaylist-box .mp-f2').addClass('hide');
             NhacVnCoreJs.showDialogPlaylist($(this).find('i'));
-            $("#overlay_ts").live('click', function(){
+            $("#overlay_ts").bind('click', function(){
                 NhacVnCoreJs.hideOverlay();
                 NhacVnCoreJs.closePlaylist();
             })
             return false
         });
-        $(".addsongtmpldt").live('click',function() {
+        $(".addsongtmpldt").bind('click',function() {
             userId = $("#user_id").text();
             if(userId == 0){
                 addDialoglogin_form_dialog();
@@ -185,17 +185,17 @@ var NhacVnCoreJs = {
             $('#dialog-myplaylist-box .mp-f2').removeClass('show');
             $('#dialog-myplaylist-box .mp-f2').addClass('hide');
             NhacVnCoreJs.showDialogPlaylist($(this));
-            $("#overlay_ts").live('click', function(){
+            $("#overlay_ts").bind('click', function(){
                 NhacVnCoreJs.hideOverlay();
                 NhacVnCoreJs.closePlaylist();
             })
             return false
         });
-        $('.pl-create-nav a').live('click', function(){
+        $('.pl-create-nav a').bind('click', function(){
             NhacVnCoreJs.mpf1tof2();
             NhacVnCoreJs.buildFormCreatePl();
         })
-        $('a.mp-f2-back').live('click', function(){
+        $('a.mp-f2-back').bind('click', function(){
             $('#dialog-myplaylist-box .mp-f1').removeClass('hide');
             $('#dialog-myplaylist-box .mp-f2').removeClass('show');
             $('#dialog-myplaylist-box .mp-f2').addClass('hide');
@@ -204,13 +204,13 @@ var NhacVnCoreJs = {
             var left = NhacVnCoreJs.playlistLeft;
             a.css("top", top).css("left", left);
         })
-        $('#dialog-myplaylist-box .l-items li a').live('click', function(){
+        $('#dialog-myplaylist-box .l-items li a').bind('click', function(){
             //$(this).toggleClass('added');
             var playlistId = $(this).attr('id');
             var songId = NhacVnCoreJs.songId;
             NhacVnCoreJs.addSongToPlaylist(songId,playlistId);
         })
-        $('.crollto').live('click',function(){
+        $('.crollto').bind('click',function(){
             var n = $(this).attr('rel');
             var t = $('#'+n).offset();
             $('body,html').animate({
@@ -463,7 +463,7 @@ var NhacVnCoreJs = {
     initMyMusic: function()
     {
         //sửa xóa nhạc của tôi
-        $('.myplaylist .mp-nav-tool a.edit').live('click', function(){
+        $('.myplaylist .mp-nav-tool a.edit').bind('click', function(){
             var id = $(this).attr('rel');
             var a = $('.myplaylist li#albumlist-'+id);
             a.addClass('active');
@@ -476,7 +476,7 @@ var NhacVnCoreJs = {
             var popup = $('#popuppro-box');
             NhacVnCoreJs.showPopupMyMusic(popup,$(this));
         })
-        $('.myplaylist .mp-nav-tool a.delete').live('click', function(){
+        $('.myplaylist .mp-nav-tool a.delete').bind('click', function(){
             var id = $(this).attr('rel');
             var a = $('.myplaylist li#albumlist-'+id);
             a.addClass('active');
@@ -489,7 +489,7 @@ var NhacVnCoreJs = {
             var popup = $('#popuppro-box');
             NhacVnCoreJs.showPopupMyMusic(popup,$(this));
         })
-        $('.myplaylist .mp-nav-tool a.delete-album').live('click', function(){
+        $('.myplaylist .mp-nav-tool a.delete-album').bind('click', function(){
             var id = $(this).attr('rel');
             var a = $('.myplaylist li#albumlist-'+id);
             a.addClass('active');
@@ -662,7 +662,7 @@ var NhacVnCoreJs = {
         //right = 60;
         a.removeClass("hide").css("top", c.top).css("left", c.left).css("display", "block");
         this.showOverlay();
-        $("#overlay_ts").live('click', function(){
+        $("#overlay_ts").bind('click', function(){
             NhacVnCoreJs.closePopupMyMusic(a);
         })
     },
@@ -714,24 +714,8 @@ $(document).ready(function() {
     Popup.init();
 	var userId = $("#user_id").text();
 
-    if($.browser.msie && $.browser.version <= 9){
-        /*$("[placeholder]").focus(function(){
-            if($(this).val()==$(this).attr("placeholder")) $(this).val("");
-        }).blur(function(){
-            if($(this).val()=="") $(this).val($(this).attr("placeholder"));
-        }).blur();
-
-        $("[placeholder]").parents("form").submit(function() {
-            $(this).find('[placeholder]').each(function() {
-                if ($(this).val() == $(this).attr("placeholder")) {
-                    $(this).val("");
-                }
-            })
-        });*/
-    }
-
     /* AJAX LINK POPUP */
-    $('a.has-ajax-pop').live('click',function(){
+    $('a.has-ajax-pop').bind('click',function(){
     	userId = $("#user_id").text();
     	var link = $(this).attr("rel");
     	if($(this).hasClass("reqlogin") && userId == 0){
@@ -783,14 +767,14 @@ $(document).ready(function() {
             }
         })
     }
-    $('#load_ajax .ajax_load li a').live('click',function(){
+    $('#load_ajax .ajax_load li a').bind('click',function(){
         var rel = $(this).attr('rel');
         xhr_load(rel,'user_board','GET');
     })
 })
 
 /*Begin Like bai hat*/
-$(".like_song").live("click",function(){
+$(".like_song").bind("click",function(){
 	userId = $("#user_id").text();
 	if(userId == 0){
 		//open_popup(popup_login_url);
@@ -820,7 +804,7 @@ $(".like_song").live("click",function(){
 
 })
 /*like box*/
-$(".ilike").live("click", function(){
+$(".ilike").bind("click", function(){
     userId = $("#user_id").text();
     if(userId == 0){
         //open_popup(popup_login_url);
@@ -849,7 +833,7 @@ $(".ilike").live("click", function(){
 })
 /*End like bai hat*/
 /*like box*/
-$(".ilike-artist").live("click", function(){
+$(".ilike-artist").bind("click", function(){
     userId = $("#user_id").text();
     if(userId == 0){
         //open_popup(popup_login_url);
@@ -879,7 +863,7 @@ $(".ilike-artist").live("click", function(){
 /*End like bai hat*/
 
 /*Begin Nghe radio*/
-$(".listen_radio").live("click",function(){
+$(".listen_radio").bind("click",function(){
 	alert(__t('Chức năng đang trong quá trình xây dựng'));
 })
 /*End Nghe radio*/
@@ -912,7 +896,7 @@ var load_like_song = function()
 }
 
 /*Begin Like artist*/
-$(".like_artist").live("click",function(){
+$(".like_artist").bind("click",function(){
     userId = $("#user_id").text();
     if(userId == 0){
         //open_popup(popup_login_url);
@@ -948,7 +932,7 @@ $(".like_artist").live("click",function(){
 /*End Like artist*/
 
 /*Submit search form*/
-$("#submit-search").live("click",function(){
+$("#submit-search").bind("click",function(){
 	if($("#keyword").val()!=""){
 		$(this).parent('form').get(0).submit();
 	}else{
@@ -1118,11 +1102,11 @@ window.overlayHide = function(){
 
 	if(xhr)	xhr.abort();
 };
-$("#stop").live('click', function() {
+$("#stop").bind('click', function() {
 	overlayHide();
 });
 
-$(".download-song-pr").live('click', function() {
+$(".download-song-pr").bind('click', function() {
 	$("#dialog").dialog("close");
 });
 
@@ -1144,7 +1128,7 @@ function loadLyrics(songId) {
     ajax_load(ajax_url,{'action':'songLyric','song_id':songId}, before_song_lyric,success_song_lyric);
 }
 $(function(){
-    $('select').live('change', function(){
+    $('select').bind('change', function(){
         if ($(this).children('option:first-child').is(':selected')) {
             $(this).addClass('placeholder');
         } else {
@@ -1175,15 +1159,15 @@ function LoadAjaxContent(link,id){
     })
 }
 $(function(){
-    $('#chart_song .ajax_load li a').live('click',function(){
+    $('#chart_song .ajax_load li a').bind('click',function(){
         var genre = $(this).attr('rel');
         LoadSongRank(genre);
     })
-    $('#chart_album .ajax_load li a').live('click',function(){
+    $('#chart_album .ajax_load li a').bind('click',function(){
         var genre = $(this).attr('rel');
         LoadAlbumRank(genre);
     })
-    $('#chart_video .ajax_load li a').live('click',function(){
+    $('#chart_video .ajax_load li a').bind('click',function(){
         var genre = $(this).attr('rel');
         LoadVideoRank(genre);
     });
