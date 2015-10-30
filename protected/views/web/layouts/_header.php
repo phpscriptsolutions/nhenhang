@@ -74,9 +74,9 @@ $categories = CategoryModel::model()->findAll();
                         </a>
                     </li>
                 </ul>
-                <form class="navbar-form navbar-right" role="search">
+                <form class="navbar-form navbar-right" method="get" role="search" action="<?php echo Yii::app()->createUrl('home/search')?>">
                     <div class="form-group">
-                        <input type="text" class="form-control" placeholder="Search">
+                        <input type="text" name="q" class="form-control" placeholder="Search">
                     </div>
                     <button type="submit" class="btn btn-default">Tìm kiếm</button>
                 </form>

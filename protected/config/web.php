@@ -35,7 +35,8 @@ return CMap::mergeArray ( require (dirname ( __FILE__ ) . "/main.php"), array (
 							'search'=>'search/index',
 							'the-loai/<category:[a-zA-Z0-9-_]+>'=>'home/category',
 							'Truyen-<slug:[a-zA-Z0-9-_]+>'=>'story/view',
-							'u/<u:[a-zA-Z0-9-_]+>'=>'user/detail',
+							'tim-kiem'=>'home/search',
+							/*'u/<u:[a-zA-Z0-9-_]+>'=>'user/detail',
 							'u/<u:[a-zA-Z0-9-_]+>/nhac-cua-toi'=>'user/myMusic',
 							'u/<u:[a-zA-Z0-9-_]+>/nghe-gan-day/<type:(song|video|album)>'=>'user/recent',
 							'u/<u:[a-zA-Z0-9-_]+>/nghe-gan-day'=>'user/recent',
@@ -52,7 +53,7 @@ return CMap::mergeArray ( require (dirname ( __FILE__ ) . "/main.php"), array (
 
 							'<action:[a-zA-Z0-9-]+>/<url_key:[a-zA-Z0-9-]+>-<gt:[a-zA-Z0-9-]+>-<code:[a-zA-Z0-9-]+>'=>'site/url2',
 							'<action:[a-zA-Z0-9-]+>/<url_key:[a-zA-Z0-9-]+>-<code:[a-zA-Z0-9-]+>'=>'site/url2',
-							'<action:[a-zA-Z0-9-]+>/<url_key:[a-zA-Z0-9-]+>-<code:[a-zA-Z0-9-]+>/<action_sub:[a-zA-Z0-9-]+>'=>'site/url3',
+							'<action:[a-zA-Z0-9-]+>/<url_key:[a-zA-Z0-9-]+>-<code:[a-zA-Z0-9-]+>/<action_sub:[a-zA-Z0-9-]+>'=>'site/url3',*/
 						),
 						"showScriptName" => false 
 						// "urlSuffix"=>".html",

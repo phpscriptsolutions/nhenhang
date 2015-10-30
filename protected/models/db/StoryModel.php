@@ -203,4 +203,27 @@ class StoryModel extends BaseStoryModel
 
 		return self::model()->findAll($criteria);
 	}
+
+	public function countSearchByName($q){
+		$crit = new CDbCriteria();
+		$crit->condition = 'story_name like :q';
+		$crit->params = array(
+			':q'=>'%'.$q.'%'
+		);
+
+		return self::model()->count($crit);
+	}
+
+	public function getSearchByName($q,$limit,$offset){
+		$crit = new CDbCriteria();
+		$crit->select = 'id,category_name,category_slug,story_name,story_slug,lastest_chapter,hot,status';
+		$crit->condition = 'story_name like :q';
+		$crit->params = array(
+			':q'=>'%'.$q.'%'
+		);
+		$crit->limit = $limit;
+		$crit->offset = $offset;
+
+		return self::model()->findAll($crit);
+	}
 }

@@ -9,6 +9,23 @@ class HomeController extends Controller{
         $this->render('index',compact('hotStories','fullStories'));
     }
 
+    public function actionSearch(){
+        $q = Yii::app()->request->getParam('q',null);
+        if(empty($q)){
+            $this->redirect(Yii::app()->getBaseUrl(true));
+        }
+
+        $limit = 32;
+        $total = StoryModel::model()->countSearchByName($q);
+        $pager = new CPagination($total);
+        $pager->setPageSize($limit);
+
+        $stories = StoryModel::model()->getSearchByName($q,$limit,
+            $pager->getOffset());
+
+        $this->render('search',compact('total','pager','stories','q'));
+    }
+
     public function actionCategory(){
         $categorySlug = Yii::app()->request->getParam('category','ngon-tinh');
         $isHot = Yii::app()->request->getParam('hot',null);
