@@ -89,8 +89,10 @@
         <div class="relate-header">
             <img width="60" src="<?php echo Yii::app()->getBaseUrl(true);?>/web/images/author.jpg">
             <div class="relate-info">
-                <a href=""><h3><?php echo $story->author?></h3></a>
-                <a href=""><h4><?php echo $story->category_name;?></h4></a>
+                <a href="javascript:void(0);"><h3><?php echo $story->author?></h3></a>
+                <a href="<?php echo Yii::app()->createUrl('home/category',array(
+                    'category'=>$story->category_slug,
+                ))?>"><h4><?php echo $story->category_name;?></h4></a>
             </div>
         </div>
         <div class="relate-content">
