@@ -55,20 +55,19 @@
         <div class="relate-content">
             <ul class="box">
                 <?php foreach($storyAuthor as $item):?>
-                <li class="story-item">
-                    <div class="cover">
-                        <a href="<?php echo Yii::app()->createUrl('story/view',array('slug'=>$item->story_slug))?>">
-                            <img width="129" src="<?php echo Yii::app()->getBaseUrl(true).
-                                '/public/images/'.$item->category_slug.'/'.$item->story_slug.'-md.jpg';?>"
-                                 onerror="this.src='<?php echo Yii::app()->getBaseUrl(true)?>/public/images/tien-hiep/Dan-Tu-md.jpg'"/>
-                        </a>
-                    </div>
-                    <div class="info">
-                        <div class="info-name">
-                            <a href="<?php echo Yii::app()->createUrl('story/view',array('slug'=>$item->story_slug))?>"><h4><?php echo $item->story_name;?></h4></a>
+                    <li class="col-xs-6 col-md-3">
+                        <div class="story-item ">
+                            <a class="thumbnail" href="<?php echo Yii::app()->createUrl('story/view',array('slug'=>$item->story_slug))?>">
+                                <img width="129" src="<?php echo Yii::app()->getBaseUrl(true).
+                                    '/public/images/'.$item->category_slug.'/'.$item->story_slug.'-md.jpg';?>" onerror="this.src='<?php echo Yii::app()->getBaseUrl(true)?>/public/images/tien-hiep/Dan-Tu-md.jpg'"/>
+                            </a>
+                            <div class="info">
+                                <div class="info-name">
+                                    <a href="<?php echo Yii::app()->createUrl('story/view',array('slug'=>$item->story_slug))?>"><h4 class="subtext"><?php echo $item->story_name?></h4></a>
+                                </div>
+                            </div>
                         </div>
-                    </div>
-                </li>
+                    </li>
                 <?php endforeach;?>
             </ul>
         </div>
