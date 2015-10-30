@@ -79,6 +79,18 @@ class ChapterModel{
         }
     }
 
+    public function getChapterBySlug($table,$storyId){
+        try {
+            $sql = 'select story_id,max(chapter_number),story_name,story_slug,chapter_slug,chapter_name,id,category_name,category_slug,content,chapter_number from :table where story_id=:storyID group by story_id';
+            $command = Yii::app()->db->createCommand($sql);
+            $command->bindParam(":storyId",$storyId,PDO::PARAM_INT);
+            $command->bindParam(":table",$table,PDO::PARAM_STR);
+            return $command->queryRow();
+        }catch (Exception $ex){
+            return null;
+        }
+    }
+
     public function countChapterByStory($table,$story_slug){
         try {
             $command = Yii::app()->db->createCommand();

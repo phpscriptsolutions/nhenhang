@@ -76,4 +76,43 @@ class StoryController extends Controller{
 
         $this->renderPartial('ajax',compact('stories','title'));
     }
+
+    public function actionLastest(){
+        Yii::import("application.vendors.Hashids.*");
+
+        $slug = Yii::app()->request->getParam('slug');
+        $hashStr =  Yii::app()->request->getParam('code');
+        $hashStrId = substr($hashStr, 2);
+        $prefix =  substr($hashStr, 0,2);
+        $table = 'chapter_'.$prefix;
+        $hashids = new Hashids(Yii::app()->params["hash_url"]);
+        $parse = $hashids->decode($hashStrId);
+        $storyId = $parse[0];
+        //lay chpater info
+        $chapter = new ChapterModel();
+        $chapterInfo = $chapter->getChapterBySlug($table,$storyId);
+        if(empty($chapterInfo)){
+            $this->forward('index/error');
+            Yii::app()->end();
+        }
+
+        //lay next va previous chapter
+        $chapterIds = array($chapterInfo['chapter_number']-1,$chapterInfo['chapter_number']+1);
+        $otherChapter = $chapter->getOtherChapterByChapterNumber($table,$chapterInfo['story_id'],$chapterIds);
+        $previous = $next = null;
+        if(!empty($otherChapter)) {
+            foreach ($otherChapter as $r) {
+                if ($r['chapter_number'] == $chapterIds[0]) {
+                    $previous = $r;
+                } else if ($r['chapter_number'] == $chapterIds[1]) {
+                    $next = $r;
+                }
+            }
+        }
+
+        //get story Info
+        $story = StoryModel::model()->findByPk($chapterInfo['story_id']);
+
+        $this->render('detail',compact('story','chapterInfo','previous','next'));
+    }
 }

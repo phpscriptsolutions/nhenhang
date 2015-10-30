@@ -3,7 +3,7 @@
         <div class="story-header-info">
             <h1><?php echo $story->story_name?></h1>
             <h2><span class="legend">Thể loại:</span> <?php echo $story->category_name;?></h2>
-            <a href=""><h2><span class="legend">Mới nhất:</span><?php echo $story->lastest_chapter?></h2></a>
+            <a href=""><h2 class="chapter_name subtext"><span class="legend">Mới nhất:</span><?php echo $story->lastest_chapter?></h2></a>
             <?php $linkFb =  Yii::app()->createAbsoluteUrl('story/view',array('slug'=>$story->story_slug));?>
             <ul class="social">
                 <li>

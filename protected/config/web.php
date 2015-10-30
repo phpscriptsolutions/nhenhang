@@ -35,6 +35,7 @@ return CMap::mergeArray ( require (dirname ( __FILE__ ) . "/main.php"), array (
 							'search'=>'search/index',
 							'the-loai/<category:[a-zA-Z0-9-_]+>'=>'home/category',
 							'Truyen-<slug:[a-zA-Z0-9-_]+>'=>'story/view',
+							'Doc-<slug:[a-zA-Z0-9-_]+>-<code:[a-zA-Z0-9-_]+>'=>'story/lastest',
 							'tim-kiem'=>'home/search',
 							'u/<u:[a-zA-Z0-9-_]+>'=>'user/detail',
 							'u/<u:[a-zA-Z0-9-_]+>/nhac-cua-toi'=>'user/myMusic',

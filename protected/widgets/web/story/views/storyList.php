@@ -10,7 +10,10 @@
     <?php if(!empty($stories) && count($stories)):?>
     <ul>
         <div class="row">
-        <?php foreach($stories as $story):?>
+        <?php
+        Yii::import("application.vendors.Hashids.*");
+        $hashids = new Hashids(Yii::app()->params["hash_url"]);
+        foreach($stories as $story):?>
         <li class="col-xs-6 col-md-3">
             <div class="story-item ">
                 <a class="thumbnail" href="<?php echo Yii::app()->createUrl('story/view',array('slug'=>$story->story_slug))?>">
@@ -31,7 +34,11 @@
                     ))?>"><h4 class="subtext"><span>Thể loại: </span><?php echo $story->category_name?></h4></a>
                 </div>
                 <div class="info-category text-center">
-                    <a href=""><h4 class="subtext"><?php echo $story->lastest_chapter;?></h4></a>
+                    <?php
+                    $encodeId = $hashids->encode($story["id"]);
+                    ?>
+                    <a href="<?php echo Yii::app()->createUrl('story/lastest',
+                        array('slug'=>Common::makeFriendlyStoryUrl($story->lastest_chapter),'code'=>substr($story->story_slug,0,2).$encodeId));?>"><h4 class="subtext"><?php echo $story->lastest_chapter;?></h4></a>
                 </div>
             </div>
             </div>
