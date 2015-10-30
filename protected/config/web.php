@@ -36,7 +36,7 @@ return CMap::mergeArray ( require (dirname ( __FILE__ ) . "/main.php"), array (
 							'the-loai/<category:[a-zA-Z0-9-_]+>'=>'home/category',
 							'Truyen-<slug:[a-zA-Z0-9-_]+>'=>'story/view',
 							'tim-kiem'=>'home/search',
-							/*'u/<u:[a-zA-Z0-9-_]+>'=>'user/detail',
+							'u/<u:[a-zA-Z0-9-_]+>'=>'user/detail',
 							'u/<u:[a-zA-Z0-9-_]+>/nhac-cua-toi'=>'user/myMusic',
 							'u/<u:[a-zA-Z0-9-_]+>/nghe-gan-day/<type:(song|video|album)>'=>'user/recent',
 							'u/<u:[a-zA-Z0-9-_]+>/nghe-gan-day'=>'user/recent',
@@ -53,7 +53,7 @@ return CMap::mergeArray ( require (dirname ( __FILE__ ) . "/main.php"), array (
 
 							'<action:[a-zA-Z0-9-]+>/<url_key:[a-zA-Z0-9-]+>-<gt:[a-zA-Z0-9-]+>-<code:[a-zA-Z0-9-]+>'=>'site/url2',
 							'<action:[a-zA-Z0-9-]+>/<url_key:[a-zA-Z0-9-]+>-<code:[a-zA-Z0-9-]+>'=>'site/url2',
-							'<action:[a-zA-Z0-9-]+>/<url_key:[a-zA-Z0-9-]+>-<code:[a-zA-Z0-9-]+>/<action_sub:[a-zA-Z0-9-]+>'=>'site/url3',*/
+							'<action:[a-zA-Z0-9-]+>/<url_key:[a-zA-Z0-9-]+>-<code:[a-zA-Z0-9-]+>/<action_sub:[a-zA-Z0-9-]+>'=>'site/url3',
 						),
 						"showScriptName" => false 
 						// "urlSuffix"=>".html",
@@ -105,8 +105,8 @@ return CMap::mergeArray ( require (dirname ( __FILE__ ) . "/main.php"), array (
             	'limit_chart_home_number'=>5,
 				'htmlMetadata' => array (
 						'title' => 'Nhenhang.com',
-						'description' => 'Website đọc truyện hay nhất, nhanh nhất',
-						'keywords' => 'nhạc, nhac , music, nghe nhạc, nghe nhac, tìm nhạc, tim nhac, tải nhạc, tai nhac, nhạc chất lượng cao, nhac chat luong cao, nhạc hot nhất, nhac hot nhat, nhạc hay nhất, nhac hay nhat, lời bài hát, loi bai hat, lossless, lyric, download, upload, album, ca sĩ, ca si...'
+						'description' => 'Website đọc truyện hay nhất, nhanh nhất. Đọc truyện online, đọc truyện chữ, truyện hay, truyện full. Truyện Full luôn tổng hợp và cập nhật các chương truyện một cách nhanh nhất.',
+						'keywords' => 'doc truyen, doc truyen online, truyen hay, truyen chu, ngon tinh, kiem hiep, tien hiep, sac hiep, kinh di, trinh tham, vong du, xuyen khong, truyen teen..'
 				),
                 'album'=>array(
                     'number_per_page'=>20

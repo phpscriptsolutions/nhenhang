@@ -58,8 +58,8 @@ class Controller extends CController {
     	}
     	if($this->headMeta ==''){
     		$this->headMeta = '
-    				<meta name="description" content="Website nghe nhạc, tải nhạc hàng đầu Việt Nam với đầy đủ nhất các thể loại, album, ca sĩ, bài hát, ca khúc, video clip mv hot nhất, hay nhất, nghe nhạc chất lượng cao có lời (lyric), tải (download) nhạc nhanh nhất, cài nhạc chờ Ringtunes của VinaPhone" />
-					<meta name="keywords" content="ringtunes, nhạc, nhac , music, nghe nhạc, nghe nhac, tìm nhạc, tim nhac, tải nhạc, tai nhac, nhạc chất lượng cao, nhac chat luong cao, nhạc hot nhất, nhac hot nhat, nhạc hay nhất, nhac hay nhat, lời bài hát, loi bai hat, lossless, lyric, download, upload, album, ca sĩ, ca si, nhạc chờ, nhac cho, nhạc chuông, nhac chuong, ringtunes, vinaphone" />
+    				<meta name="description" content="Đọc truyện online, đọc truyện chữ, truyện hay, truyện full. Truyện Full luôn tổng hợp và cập nhật các chương truyện một cách nhanh nhất." />
+					<meta name="keywords" content="doc truyen, doc truyen online, truyen hay, truyen chu, ngon tinh, kiem hiep, tien hiep, sac hiep, kinh di, trinh tham, vong du, xuyen khong, truyen teen" />
 			';
     	}
     	parent::render($view, $data, $return);
