@@ -127,18 +127,18 @@ $categories = CategoryModel::model()->findAll();
                     <li><a href="<?php echo Yii::app()->createUrl('home/category',array(
                             'category'=>'di-gioi',
                         ))?>">Dị Giới</a></li>
-                    <li><a href="<?php echo Yii::app()->createUrl('home/category',array(
-                            'category'=>'lich-su',
-                        ))?>">Lịch Sử</a></li>
-                    <li><a href="<?php echo Yii::app()->createUrl('home/category',array(
-                            'category'=>'trong-sinh',
-                        ))?>">Trọng Sinh</a></li>
-                    <li><a href="<?php echo Yii::app()->createUrl('home/category',array(
-                            'category'=>'trinh-tham',
-                        ))?>">Trinh Thám</a></li>
                     <li class="dropdown">
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Truyện Khác <span class="caret"></span></a>
                         <ul class="dropdown-menu">
+                            <li><a href="<?php echo Yii::app()->createUrl('home/category',array(
+                                    'category'=>'lich-su',
+                                ))?>">Lịch Sử</a></li>
+                            <li><a href="<?php echo Yii::app()->createUrl('home/category',array(
+                                    'category'=>'trong-sinh',
+                                ))?>">Trọng Sinh</a></li>
+                            <li><a href="<?php echo Yii::app()->createUrl('home/category',array(
+                                    'category'=>'trinh-tham',
+                                ))?>">Trinh Thám</a></li>
                             <li><a href="<?php echo Yii::app()->createUrl('home/category',array(
                                     'category'=>'khoa-huyen',
                                 ))?>">Khoa Huyền</a></li>
