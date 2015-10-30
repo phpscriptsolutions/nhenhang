@@ -160,23 +160,21 @@ a, a:hover, a:active, a:focus, a:visited{
 }
 
 .box .story-item{
-    display: inline-block;
-    margin: 10px;
     background: #fff;
     border-radius: 4px;
     box-shadow: 0 1px 3px rgba(0,0,0,0.3);
     position: relative;
-    width: 21%;
+    margin-top:10px;
+}
+
+.thumbnail{
+    border: none;
 }
 
 .story-item .info-name{
     text-align: center;
 }
 
-
-.story-item .info{
-    margin-top: 200px;
-}
 
 .story-item .cover img{
     position: absolute;
