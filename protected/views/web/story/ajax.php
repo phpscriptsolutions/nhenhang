@@ -4,11 +4,11 @@
         <ul class="list-story">
             <?php foreach($stories as $story):?>
             <li>
-                <a href="">
+                <a href="<?php echo Yii::app()->createUrl('story/view',array('slug'=>$story->story_slug))?>">
                     <img src="<?php echo Yii::app()->getBaseUrl(true).'/public/images/'.$story->category_slug.'/'.$story->story_slug.'-md.jpg';?>"
                          onerror="this.src='<?php echo Yii::app()->getBaseUrl(true)?>/public/images/tien-hiep/Dan-Tu-md.jpg'" width="38"/>
                 </a>
-                <a href="" class="hot-title">
+                <a href="<?php echo Yii::app()->createUrl('story/view',array('slug'=>$story->story_slug))?>" class="hot-title">
                     <h4 class="subtext"><?php echo $story->story_name;?></h4>
                 </a>
             </li>
