@@ -3,7 +3,13 @@
         <div class="story-header-info">
             <h1><?php echo $story->story_name?></h1>
             <h2><span class="legend">Thể loại:</span> <?php echo $story->category_name;?></h2>
-            <a href=""><h2 class="chapter_name subtext"><span class="legend">Mới nhất:</span><?php echo $story->lastest_chapter?></h2></a>
+            <?php
+            Yii::import("application.vendors.Hashids.*");
+            $hashids = new Hashids(Yii::app()->params["hash_url"]);
+            $encodeId = $hashids->encode($story["id"]);
+            ?>
+            <a href="<?php echo Yii::app()->createUrl('story/lastest',
+                array('slug'=>Common::makeFriendlyStoryUrl($story->lastest_chapter),'code'=>substr($story->story_slug,0,2).$encodeId));?>"><h2 class="chapter_name subtext"><span class="legend">Mới nhất:</span><?php echo $story->lastest_chapter?></h2></a>
             <?php $linkFb =  Yii::app()->createAbsoluteUrl('story/view',array('slug'=>$story->story_slug));?>
             <ul class="social">
                 <li>
