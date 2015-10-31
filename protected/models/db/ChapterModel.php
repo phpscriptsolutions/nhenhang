@@ -81,10 +81,8 @@ class ChapterModel{
 
     public function getChapterBySlug($table,$storyId){
         try {
-            $sql = 'select * from :table where story_id=:storyID order by chapter_number DESC LIMIT 1';
+            $sql = 'select * from '.$table.' where story_id='.$storyId.' order by chapter_number DESC LIMIT 1';
             $command = Yii::app()->db->createCommand($sql);
-            $command->bindParam(":storyId",$storyId,PDO::PARAM_INT);
-            $command->bindParam(":table",$table,PDO::PARAM_STR);
             return $command->queryRow();
         }catch (Exception $ex){
             return null;
