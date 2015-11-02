@@ -3,6 +3,7 @@
         <div class="story-header-info">
             <h1><?php echo $story->story_name?></h1>
             <h2><span class="legend">Thể loại:</span> <?php echo $story->category_name;?></h2>
+            <h2><span class="legend">Tình trạng:</span> <?php echo $story->status;?></h2>
             <?php
             Yii::import("application.vendors.Hashids.*");
             $hashids = new Hashids(Yii::app()->params["hash_url"]);

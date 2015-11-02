@@ -11,6 +11,11 @@
                     <li class="comment-li crollto" rel="box-comment">Bình Luận</li>
                 </ul>
             </div>
+            <div class="label-hot-full">
+                <?php if($story->hot):?>
+                    <span class="label-span label-hot">HOT</span>
+                <?php endif;?>
+            </div>
         </div>
 
     </div>
