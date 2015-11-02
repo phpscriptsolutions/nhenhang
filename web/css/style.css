@@ -137,7 +137,7 @@ a, a:hover, a:active, a:focus, a:visited{
 }
 
 .container{
-    margin: 140px auto;
+    margin: 110px auto;
     background: #f4f4f4;
 }
 
@@ -474,4 +474,10 @@ footer section li h3{
 
 .other-chapter{
     margin-top: 30px;
+}
+
+#facebook-fan:before, #facebook-fan:after{
+    content:'';
+    display: table;
+    clear: both;
 }

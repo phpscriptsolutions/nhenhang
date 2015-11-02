@@ -25,6 +25,7 @@ $cs->registerScriptFile(Yii::app()->request->baseUrl."/web/js/hashids.min.js");
 $cs->registerScriptFile(Yii::app()->request->baseUrl."/web/js/_common.js");
 $cs->registerScriptFile(Yii::app()->request->baseUrl."/web/js/main.js");
 $cs->registerScriptFile(Yii::app()->request->baseUrl."/web/js/fb.js");
+$cs->registerScriptFile(Yii::app()->request->baseUrl."/web/js/facebook_box.js");
 
 $userId = 0;
 if (!Yii::app()->user->isGuest){
