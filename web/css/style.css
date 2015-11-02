@@ -481,3 +481,19 @@ footer section li h3{
     display: table;
     clear: both;
 }
+
+.label-hot{
+    border: 1px solid #FD8383;
+    color: #FD8383;
+}
+
+.label-full{
+    border: 1px solid #00a14b;
+    color: #00a14b;
+}
+
+.label-hot-full{
+    position: absolute;
+    top: 10px;
+    background:#fff;
+}

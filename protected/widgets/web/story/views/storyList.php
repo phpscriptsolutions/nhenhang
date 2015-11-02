@@ -15,6 +15,7 @@
         $hashids = new Hashids(Yii::app()->params["hash_url"]);
         foreach($stories as $story):?>
         <li class="col-xs-6 col-md-3">
+
             <div class="story-item ">
                 <a class="thumbnail" href="<?php echo Yii::app()->createUrl('story/view',array('slug'=>$story->story_slug))?>">
                     <img width="129" src="<?php echo Yii::app()->getBaseUrl(true).
@@ -41,6 +42,14 @@
                         array('slug'=>Common::makeFriendlyStoryUrl($story->lastest_chapter),'code'=>substr($story->story_slug,0,2).$encodeId));?>"><h4 class="subtext"><?php echo $story->lastest_chapter;?></h4></a>
                 </div>
             </div>
+            </div>
+            <div class="label-hot-full">
+                <?php if($story->hot):?>
+                    <span class="label-span label-hot">HOT</span>
+                <?php endif;?>
+                <?php if($story->status=='Full'):?>
+                    <span class="label-span label-full">FULL</span>
+                <?php endif;?>
             </div>
         </li>
         <?php endforeach;?>
