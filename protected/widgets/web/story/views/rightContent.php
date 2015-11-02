@@ -28,6 +28,6 @@
 
 <script type="text/javascript" src="<?php echo Yii::app()->getBaseUrl(true)?>/web/js/story.js"></script>
 <script>
-    story.loadList('hot');
-    story.loadList('full');
+    story.loadList('hot','<?php echo $story->category_slug;?>');
+    story.loadList('full','<?php echo $story->category_slug;?>');
 </script>

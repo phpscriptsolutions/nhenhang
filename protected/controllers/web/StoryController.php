@@ -62,17 +62,19 @@ class StoryController extends Controller{
 
     public function actionAjax(){
         $type = Yii::app()->request->getParam('type','full');
+        $cate = Yii::app()->request->getParam('category',null);
+
         $isFull = null;
         $isHot = false;
         if($type == 'full'){
             $isFull = 'Full';
             $title = 'Truyện FULL';
         }else{
-            $isHot = false; //khi co hot thi chuyen thanh true
+            $isHot = true; //khi co hot thi chuyen thanh true
             $title = 'Truyện HOT';
         }
-        $stories = StoryModel::model()->getStoryByCategory(null,10,
-            0,'id,category_name,category_slug,story_name,story_slug,lastest_chapter,hot,status', $isHot,$isFull);
+        $stories = StoryModel::model()->getStoryByCategory($cate,10,
+            0,'id,category_name,category_slug,story_name,story_slug,lastest_chapter,hot,status', $isHot,$isFull,'sorder ASC');
 
         $this->renderPartial('ajax',compact('stories','title'));
     }

@@ -4,8 +4,8 @@ class HomeController extends Controller{
         $this->layout = 'application.views.web.layouts.main';
         //$db = new ChapterModel();
         //$user = $db->getChapterByStory('chapter_50','50-Sac-Thai-Fifty-Shades-of-Grey',12,0,'id,chapter_name,chapter_slug');
-        $hotStories = StoryModel::model()->getStoryByCategory();
-        $fullStories = StoryModel::model()->getFullStoryByCategory();
+        $hotStories = StoryModel::model()->getStoryByCategory(null,12,0,null,true,null,'sorder ASC');
+        $fullStories = StoryModel::model()->getFullStoryByCategory(null,12,0,null,false,'sorder ASC');
         $this->render('index',compact('hotStories','fullStories'));
     }
 
