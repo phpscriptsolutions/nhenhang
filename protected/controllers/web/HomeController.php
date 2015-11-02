@@ -60,7 +60,7 @@ class HomeController extends Controller{
         $pager->setPageSize($limit);
 
         $stories = StoryModel::model()->getStoryByCategory($categorySlug,$limit,
-            $pager->getOffset(),'id,category_name,category_slug,story_name,story_slug,lastest_chapter,hot,status', $isHot,$isFull);
+            $pager->getOffset(),'id,category_name,category_slug,story_name,story_slug,lastest_chapter,hot,status', $isHot,$isFull,'sorder ASC');
 
         $this->render('category',compact('total','pager','stories','category','isHot'));
     }
