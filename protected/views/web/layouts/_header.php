@@ -47,8 +47,8 @@ $categories = CategoryModel::model()->findAll();
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a title="Truyện Kiếm Hiệp, Ngôn Tình, Sắc Hiệp, Tiên Hiệp, Trinh Thám, Truyện Online, Truyện hay , Truyện Mới nhất" alt="Truyện Kiếm Hiệp, Ngôn Tình, Sắc Hiệp, Tiên Hiệp, Trinh Thám, Truyện Online, Truyện Hay Nhất, Truyện Mới nhất" class="navbar-brand" href="<?php echo Yii::app()->getBaseUrl(true);?>">Nhenhang.com</a>
-                <h1 style="text-indent: -9999px; display: none;"><a href="<?php echo Yii::app()->getBaseUrl(true);?>">Truyện Kiếm Hiệp, Ngôn Tình, Sắc Hiệp, Tiên Hiệp, Trinh Thám, Truyện Online, Truyện Hay Nhất, Truyện Mới nhất</a> </h1>
+                <a title="Truyện Kiếm Hiệp, Ngôn Tình, Sắc Hiệp, Tiên Hiệp, Trinh Thám, Truyện Online, Truyện hay , Truyện Mới nhất" alt="Truyện Kiếm Hiệp, Ngôn Tình, Sắc Hiệp, Tiên Hiệp, Trinh Thám, Truyện Online, Truyện Hay Nhất, Truyện Mới nhất, Wap Truyện, Đọc truyện trên Mobile" class="navbar-brand" href="<?php echo Yii::app()->getBaseUrl(true);?>">Nhenhang.com</a>
+                <h1 style="text-indent: -9999px; display: none;"><a href="<?php echo Yii::app()->getBaseUrl(true);?>">Truyện Kiếm Hiệp, Ngôn Tình, Sắc Hiệp, Tiên Hiệp, Trinh Thám, Truyện Online, Truyện Hay Nhất, Truyện Mới nhất, Wap Truyện, Đọc truyện trên Mobile</a> </h1>
             </div>
 
             <!-- Collect the nav links, forms, and other content for toggling -->
