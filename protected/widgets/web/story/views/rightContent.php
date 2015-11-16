@@ -2,7 +2,7 @@
     <div class="info-story">
         <div class="info-story-header">
             <img src="<?php echo Yii::app()->getBaseUrl(true).'/public/images/'.$story->category_slug.'/'.$story->story_slug.'-md.jpg';?>"
-                 onerror="this.src='<?php echo Yii::app()->getBaseUrl(true)?>/public/images/tien-hiep/Dan-Tu-md.jpg'" width="90"/>
+                 onerror="this.src='<?php echo Yii::app()->getBaseUrl(true)?>/public/images/ngon-tinh/Ga-Cho-Tong-Giam-Doc-Phai-Can-Than-md.jpg'" width="90"/>
             <div class="info-story-more">
                 <h3><?php echo $story->story_name;?></h3>
                 <a href="<?php echo Yii::app()->createUrl('story/view',array('slug'=>$story->story_slug))?>"><h4><?php echo $story->category_name;?></h4></a>

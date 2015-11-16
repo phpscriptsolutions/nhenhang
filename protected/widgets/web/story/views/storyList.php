@@ -19,7 +19,7 @@
             <div class="story-item ">
                 <a class="thumbnail" href="<?php echo Yii::app()->createUrl('story/view',array('slug'=>$story->story_slug))?>">
                     <img width="129" src="<?php echo Yii::app()->getBaseUrl(true).
-                        '/public/images/'.$story->category_slug.'/'.$story->story_slug.'-md.jpg';?>" onerror="this.src='<?php echo Yii::app()->getBaseUrl(true)?>/public/images/tien-hiep/Dan-Tu-md.jpg'"/>
+                        '/public/images/'.$story->category_slug.'/'.$story->story_slug.'-md.jpg';?>" onerror="this.src='<?php echo Yii::app()->getBaseUrl(true)?>/public/images/ngon-tinh/Ga-Cho-Tong-Giam-Doc-Phai-Can-Than-md.jpg'"/>
                 </a>
             <div class="info">
                 <div class="info-name">
