@@ -15,4 +15,9 @@ class AdvertiserController extends Controller{
         $ads = AdvertiserModel::model()->getAdvertiser(null, 8,0,'rand()');
         $this->renderPartial('_listAds',compact('ads'));
     }
+
+    public function actionEmbed(){
+        $ads = AdvertiserModel::model()->getAdvertiser(null, 8,0,'rand()');
+        $this->renderPartial('embed',compact('ads'));
+    }
 }
