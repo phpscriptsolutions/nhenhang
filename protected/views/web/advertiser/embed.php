@@ -8,3 +8,10 @@ $this->widget('application.widgets.web.ads.AdsWidget',
         'data'=>$ads,
     ));
 ?>
+<script type="text/javascript">
+    var linkList = document.querySelectorAll('a');
+
+    for(var i in linkList){
+        linkList[i].setAttribute('target', '_blank');
+    }
+</script>
