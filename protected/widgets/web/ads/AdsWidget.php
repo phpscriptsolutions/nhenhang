@@ -2,14 +2,14 @@
 class AdsWidget extends CWidget
 {
 
-    public $listAds = null;
-    public $title = 'Danh Sách Ứng Dụng';
+    public $data = null;
+    public $title = 'Kho tải App/Game';
     public $link = null;
     public $options = array();
     public function run()
     {
         $this->render('listAds', array(
-            'stories'=>$this->stories,
+            'data'=>$this->data,
             'title' => $this->title,
             'link' => $this->link,
             'options'=>  $this->options,
