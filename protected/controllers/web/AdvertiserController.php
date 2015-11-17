@@ -10,4 +10,9 @@ class AdvertiserController extends Controller{
 
         $this->render('index', compact('total','ads','pager'));
     }
+
+    public function actionAjax(){
+        $ads = AdvertiserModel::model()->getAdvertiser(null, 8,0,'rand()');
+        $this->renderPartial('_listAds',compact('ads'));
+    }
 }

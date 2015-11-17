@@ -35,4 +35,5 @@
 <script>
     story.loadList('hot','<?php echo $story->category_slug;?>');
     story.loadList('full','<?php echo $story->category_slug;?>');
+    story.ads();
 </script>

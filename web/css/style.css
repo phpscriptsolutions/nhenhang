@@ -509,3 +509,7 @@ footer section li h3{
 .ads-item img{
     width: 120px !important;
 }
+
+.ads-item h2{
+    clear: both;
+}

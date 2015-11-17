@@ -74,6 +74,7 @@
             </ul>
         </div>
     </div>
+    <div class="ads-box"></div>
     <div class="story-chapter">
         <div class="story-chapter-title">
             <h3>Bình Luận</h3>

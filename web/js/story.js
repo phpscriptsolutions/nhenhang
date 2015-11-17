@@ -16,3 +16,18 @@ story.loadList = function(type,cate){
         }
     })
 }
+
+story.ads = function(){
+    $.ajax({
+        url: 'advertiser/ajax',
+        type: 'GET',
+        beforeSend: function(){
+            $('.ads-box').prepend('<div class=\"ovelay-loading-face\">'+ajax_loading_content+'</div>');
+        },
+        success: function(data){
+            $('.ads-box').html(data);
+        }
+    }).done(function(){
+        $('.ads-item a').attr('target','_blank');
+    })
+}
