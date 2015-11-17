@@ -214,7 +214,7 @@ var NhacVnCoreJs = {
             var n = $(this).attr('rel');
             var t = $('#'+n).offset();
             $('body,html').animate({
-                scrollTop: t.top-50
+                scrollTop: t.top-155
             }, 400);
         })
     },
@@ -711,6 +711,7 @@ var NhacVnCoreJs = {
     }
 }
 $(document).ready(function() {
+    $('.ads-item a').attr('target','_blank');
     Popup.init();
 	var userId = $("#user_id").text();
 
