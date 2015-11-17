@@ -75,6 +75,7 @@ $categories = CategoryModel::model()->findAll();
                         ));?>
                         </a>
                     </li>
+                    <li><a href="<?php echo Yii::app()->createUrl('advertiser')?>">Ứng Dụng Hay</a></li>
                 </ul>
                 <form class="navbar-form navbar-right" method="get" role="search" action="<?php echo Yii::app()->createUrl('home/search')?>">
                     <div class="form-group">
