@@ -18,6 +18,7 @@
  * @property string $link
  * @property integer $hot
  * @property string $source
+ * @property string $gp_store
  * @property integer $page
  * @property integer $is_crawler
  */
@@ -50,7 +51,7 @@ class BaseStoryModel extends MainActiveRecord
 		return array(
 			array('category_name, category_slug, category_id, story_name, story_slug, status, updated_time, link, source', 'required'),
 			array('category_id, hot, page, is_crawler', 'numerical', 'integerOnly'=>true),
-			array('category_name, category_slug, story_name, story_slug, author, lastest_chapter, link', 'length', 'max'=>255),
+			array('category_name, category_slug, story_name, story_slug, author, lastest_chapter, link, gp_store', 'length', 'max'=>255),
 			array('status, source', 'length', 'max'=>100),
 			array('description', 'safe'),
 			// The following rule is used by search().

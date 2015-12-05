@@ -7,7 +7,11 @@
                 <h3><?php echo $story->story_name;?></h3>
                 <a href="<?php echo Yii::app()->createUrl('story/view',array('slug'=>$story->story_slug))?>"><h4><?php echo $story->category_name;?></h4></a>
                 <ul>
-                    <li class="gp-icon">Android</li>
+                    <?php if(!empty($story->gp_store)):?>
+                    <li class="gp-icon"><a target="_blank" href="<?php echo $story->gp_store;?>" title="Tải app đọc truyện <?php echo $story->story_name?>" alt="Tải app đọc truyện <?php echo $story->story_name?>">
+                        <img src="<?php echo Yii::app()->getBaseUrl(true).'/public/googleplay.png';?>" width="100px"/>
+                        </a></li>
+                    <?php endif;?>
                     <li class="comment-li crollto" rel="box-comment">Bình Luận</li>
                 </ul>
             </div>

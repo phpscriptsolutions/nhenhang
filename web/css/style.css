@@ -513,3 +513,6 @@ footer section li h3{
 .ads-item h2{
     clear: both;
 }
+.gp-icon{
+    display: inline-block;
+}
