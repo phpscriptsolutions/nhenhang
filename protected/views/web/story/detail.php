@@ -1,7 +1,7 @@
 <?php
 $friendlyName = Common::strNormal($story->story_name);
-$metaTitle = $story->story_name.' '.$story->author.' | NHENHANG.COM';
-$metaKeyword = $story->story_name.', '.$friendlyName.', '.$story->story_name.' '.$story->author.', đọc truyện '.$story->story_name.
+$metaTitle = $story->story_name.' '.$story->author.' | đọc truyện NHENHANG.COM';
+$metaKeyword = $story->story_name.', '.$friendlyName.', '.$story->story_name.' Full,'.$story->story_name.' '.$story->author.', đọc truyện '.$story->story_name.
     ', truyện '.$story->category_name;
 $url = Yii::app()->createAbsoluteUrl('story/view',array('slug'=>$story->story_slug));
 $description = $story->description;
@@ -10,7 +10,7 @@ $imageShare = Yii::app()->getBaseUrl(true).
 
 Yii::app()->SEO->setInitialize($story->id,'');
 Yii::app()->SEO->setMetaTitle($metaTitle);
-Yii::app()->SEO->setMetaDescription($metaKeyword);
+Yii::app()->SEO->setMetaDescription($metaTitle.' - '.$description);
 Yii::app()->SEO->setMetaKeyword($metaKeyword);
 Yii::app()->SEO->setMetaNewsKeywords($metaKeyword);
 Yii::app()->SEO->setCanonical($url);
