@@ -1,7 +1,18 @@
 <meta charset="utf-8"/>
 <link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->getbaseUrl(true)."/web/css/bootstrap.min.css?v=".time()?>">
 <link rel="stylesheet" type="text/css" href="<?php echo Yii::app()->request->getbaseUrl(true)."/web/css/style.css?v=".time()?>">
-
+<div class="gg-ads">
+    <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+    <!-- item-ads -->
+    <ins class="adsbygoogle"
+         style="display:block"
+         data-ad-client="ca-pub-7746462635786238"
+         data-ad-slot="1078062902"
+         data-ad-format="auto"></ins>
+    <script>
+        (adsbygoogle = window.adsbygoogle || []).push({});
+    </script>
+</div>
 <?php
 $this->widget('application.widgets.web.ads.AdsWidget',
     array(

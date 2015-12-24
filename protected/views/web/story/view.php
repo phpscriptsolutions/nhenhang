@@ -23,7 +23,20 @@ Yii::app()->SEO->addMetaProp('og:site_name',Yii::app()->name);
 Yii::app()->SEO->addMetaProp('og:updated_time',time());
 ?>
 
+
 <div class="container content-container">
+    <div class="gg-ads">
+        <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+        <!-- item-ads -->
+        <ins class="adsbygoogle"
+             style="display:block"
+             data-ad-client="ca-pub-7746462635786238"
+             data-ad-slot="1078062902"
+             data-ad-format="auto"></ins>
+        <script>
+            (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
+    </div>
     <?php
     if($this->breadcrumbs){
         echo '<div id="breadcrumb">';
