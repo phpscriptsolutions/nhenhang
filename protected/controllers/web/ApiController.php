@@ -9,14 +9,21 @@ class ApiController extends Controller{
         }
 
         //lay thong tin story xem full hay chua
-        $story = StoryModel::model()->findByPk($storyId);
+        $story = QuotevStoryModel::model()->findByPk($storyId);
 
         //lay thong tin truyen
         $chapterModel = new ChapterModel();
         $chapters = $chapterModel->getChapterByStoryId('quotev_chapter',$storyId,$limit,$offset);
 
+        $isFull = 0;
+
+        if(!empty($story) && $story->status == 'Full'){
+            if(count($chapters)<$limit){
+                $isFull = 1;
+            }
+        }
         if(empty($chapters)){
-            exit(json_encode(array('status'=>true,'msg'=>'Đã hết dữ liệu','data'=>null)));
+            exit(json_encode(array('status'=>true,'msg'=>'Đã hết dữ liệu','data'=>null,'is_full'=>$isFull)));
         }
 
         $data = array();
@@ -28,12 +35,6 @@ class ApiController extends Controller{
                 'chapter_number' => $chapter['chapter_number'],
                 'content' => $chapter['content']
             );
-        }
-        $isFull = 0;
-        if(!empty($story) && $story->status == 'Full'){
-            if(count($chapters)<$limit){
-                $isFull = 1;
-            }
         }
 
         exit(json_encode(array('status'=>true,'msg'=>'Success','data'=>$data,'is_full'=>$isFull)));
