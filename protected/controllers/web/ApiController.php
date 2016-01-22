@@ -3,10 +3,13 @@ class ApiController extends Controller{
     public function actionChapter(){
         $storyId = Yii::app()->request->getParam('story_id');
         $limit = (int) Yii::app()->request->getParam('limit',100);
-        $offset = (int)Yii::app()->request->getParam('limit',0);
+        $offset = (int)Yii::app()->request->getParam('offset',0);
         if(empty($storyId)){
             exit(json_encode(array('status'=>false,'msg'=>'Invalid param','data'=>null)));
         }
+
+        //lay thong tin story xem full hay chua
+        $story = StoryModel::model()->findByPk($storyId);
 
         //lay thong tin truyen
         $chapterModel = new ChapterModel();
@@ -22,12 +25,18 @@ class ApiController extends Controller{
                 'story_name' => $chapter['story_name'],
                 'story_id' => $chapter['story_id'],
                 'chapter_name' => $chapter['chapter_name'],
-                'story_number' => $chapter['chapter_number'],
+                'chapter_number' => $chapter['chapter_number'],
                 'content' => $chapter['content']
             );
         }
+        $isFull = 0;
+        if(!empty($story) && $story->status == 'Full'){
+            if(count($chapters)<$limit){
+                $isFull = 1;
+            }
+        }
 
-        exit(json_encode(array('status'=>true,'msg'=>'Success','data'=>$data)));
+        exit(json_encode(array('status'=>true,'msg'=>'Success','data'=>$data,'is_full'=>$isFull)));
     }
 
     public function actionStory(){
@@ -35,7 +44,7 @@ class ApiController extends Controller{
         $limit = (int) Yii::app()->request->getParam('limit',100);
         $offset = (int)Yii::app()->request->getParam('limit',0);
 
-        $stories = StoryModel::model()->getStoryWithLastId($lastId,$limit,$offset,null,null,null,'id ASC');
+        $stories = QuotevStoryModel::model()->getStoryWithLastId($lastId,$limit,$offset,null,null,null,'id ASC');
 
         if(empty($stories)){
             exit(json_encode(array(
