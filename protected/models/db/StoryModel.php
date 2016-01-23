@@ -227,7 +227,7 @@ class StoryModel extends BaseStoryModel
 		return self::model()->findAll($crit);
 	}
 
-	public function getStoryWithLastId($lastId=0,$limit=12,$offset = 0,$select = null,$isHot = false,$isFull = null, $order = null){
+	public function getStoryWithLastId($lastId=0,$limit=12,$offset = 0,$select = null,$isHot = false,$isFull = null, $order = null,$categoryId = null){
 		$criteria = new CDbCriteria();
 
 		if(!empty($select)){
@@ -244,6 +244,10 @@ class StoryModel extends BaseStoryModel
 		}
 		if($isFull){
 			$criteria->addCondition('status="'.$isFull.'"');
+		}
+
+		if($categoryId){
+			$criteria->addCondition('category_id='.$categoryId);
 		}
 
 		if(empty($order)){
