@@ -80,15 +80,22 @@ class ApiController extends Controller{
     public function actionSearch(){
         $name = trim(CHtml::encode(Yii::app()->request->getParam('name')));
         $type = trim(CHtml::encode(Yii::app()->request->getParam('type','quotev')));
+        $categoryId = (int)CHtml::encode(Yii::app()->request->getParam('category',0));
         if(empty($name) || !in_array($type,array('quotev','story'))){
             exit(json_encode(array('status'=>false,'msg'=>'Invalid param','data'=>null)));
         }
 
         $criteria = new CDbCriteria();
         $criteria->addSearchCondition('story_name',$name);
-        $criteria->limit(20);
+        $criteria->limit = 20;
         if($type == 'quotev') {
             $stories = QuotevStoryModel::model()->findAll($criteria);
+        }else{
+            if($categoryId){
+                $criteria->addCondition('category_id = '.$categoryId);
+            }
+
+            $stories = StoryModel::model()->findAll($criteria);
         }
         if(empty($stories)){
             exit(json_encode(array(
