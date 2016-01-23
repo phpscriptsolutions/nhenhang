@@ -4,16 +4,26 @@ class ApiController extends Controller{
         $storyId = Yii::app()->request->getParam('story_id');
         $limit = (int) Yii::app()->request->getParam('limit',100);
         $offset = (int)Yii::app()->request->getParam('offset',0);
-        if(empty($storyId)){
+        $type = trim(CHtml::encode(Yii::app()->request->getParam('type','quotev')));
+        if(empty($storyId) || !in_array($type,array('quotev','story'))){
             exit(json_encode(array('status'=>false,'msg'=>'Invalid param','data'=>null)));
         }
 
-        //lay thong tin story xem full hay chua
-        $story = QuotevStoryModel::model()->findByPk($storyId);
-
         //lay thong tin truyen
         $chapterModel = new ChapterModel();
-        $chapters = $chapterModel->getChapterByStoryId('quotev_chapter',$storyId,$limit,$offset);
+        //lay thong tin story xem full hay chua
+        if($type == 'quotev') {
+            $story = QuotevStoryModel::model()->findByPk($storyId);
+            $chapters = $chapterModel->getChapterByStoryId('quotev_chapter',$storyId,$limit,$offset);
+        }else{
+            $story = StoryModel::model()->findByPk($storyId);
+            if(empty($story)){
+                exit(json_encode(array('status'=>false,'msg'=>'Invalid param','data'=>null)));
+            }
+
+            $table = 'chapter_'.substr($story->story_slug,0,2);
+            $chapters = $chapterModel->getChapterByStoryId($table,$story->id,$limit,$offset);
+        }
 
         $isFull = 0;
 
