@@ -23,7 +23,7 @@ class ApiController extends Controller{
             }
         }
         if(empty($chapters)){
-            exit(json_encode(array('status'=>true,'msg'=>'Đã hết dữ liệu','data'=>null,'is_full'=>$isFull)));
+            exit(json_encode(array('status'=>true,'msg'=>'Đã hết dữ liệu','data'=>null,'is_full'=>$isFull,"story_id"=>$storyId)));
         }
 
         $data = array();
@@ -37,7 +37,7 @@ class ApiController extends Controller{
             );
         }
 
-        exit(json_encode(array('status'=>true,'msg'=>'Success','data'=>$data,'is_full'=>$isFull)));
+        exit(json_encode(array('status'=>true,'msg'=>'Success','data'=>$data,'is_full'=>$isFull,"story_id"=>$storyId)));
     }
 
     public function actionStory(){
