@@ -64,6 +64,13 @@ class ApiController extends Controller{
         if($type == 'quotev') {
             $stories = QuotevStoryModel::model()->getStoryWithLastId($lastId, $limit, $offset, null, null, null, 'id ASC');
         }else{
+            if($categoryId == 2){
+                $categoryId = [1,2];
+            }else if($categoryId ==14){
+                $categoryId = [13,14];
+            }else if($categoryId == 7){
+                $categoryId = [7,8];
+            }
             $stories = StoryModel::model()->getStoryWithLastId($lastId,$limit,$offset,null,null,null,'id ASC',$categoryId);
         }
 
@@ -102,7 +109,13 @@ class ApiController extends Controller{
             $stories = QuotevStoryModel::model()->findAll($criteria);
         }else{
             if($categoryId){
-                $criteria->addCondition('category_id = '.$categoryId);
+		if($categoryId ==2){
+                	$criteria->addInCondition('category_id',array(1,2));
+		}else if($categoryId ==14){
+                	$criteria->addInCondition('category_id',array(13,14));
+		}else{
+                	$criteria->addCondition('category_id = '.$categoryId);
+		}
             }
 
             $stories = StoryModel::model()->findAll($criteria);
