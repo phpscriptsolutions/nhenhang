@@ -246,8 +246,12 @@ class StoryModel extends BaseStoryModel
 			$criteria->addCondition('status="'.$isFull.'"');
 		}
 
-		if($categoryId){
-			$criteria->addCondition('category_id='.$categoryId);
+		if(!empty($categoryId)){
+			if(!is_array($categoryId)){
+			  $criteria->addCondition('category_id='.$categoryId);
+			}else{
+			  $criteria->addInCondition('category_id',$categoryId);	
+			}
 		}
 
 		if(empty($order)){
