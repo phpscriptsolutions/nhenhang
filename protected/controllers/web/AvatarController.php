@@ -39,8 +39,8 @@ class AvatarController extends Controller{
         if (Yii::app ()->request->isAjaxRequest) {
             $coverWidth = 1190;
             $coverHeight = 350;
-            $minCoverWidth = 600;
-            $minCoverHeight = 300;
+            $minCoverWidth = 500;
+            $minCoverHeight = 200;
 
             $fileName = CHtml::encode(Yii::app ()->request->getParam ( 'file' ));
             $file = substr($fileName,0,strpos($fileName,'.'));
@@ -48,6 +48,7 @@ class AvatarController extends Controller{
             $filePath = Yii::app()->params['storage']['staticDir'] . DS . "tmp" . DS . $fileName;
             $filePath512 = Yii::app()->params['storage']['staticDir'] . DS . "tmp" . DS . $file.'_512'.$type;
             $filePath1024 = Yii::app()->params['storage']['staticDir'] . DS . "tmp" . DS . $file.'_1024'.$type;
+            $filePath1280 = Yii::app()->params['storage']['staticDir'] . DS . "tmp" . DS . $file.'_1280'.$type;
             $filePath320 = Yii::app()->params['storage']['staticDir'] . DS . "tmp" . DS . $file.'_320'.$type;
             $filePath180 = Yii::app()->params['storage']['staticDir'] . DS . "tmp" . DS . $file.'_180'.$type;
 
@@ -60,7 +61,7 @@ class AvatarController extends Controller{
                     $desWidth = $coverWidth;
                     $aspectRatioW = $aspectRatioH = 1;
                     $desHeight = round($desWidth * intval($aspectRatioH) / intval($aspectRatioW));
-                    $resizeFile = Yii::app()->params['storage']['staticDir'] . DS . "tmp" . DS . time() . ".jpg";
+                    $resizeFile = Yii::app()->params['storage']['staticDir'] . DS . "tmp" . DS . time() . ".".$type;
                     AvatarHelper::ImageCropPro($resizeFile,$filePath,$desWidth,$desHeight);
                     $fileSystem->remove($filePath);
                     $fileSystem->rename($resizeFile, $filePath);
@@ -73,13 +74,14 @@ class AvatarController extends Controller{
                     Yii::app()->end();
                 }
 
-                $coverPath = UserModel::model()->getCoverPath(1000);
+                //$coverPath = UserModel::model()->getCoverPath(1000);
                 $imgCrop = new ImageCrop($filePath, 0, 0, $width, $height);
 
 
-                Utils::makeDir(dirname($coverPath));
+                //Utils::makeDir(dirname($coverPath));
                 $imgCrop->resizeCrop($filePath512, 512, 512, 100);
                 $imgCrop->resizeCrop($filePath1024, 1024, 500, 100);
+                $imgCrop->resizeCrop($filePath1280, 1280, 720, 100);
                 $imgCrop->resizeCrop($filePath320, 320, 180, 100);
                 $imgCrop->resizeCrop($filePath180, 180, 120, 100);
 
