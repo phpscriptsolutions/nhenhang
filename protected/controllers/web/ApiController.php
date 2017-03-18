@@ -141,14 +141,14 @@ class ApiController extends Controller{
     }
 
     public function actionVietlott(){
+        header('Access-Control-Allow-Origin: *');
         $no = Yii::app()->request->getParam('day',null);
         $table = trim(CHtml::encode(Yii::app()->request->getParam('type','max4d')));
         $action = trim(CHtml::encode(Yii::app()->request->getParam('action','previous')));
         if(!in_array($table,array('max4d','mega645'))){
             exit(json_encode(array('status'=>false,'msg'=>'Invalid param','data'=>null)));
         }
-        $data = Max4dMisodel::model()->getData($table,$no,$action);
-        header('Access-Control-Allow-Origin: *');
+        $data = Max4dModel::model()->getData($table,$no,$action);
         exit(json_encode(array('status'=>true,'msg'=>'Success','data'=>$data)));
 
     }
