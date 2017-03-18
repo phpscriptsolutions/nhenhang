@@ -18,10 +18,11 @@
  * @property integer $first
  * @property integer $second
  * @property integer $third
- * @property integer $money
+ * @property string $money
  * @property integer $status
  * @property string $created_time
  * @property string $content
+ * @property string $next_money
  */
 class BaseMega645Model extends MainActiveRecord
 {
@@ -50,14 +51,16 @@ class BaseMega645Model extends MainActiveRecord
 		// NOTE: you should only define rules for those attributes that
 		// will receive user inputs.
 		return array(
-			array('jackpot, first, second, third, money, status', 'numerical', 'integerOnly'=>true),
+			array('jackpot, first, second, third, status', 'numerical', 'integerOnly'=>true),
 			array('order_lott', 'length', 'max'=>20),
 			array('no1, no2, no3, no4, no5, no6', 'length', 'max'=>2),
 			array('no_win', 'length', 'max'=>12),
+			array('money', 'length', 'max'=>15),
+			array('next_money', 'length', 'max'=>255),
 			array('day, created_time, content', 'safe'),
 			// The following rule is used by search().
 			// Please remove those attributes that should not be searched.
-			array('id, order_lott, day, no1, no2, no3, no4, no5, no6, no_win, jackpot, first, second, third, money, status, created_time, content', 'safe', 'on'=>'search'),
+			array('id, order_lott, day, no1, no2, no3, no4, no5, no6, no_win, jackpot, first, second, third, money, status, created_time, content, next_money', 'safe', 'on'=>'search'),
 		);
 	}
 
@@ -105,10 +108,11 @@ class BaseMega645Model extends MainActiveRecord
 		$criteria->compare('first',$this->first);
 		$criteria->compare('second',$this->second);
 		$criteria->compare('third',$this->third);
-		$criteria->compare('money',$this->money);
+		$criteria->compare('money',$this->money,true);
 		$criteria->compare('status',$this->status);
 		$criteria->compare('created_time',$this->created_time,true);
 		$criteria->compare('content',$this->content,true);
+		$criteria->compare('next_money',$this->next_money,true);
 		$criteria->order = "id DESC";
 		return new CActiveDataProvider($this, array(
 			'criteria'=>$criteria,

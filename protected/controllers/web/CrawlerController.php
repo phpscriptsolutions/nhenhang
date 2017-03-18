@@ -28,6 +28,30 @@ class CrawlerController extends Controller{
         }
     }
 
+    public function actionMoney(){
+        $html = file_get_dom('http://vietlott.vn/vi/home/');
+        $content = $html('#mega-6-45 .jackpot-win')[0]->html();
+
+        echo '<pre>';
+        print_r($content);
+        echo '</pre>';
+        if(!empty($content)){
+            $info = Mega645Model::model()
+                ->findBySql('SELECT * from mega645 ORDER BY day DESC LIMIT 1');
+
+            if(!empty($info)){
+                $info->next_money = trim($content);
+                $info->save(false);
+                echo 'Update successfull';
+            }else{
+                echo 'Not found last info';
+            }
+
+        }else{
+            echo 'cannot get data crawler';
+        }
+
+    }
     public function max4d($day,$drawId){
         try {
             $url = 'http://vietlott.vn/Ajax/PrevNextResultGameMax4D';

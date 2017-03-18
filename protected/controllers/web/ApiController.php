@@ -87,7 +87,7 @@ class ApiController extends Controller{
             $data[] = array(
                 'id' => $story['id'],
                 'story_name' => $story['story_name'],
-                'description' => $story['description'],
+                'description' => '',
             );
         }
         exit(json_encode(array('status'=>true,'msg'=>'Success','data'=>$data)));
@@ -133,7 +133,7 @@ class ApiController extends Controller{
             $data[] = array(
                 'id' => $story['id'],
                 'story_name' => $story['story_name'],
-                'description' => $story['description'],
+                'description' => ''//$story['description'],
             );
         }
         exit(json_encode(array('status'=>true,'msg'=>'Success','data'=>$data)));
@@ -147,7 +147,8 @@ class ApiController extends Controller{
         if(!in_array($table,array('max4d','mega645'))){
             exit(json_encode(array('status'=>false,'msg'=>'Invalid param','data'=>null)));
         }
-        $data = Max4dModel::model()->getData($table,$no,$action);
+        $data = Max4dMisodel::model()->getData($table,$no,$action);
+        header('Access-Control-Allow-Origin: *');
         exit(json_encode(array('status'=>true,'msg'=>'Success','data'=>$data)));
 
     }

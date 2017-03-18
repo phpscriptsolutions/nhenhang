@@ -30,9 +30,11 @@ class Max4dModel extends BaseMax4dModel
 				$command->from($table);
 				if ($action == 'previous') {
 					$command->where('day < :day', [':day' => $no]);
+					$command->order('day DESC');
 
 				} else {
 					$command->where('day > :day', [':day' => $no]);
+					$command->order('day ASC');
 				}
 				$data[$table]= $command->queryRow();
 			}
